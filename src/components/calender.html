@@ -4,8 +4,15 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);  
 }
-.calendar__week {
+.calendar__week { 
   grid-auto-rows: 100px;
+}
+
+.calendar__week > p {
+  text-align: center;
+}
+
+.calendar__date {
   text-align: right;
 }
 
@@ -17,7 +24,9 @@
 
 .calendar__day {
   padding: 16px;
+  text-align: right;
 }
+
 
 
 
@@ -54,9 +63,18 @@
           <div>sun</div> -->
         </div>
         <div class="calendar__week">
-          <div class="calendar__day">1</div>
-          <div class="calendar__day">2</div>
-          <div class="calendar__day">3</div>
+          <div class="calendar__day">
+            <div class="calender_date">1</div>
+            <p>Course <br> Busy</p>
+          </div>
+          <div class="calendar__day">
+            <div class="calender_date">2</div>
+            <p>Course <br> Busy</p>
+          </div>
+          <div class="calendar__day">
+            <div class="calender_date">3</div>
+            <p>Course <br> Busy</p>
+          </div>
         </div>
       </div>
     </main>
