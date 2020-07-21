@@ -18,15 +18,15 @@
     />
     <meta name="msapplication-tap-highlight" content="no" />
     <!--
-    =========================================================
-    * ArchitectUI HTML Theme Dashboard - v1.0.0
-    =========================================================
-    * Product Page: https://dashboardpack.com
-    * Copyright 2019 DashboardPack (https://dashboardpack.com)
-    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
-    =========================================================
-    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-    -->
+  =========================================================
+  * ArchitectUI HTML Theme Dashboard - v1.0.0
+  =========================================================
+  * Product Page: https://dashboardpack.com
+  * Copyright 2019 DashboardPack (https://dashboardpack.com)
+  * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+  =========================================================
+  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  -->
     <link
       href="../styles/architectui-html-free/architectui-html-free/main.css"
       rel="stylesheet"
@@ -523,7 +523,7 @@
 
   <body>
     <div
-      class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header closed-sidebar"
+      class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header closed-sidebar closed-sidebar-mobile"
     >
       <div class="app-main">
         <div class="app-main__outer">
@@ -534,10 +534,11 @@
               <li class="nav-item">
                 <a
                   role="tab"
-                  class="nav-link active"
+                  class="nav-link show active"
                   id="tab-0"
                   data-toggle="tab"
                   href="#tab-content-0"
+                  aria-selected="true"
                 >
                   <span>TA</span>
                 </a>
@@ -545,10 +546,11 @@
               <li class="nav-item">
                 <a
                   role="tab"
-                  class="nav-link"
+                  class="nav-link show"
                   id="tab-1"
                   data-toggle="tab"
                   href="#tab-content-1"
+                  aria-selected="false"
                 >
                   <span>Marker</span>
                 </a>
@@ -556,101 +558,43 @@
             </ul>
             <div class="tab-content">
               <div
-                class="tab-pane tabs-animation fade show active"
+                class="tab-pane tabs-animation fade active show"
                 id="tab-content-0"
                 role="tabpanel"
               >
                 <div class="main-card mb-3 card">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      Teaching Assistant Duties Form
-                    </h5>
-                    <h6 class="card-subtitle">
-                      Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement
-                      (^)
-                    </h6>
-                    <form class="">
-                      <div class="form-row">
-                        <div class="col-md-auto">
-                          <div class="position-relative form-group">
-                            <label for="exampleCustomSelect" class=""
-                              >Total Hours</label
-                            ><select
-                              type="select"
-                              id="exampleCustomSelect"
-                              name="customSelect"
-                              class="custom-select"
-                            >
-                              <option value="">Select</option>
-                              <option>25</option>
-                              <option>35</option>
-                              <option>45</option>
-                              <option>65</option>
-                              <option>90</option>
-                              <option>110</option>
-                              <option>130</option>
-                              <option>Other</option>
-                            </select>
-                          </div>
-                          <div class="position-relative form-group">
-                            <label for="examplePassword11" class=""
-                              >Note: Above TA assignment together with other TA
-                              assignments for other courses cannot exceed 130
-                              hours per semester - as per (^) </label
-                            ><input
-                              name="password"
-                              id="examplePassword11"
-                              placeholder="Enter hours"
-                              type="password"
-                              class="form-control"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"
-                                >In-Class Duties</span
-                              >
-                            </div>
-                            <input
-                              type="text"
-                              class="form-control"
-                              placeholder="lectures, tutorials, seminars, lab work, field trips, etc."
-                            />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"
-                                >Office Duties</span
-                              >
-                            </div>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"
-                                >Marking, Grading, Invigilating</span
-                              >
-                            </div>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"
-                                >Other (please specify)</span
-                              >
-                            </div>
-                            <input type="text" class="form-control" />
-                            <input type="text" class="form-control" />
-                          </div>
-                          <br />
-                        </div>
-                      </div>
-
-                      <button class="mt-2 btn btn-primary">Submit</button>
-                    </form>
+                    <h5 class="card-title">TA Hours Approval</h5>
+                    <table class="mb-0 table table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Username</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -661,95 +605,37 @@
               >
                 <div class="main-card mb-3 card">
                   <div class="card-body">
-                    <h5 class="card-title">
-                      Teaching Assistant Duties Form
-                    </h5>
-                    <h6 class="card-subtitle">
-                      Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement
-                      (^)
-                    </h6>
-                    <form class="">
-                      <div class="form-row">
-                        <div class="col-md-auto">
-                          <div class="position-relative form-group">
-                            <label for="exampleCustomSelect" class=""
-                              >Total Hours</label
-                            ><select
-                              type="select"
-                              id="exampleCustomSelect"
-                              name="customSelect"
-                              class="custom-select"
-                            >
-                              <option value="">Select</option>
-                              <option>25</option>
-                              <option>35</option>
-                              <option>45</option>
-                              <option>65</option>
-                              <option>90</option>
-                              <option>110</option>
-                              <option>130</option>
-                              <option>Other</option>
-                            </select>
-                          </div>
-                          <div class="position-relative form-group">
-                            <label for="examplePassword11" class=""
-                              >Note: Above TA assignment together with other TA
-                              assignments for other courses cannot exceed 130
-                              hours per semester - as per (^) </label
-                            ><input
-                              name="password"
-                              id="examplePassword11"
-                              placeholder="Enter hours"
-                              type="password"
-                              class="form-control"
-                            />
-                          </div>
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"
-                                >In-Class Duties</span
-                              >
-                            </div>
-                            <input
-                              type="text"
-                              class="form-control"
-                              placeholder="lectures, tutorials, seminars, lab work, field trips, etc."
-                            />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"
-                                >Office Duties</span
-                              >
-                            </div>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"
-                                >Marking, Grading, Invigilating</span
-                              >
-                            </div>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <br />
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"
-                                >Other (please specify)</span
-                              >
-                            </div>
-                            <input type="text" class="form-control" />
-                            <input type="text" class="form-control" />
-                          </div>
-                          <br />
-                        </div>
-                      </div>
-
-                      <button class="mt-2 btn btn-primary">Submit</button>
-                    </form>
+                    <h5 class="card-title">Marker Hours Approval</h5>
+                    <table class="mb-0 table table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Username</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
