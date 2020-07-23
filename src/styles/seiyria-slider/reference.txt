@@ -1,0 +1,2 @@
+The following code was collected from (Example 13): https://seiyria.com/bootstrap-slider/
+
