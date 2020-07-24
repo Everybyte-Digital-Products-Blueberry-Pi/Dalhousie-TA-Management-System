@@ -1,14 +1,20 @@
 <!--This card will be used by instructors to post a job-->
 <div class="card-body"><h5 class="card-title">Post A New Job</h5>
-        <form class="">
-            <div class="position-relative form-group"><label for="jobTitleSearch" class="">Job Title</label><input name="jobtitle" id="jobTitleSearch" placeholder="Job Title" class="form-control"></div>
-            <div class="position-relative form-group"><label for="jobDescriptionSearch" class="">Job Discription</label><input name="jobdescription" id="jobDescriptionSearch" placeholder="Job Description" class="form-control"></div>
-            <div class="position-relative form-group"><label for="jobRequirementSearch" class="">Job Requirement</label><input name="jobrequirement" id="jobRequirementSearch" placeholder="Job Requirement" class="form-control"></div>
-            <div class="position-relative form-group"><label for="payPost typePost" class="">Pay Rate & Type</label><input name="payrate" id="payPost" placeholder="Pay Rate" type="number" class="form-control"><input name="typepost" id="typePost" placeholder="" class="form-control"></div>
-            <div class="position-relative form-group"><label for="workHours" class="">Work Hours</label><input name="hours" id="workHours" placeholder="Work Hours" type="number" class="form-control"></div>
-            <div class="position-relative form-group"><label for="ddlPost" class="">Application Deadline</label><input name="ddl" id="ddlPost" placeholder="" type="date" class="form-control"></div>
-            <div class="position-relative form-group"><label for="additionInfoSearch" class="">Additional Info</label><textarea name="additioninfo" id="additionInfoSearch" class="form-control"></textarea></div>
-            <button class="mt-1 btn btn-primary">Post the job</button>
-        </form>
-    </div>
+    <form class="">
+        <div class="position-relative form-group"><label for="jobTitleSearch" class="">Job Title</label><input name="jobtitle" id="jobTitleSearch" placeholder="Job Title" class="form-control"></div>
+        
+        <div class="position-relative form-group"><label for="payPost" class="">Pay Rate</label><input name="payrate" id="payPost" placeholder="Pay Rate" type="number" class="form-control"></div>
+        <div class="position-relative form-group"><label for="facultySelection" class="">Type</label><select name="typeselect" id="typeSelection" class="form-control">
+            <option>-----Select One-----</option>
+            <option>Hourly</option>
+            <option>Weekly</option>
+            <option>Monthly</option>
+        </select></div>
+        <div class="position-relative form-group"><label for="workHours" class="">Work Hours Per Week</label><input name="hours" id="workHours" placeholder="Work Hours" type="number" class="form-control"></div>
+        <div class="position-relative form-group"><label for="jobDescriptionSearch" class="">Job Discription</label><input name="jobdescription" id="jobDescriptionSearch" placeholder="Job Description" class="form-control"></div>
+        <div class="position-relative form-group"><label for="jobRequirementSearch" class="">Job Requirement</label><input name="jobrequirement" id="jobRequirementSearch" placeholder="Job Requirement" class="form-control"></div>
+        <div class="position-relative form-group"><label for="additionInfoSearch" class="">Additional Info</label><textarea name="additioninfo" id="additionInfoSearch" class="form-control"></textarea></div>
+        <div class="position-relative form-group"><label for="ddlPost" class="">Application Deadline</label><input name="ddl" id="ddlPost" placeholder="" type="date" class="form-control"></div>
+        <button class="mt-1 btn btn-primary">Post the job</button>
+    </form>
 </div>
