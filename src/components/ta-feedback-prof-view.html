@@ -31,6 +31,10 @@
       href="../styles/architectui-html-free/architectui-html-free/main.css"
       rel="stylesheet"
     />
+    <link
+      href="../styles/seiyria-slider/bootstrap-slider/dist/css/bootstrap-slider.min.css"
+      rel="stylesheet"
+    />
     <style type="text/css">
       /* Chart.js */
       @-webkit-keyframes chartjs-render-animation {
@@ -772,266 +776,99 @@
       <div class="app-main">
         <div class="app-main__outer">
           <div class="app-main__inner">
-            <div class="tab-content">
-              <div
-                class="tab-pane tabs-animation fade active show"
-                id="tab-content-0"
-                role="tabpanel"
-              >
-                <div class="col-md-6">
+            <div class="col-md-6">
+              <div class="main-card mb-3 card">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Darren Williams | TA | CSCI 1800 F18
+                  </h5>
+                  <h6 class="card-subtitle">Feedback Form</h6>
+
                   <div class="main-card mb-3 card">
                     <div class="card-body">
-                      <h5 class="card-title">CSCI 1800</h5>
-                      <h6 class="card-subtitle">Feedback Statistics</h6>
-                      <div class="text-left">Organisation</div>
-                      <div class="text-center">Poor</div>
-                      <div class="mb-3 progress">
-                        <div
-                          class="progress-bar bg-danger"
-                          role="progressbar"
-                          aria-valuenow="1"
-                          aria-valuemin="0"
-                          aria-valuemax="5"
-                          style="width: 20%;"
-                        ></div>
-                      </div>
-                      <div class="text-left">Teamwork</div>
-                      <div class="text-center">Okay</div>
-                      <div class="mb-3 progress">
-                        <div
-                          class="progress-bar bg-warning"
-                          role="progressbar"
-                          aria-valuenow="2"
-                          aria-valuemin="0"
-                          aria-valuemax="5"
-                          style="width: 40%;"
-                        ></div>
-                      </div>
-                      <div class="text-left">Time Management</div>
-                      <div class="text-center">Moderate</div>
-                      <div class="mb-3 progress">
-                        <div
-                          class="progress-bar bg-info"
-                          role="progressbar"
-                          aria-valuenow="3"
-                          aria-valuemin="0"
-                          aria-valuemax="5"
-                          style="width: 60%;"
-                        ></div>
-                      </div>
-                      <div class="text-left">Course Knowledge</div>
-                      <div class="text-center">Good</div>
-                      <div class="mb-3 progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="4"
-                          aria-valuemin="0"
-                          aria-valuemax="5"
-                          style="width: 80%;"
-                        ></div>
-                      </div>
-                      <div class="text-left">Student Engagement</div>
-                      <div class="text-center">Excellent</div>
-                      <div class="mb-3 progress">
-                        <div
-                          class="progress-bar bg-success"
-                          role="progressbar"
-                          aria-valuenow="5"
-                          aria-valuemin="0"
-                          aria-valuemax="5"
-                          style="width: 100%;"
-                        ></div>
-                      </div>
-                      <div class="text-left">X</div>
-                      <div class="text-center">Poor</div>
-                      <div class="mb-3 progress">
-                        <div
-                          class="progress-bar bg-danger"
-                          role="progressbar"
-                          aria-valuenow="1"
-                          aria-valuemin="0"
-                          aria-valuemax="5"
-                          style="width: 20%;"
-                        ></div>
-                      </div>
-                      <div class="text-left">Y</div>
-                      <div class="text-center">Poor</div>
-                      <div class="mb-3 progress">
-                        <div
-                          class="progress-bar bg-danger"
-                          role="progressbar"
-                          aria-valuenow="1"
-                          aria-valuemin="0"
-                          aria-valuemax="5"
-                          style="width: 20%;"
-                        ></div>
-                      </div>
+                      <div class="card-subtitle">Organisation</div>
+                      <input
+                        id="ex1"
+                        type="text"
+                        data-slider-ticks="[0, 100, 200, 300, 400]"
+                        data-slider-ticks-snap-bounds="30"
+                        data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                      />
                       <br />
                       <br />
-                      <h5 class="card-subtitle">Professor Comments</h5>
-                      <div class="main-card mb-3 card">
-                        <div class="card-body">
-                          <div class="scroll-area-sm">
-                            <div class="scrollbar-container ps--active-y ps">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Vestibulum sodales ullamcorper
-                                vehicula. Duis placerat quam porta lorem
-                                lobortis, sit amet sodales mauris finibus. Donec
-                                posuere diam at volutpat viverra. Cras fringilla
-                                auctor augue sed congue. Maecenas mollis quis
-                                enim quis egestas. In sollicitudin mi a pretium
-                                varius. Integer eleifend sodales pharetra.
-                                Nullam vitae libero sem. Nulla et eros congue,
-                                tincidunt ante eu, tincidunt eros. Donec nisl
-                                purus, convallis a hendrerit ut, eleifend in
-                                lectus. Proin luctus dignissim lacus, in laoreet
-                                arcu eleifend non. Quisque viverra ipsum a massa
-                                porta convallis. Donec tincidunt imperdiet
-                                purus, interdum elementum ante commodo a.
-                                Quisque pharetra arcu sapien, vel ornare magna
-                                sollicitudin quis.
-                              </p>
-                              <p>
-                                Nunc congue magna eget eros blandit, eu viverra
-                                magna semper. Nullam in diam a metus dictum
-                                consequat. Quisque ultricies, ipsum non euismod
-                                semper, velit felis lacinia nibh, et finibus
-                                quam leo vitae nisi. Maecenas interdum diam quis
-                                risus bibendum, eu fermentum est pharetra. In
-                                dictum at enim pretium bibendum. Praesent
-                                efficitur iaculis dolor in sodales. Morbi
-                                maximus in ipsum in malesuada. Proin semper
-                                lacus tempor magna aliquam, sed aliquam dui
-                                scelerisque. Donec nisi nulla, rhoncus a
-                                tristique eget, ultrices vitae dolor. Ut id urna
-                                vitae ante tincidunt pharetra at non metus. Nunc
-                                in suscipit nulla. Sed vitae leo vulputate,
-                                euismod tortor vel, aliquet velit. Curabitur
-                                eget tincidunt elit. Nam et ligula finibus,
-                                eleifend velit et, commodo quam. Praesent non
-                                libero velit.
-                              </p>
-                              <p>
-                                Nunc congue magna eget eros blandit, eu viverra
-                                magna semper. Nullam in diam a metus dictum
-                                consequat. Quisque ultricies, ipsum non euismod
-                                semper, velit felis lacinia nibh, et finibus
-                                quam leo vitae nisi. Maecenas interdum diam quis
-                                risus bibendum, eu fermentum est pharetra. In
-                                dictum at enim pretium bibendum. Praesent
-                                efficitur iaculis dolor in sodales. Morbi
-                                maximus in ipsum in malesuada. Proin semper
-                                lacus tempor magna aliquam, sed aliquam dui
-                                scelerisque. Donec nisi nulla, rhoncus a
-                                tristique eget, ultrices vitae dolor. Ut id urna
-                                vitae ante tincidunt pharetra at non metus. Nunc
-                                in suscipit nulla. Sed vitae leo vulputate,
-                                euismod tortor vel, aliquet velit. Curabitur
-                                eget tincidunt elit. Nam et ligula finibus,
-                                eleifend velit et, commodo quam. Praesent non
-                                libero velit.
-                              </p>
-                              <p>
-                                Nunc congue magna eget eros blandit, eu viverra
-                                magna semper. Nullam in diam a metus dictum
-                                consequat. Quisque ultricies, ipsum non euismod
-                                semper, velit felis lacinia nibh, et finibus
-                                quam leo vitae nisi. Maecenas interdum diam quis
-                                risus bibendum, eu fermentum est pharetra. In
-                                dictum at enim pretium bibendum. Praesent
-                                efficitur iaculis dolor in sodales. Morbi
-                                maximus in ipsum in malesuada. Proin semper
-                                lacus tempor magna aliquam, sed aliquam dui
-                                scelerisque. Donec nisi nulla, rhoncus a
-                                tristique eget, ultrices vitae dolor. Ut id urna
-                                vitae ante tincidunt pharetra at non metus. Nunc
-                                in suscipit nulla. Sed vitae leo vulputate,
-                                euismod tortor vel, aliquet velit. Curabitur
-                                eget tincidunt elit. Nam et ligula finibus,
-                                eleifend velit et, commodo quam. Praesent non
-                                libero velit.
-                              </p>
-                              <div
-                                class="ps__rail-x"
-                                style="left: 0px; bottom: -945px;"
-                              >
-                                <div
-                                  class="ps__thumb-x"
-                                  tabindex="0"
-                                  style="left: 0px; width: 0px;"
-                                ></div>
-                              </div>
-                              <div
-                                class="ps__rail-y"
-                                style="top: 945px; height: 200px; right: 0px;"
-                              >
-                                <div
-                                  class="ps__thumb-y"
-                                  tabindex="0"
-                                  style="top: 166px; height: 34px;"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      <div class="card-subtitle">Teamwork</div>
+                      <input
+                        id="ex2"
+                        type="text"
+                        data-slider-ticks="[0, 100, 200, 300, 400]"
+                        data-slider-ticks-snap-bounds="30"
+                        data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                      />
+                      <br />
+                      <br />
+                      <div class="card-subtitle">Time Management</div>
+                      <input
+                        id="ex3"
+                        type="text"
+                        data-slider-ticks="[0, 100, 200, 300, 400]"
+                        data-slider-ticks-snap-bounds="30"
+                        data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                      />
+                      <br />
+                      <br />
+                      <div class="card-subtitle">Course Knowledge</div>
+                      <input
+                        id="ex4"
+                        type="text"
+                        data-slider-ticks="[0, 100, 200, 300, 400]"
+                        data-slider-ticks-snap-bounds="30"
+                        data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                      />
+                      <br />
+                      <br />
+                      <div class="card-subtitle">Student Engagement</div>
+                      <input
+                        id="ex5"
+                        type="text"
+                        data-slider-ticks="[0, 100, 200, 300, 400]"
+                        data-slider-ticks-snap-bounds="30"
+                        data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                      />
+                      <br />
+                      <br />
+                      <div class="card-subtitle">X</div>
+                      <input
+                        id="ex7"
+                        type="text"
+                        data-slider-ticks="[0, 100, 200, 300, 400]"
+                        data-slider-ticks-snap-bounds="30"
+                        data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                      />
+                      <br />
+                      <br />
+                      <div class="card-subtitle">Y</div>
+                      <input
+                        id="ex6"
+                        type="text"
+                        data-slider-tick="[0, 100, 200, 300, 400]"
+                        data-slider-ticks-snap-bounds="30"
+                        data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                      />
+                    </div>
+                  </div>
+                  <div class="main-card mb-3 card">
+                    <div class="card-body">
+                      <h5 class="card-subtitle">Comments</h5>
+                      <div>
+                        <textarea
+                          name="text"
+                          id="exampleText"
+                          class="form-control"
+                        ></textarea>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div
-                class="tab-pane tabs-animation fade"
-                id="tab-content-1"
-                role="tabpanel"
-              >
-                <div class="main-card mb-3 card">
-                  <div class="card-body">
-                    <h5 class="card-title">Marker Hours Approval</h5>
-                    <table class="mb-0 table table-hover">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Full Name</th>
-                          <th>B00#</th>
-                          <th>Course ID</th>
-                          <th>CRN</th>
-                          <th>Submission Time</th>
-                          <th>Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark Otto</td>
-                          <td>B00891215</td>
-                          <td>CSCI 1180</td>
-                          <td>108050</td>
-                          <td>12:30PM, Jan 18, 2020</td>
-                          <td>Approved</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Sreya Goshal</td>
-                          <td>B00891216</td>
-                          <td>CSCI 1183</td>
-                          <td>108051</td>
-                          <td>12:00AM, Jan 20, 2020</td>
-                          <td>Declined</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Hassan Saleh</td>
-                          <td>B00891217</td>
-                          <td>CSCI 1186</td>
-                          <td>108052</td>
-                          <td>4:30AM, Jan 5, 2020</td>
-                          <td>Pending</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <button class="mt-1 btn btn-primary">Submit</button>
                 </div>
               </div>
             </div>
@@ -1043,6 +880,44 @@
       type="text/javascript"
       src="../styles/architectui-html-free/architectui-html-free/assets/scripts/main.js"
     ></script>
+    <script src="../styles/seiyria-slider/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <script>
+      var slider1 = new Slider("#ex1", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider2 = new Slider("#ex2", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider3 = new Slider("#ex3", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider4 = new Slider("#ex4", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider5 = new Slider("#ex5", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider6 = new Slider("#ex6", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider7 = new Slider("#ex7", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+    </script>
     <!-- Code injected by live-server -->
     <script type="text/javascript">
       // <![CDATA[  <-- For SVG support

@@ -586,7 +586,21 @@
                           <td>CSCI 1180</td>
                           <td>108050</td>
                           <td>12:30PM, Jan 18, 2020</td>
-                          <td>Approved</td>
+                          <td>
+                            <div class="mb-2 mr-2 badge badge-success">
+                              Approved
+                            </div>
+                          </td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mr-2 mb-2 btn-primary"
+                              data-toggle="modal"
+                              data-target="#exampleModal"
+                            >
+                              Basic Modal
+                            </button>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">2</th>
@@ -595,7 +609,11 @@
                           <td>CSCI 1183</td>
                           <td>108051</td>
                           <td>12:00AM, Jan 20, 2020</td>
-                          <td>Declined</td>
+                          <td>
+                            <div class="mb-2 mr-2 badge badge-danger">
+                              Declined
+                            </div>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">3</th>
@@ -604,7 +622,11 @@
                           <td>CSCI 1186</td>
                           <td>108052</td>
                           <td>4:30AM, Jan 5, 2020</td>
-                          <td>Pending</td>
+                          <td>
+                            <div class="mb-2 mr-2 badge badge-warning">
+                              Pending
+                            </div>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -669,6 +691,7 @@
         </div>
       </div>
     </div>
+
     <script
       type="text/javascript"
       src="../styles/architectui-html-free/architectui-html-free/assets/scripts/main.js"
@@ -779,7 +802,48 @@
       }
       // ]]>
     </script>
-
+    <div
+      class="modal fade show"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style="display: block;"
+      aria-modal="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-0">
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="jvectormap-tip"></div>
   </body>
 </html>
