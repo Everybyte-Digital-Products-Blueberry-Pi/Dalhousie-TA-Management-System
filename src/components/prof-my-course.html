@@ -41,7 +41,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">1</th>
                       <td>45213</td>
                       <td>Joel Miller</td>
@@ -49,7 +49,7 @@
                       <td>TA</td>
                       <td>45</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">2</th>
                       <td>75412</td>
                       <td>Chance Morris</td>
@@ -57,7 +57,7 @@
                       <td>Marker</td>
                       <td>75</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">3</th>
                       <td>10052</td>
                       <td>Noctis Lucis Caelum</td>
@@ -81,7 +81,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">1</th>
                       <td>45213</td>
                       <td>Joel Miller</td>
@@ -89,7 +89,7 @@
                       <td>TA</td>
                       <td>45</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">2</th>
                       <td>75412</td>
                       <td>Chance Morris</td>
@@ -97,7 +97,7 @@
                       <td>Marker</td>
                       <td>75</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">3</th>
                       <td>10052</td>
                       <td>Noctis Lucis Caelum</td>
@@ -123,7 +123,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">1</th>
                       <td>45213</td>
                       <td>Joel Miller</td>
@@ -131,7 +131,7 @@
                       <td>TA</td>
                       <td>45</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">2</th>
                       <td>75412</td>
                       <td>Chance Morris</td>
@@ -139,7 +139,7 @@
                       <td>Marker</td>
                       <td>75</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">3</th>
                       <td>10052</td>
                       <td>Noctis Lucis Caelum</td>
@@ -163,7 +163,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">1</th>
                       <td>45213</td>
                       <td>Joel Miller</td>
@@ -171,7 +171,7 @@
                       <td>TA</td>
                       <td>45</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">2</th>
                       <td>75412</td>
                       <td>Chance Morris</td>
@@ -179,7 +179,7 @@
                       <td>Marker</td>
                       <td>75</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-id="1" data-target="#Coursedetail">
                       <th scope="row">3</th>
                       <td>10052</td>
                       <td>Noctis Lucis Caelum</td>
@@ -195,6 +195,44 @@
         </div>
       </div>
     </div>
+</div>
+<script type="text/javascript" src="../styles/architectui-html-free/architectui-html-free/assets/scripts/main.js"></script>
+<script>
+// taken from https://stackoverflow.com/questions/18995461/how-can-i-show-data-using-a-modal-when-clicking-a-table-row-using-bootstrap
+$(function(){
+  $('#orderModal').modal({
+    keyboard: true,
+    backdrop: "static",
+    show:false,
 
-    <script type="text/javascript" src="../styles/architectui-html-free/architectui-html-free/assets/scripts/main.js"></script></body>
-    </html>
+  }).on('show', function(){ //subscribe to show method
+    var getIdFromRow = $(event.target).closest('tr').data('id'); //get the id from tr
+    //make your ajax call populate items or what even you need
+    $(this).find('#orderDetails').html($('<b> Order Id selected: ' + getIdFromRow  + '</b>'))
+  });
+});
+</script>
+</body>
+</html>
+<!-- Large modal -->
+
+<div id="Coursedetail" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Course Detail</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
