@@ -45,7 +45,7 @@
                     </button>
                 </span>
             </div>    <div class="app-header__content">
-                
+
                 <div class="app-header-right">
                     <div class="header-btn-lg pr-0">
                         <div class="widget-content p-0">
@@ -54,9 +54,9 @@
                                     <div class="btn-group">
                                         <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
                                             <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">
-                                            
+
                                         </a>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="widget-content-left  ml-3 header-user-info">
@@ -67,7 +67,7 @@
                                         Professor
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>        </div>
@@ -106,33 +106,33 @@
                     </div>    <div class="scrollbar-sidebar ps ps--active-y">
                         <div class="app-sidebar__inner">
                             <ul class="vertical-nav-menu metismenu">
-                                
+
                                 <li>
                                     <a href="jobs.html">
                                         <i class="metismenu-icon pe-7s-pendrive"></i>
                                         Jobs
                                     </a>
                                 </li>
-                                
-								
+
+
                                 <li>
                                     <a href="profile.html">
                                         <i class="metismenu-icon pe-7s-user"></i>
                                         My profile
                                     </a>
-                                    
+
                                 </li>
-                                
-								
+
+
                                 <li>
                                     <a href="courses.html" class="mm-active">
                                         <i class="metismenu-icon pe-7s-file"></i>
                                         Courses
-                                        
+
                                     </a>
-                                    
+
                                 </li>
-                                
+
                                 <li>
                                     <a href="feedback.html" class="mm-active">
                                         <i class="metismenu-icon pe-7s-id"></i>
@@ -142,18 +142,83 @@
                             </ul>
                         </div>
                     <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 706px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 589px;"></div></div></div>
-                </div>    <div class="app-main__outer"></div>
+                </div>    <div class="app-main__outer">
                     <div class="app-main__inner">
 						<!-- TA courses by Nh -->
 						<div class = "row">
-							
-							
+              <div class="col-auto">
+                <div class="main-card mb-3 card">
+                  <div class="card-body"><h5 class="card-title">Semester A</h5>
+                    <table class="mb-0 table table-hover table-responsive-xl">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Course code</th>
+                          <th>Course name</th>
+                          <th>Instructor</th>
+                          <th>Position</th>
+                          <th>Total hours</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-toggle="modal" data-id="1" data-target="#TAdetail">
+                          <th scope="row">1</th>
+                          <td>CSCI XXXX</td>
+                          <td>Intro to Computer Science</td>
+                          <td>Joe Miller</td>
+                          <td>TA</td>
+                          <td>45</td>
+                        </tr>
+                        <tr data-toggle="modal" data-id="2" data-target="#TAdetail">
+                          <th scope="row">2</th>
+                          <td>CSCI XXXX</td>
+                          <td>Operate System</td>
+                          <td>John Snow</td>
+                          <td>Marker</td>
+                          <td>75</td>
+                        </tr>
+                        <tr data-toggle="modal" data-id="3" data-target="#TAdetail">
+                          <th scope="row">3</th>
+                          <td>CSCI XXXX</td>
+                          <td>Programming Structure</td>
+                          <td>Noctis Lucis Caelum</td>
+                          <td>TA/Marker</td>
+                          <td>30</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+</div>
 						</div>
-						
+
                     </div>
                         </div>
-                
+
         </div>
     </div>
 <script type="text/javascript" src="./assets/scripts/main.js"></script>
+<script type="text/javascript" src="../scripts/scripts.pcourses.js"></script>
+
 <div class="jvectormap-tip"></div></body></html>
+<div id="TAdetail" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Course Detail</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
