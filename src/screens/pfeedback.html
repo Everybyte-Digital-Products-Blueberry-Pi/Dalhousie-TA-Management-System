@@ -16,6 +16,10 @@
     />
     <meta name="msapplication-tap-highlight" content="no" />
     <link href="./main.css" rel="stylesheet" />
+    <link
+      href="../styles/seiyria-slider/bootstrap-slider/dist/css/bootstrap-slider.min.css"
+      rel="stylesheet"
+    />
     <style type="text/css">
       /* Chart.js */
       @-webkit-keyframes chartjs-render-animation {
@@ -226,13 +230,118 @@
         </div>
         <div class="app-main__outer">
           <div class="app-main__inner">
-            <!-- Prof feedback by Ab -->
-            <div class="row"></div>
+            <div class="row">
+              <!-- Abdullah -->
+              <div class="col-md-6">
+                <div class="main-card mb-3 card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Darren Williams | TA | CSCI 1800 F18
+                    </h5>
+                    <h6 class="card-subtitle">Feedback Form</h6>
+
+                    <div class="main-card mb-3 card">
+                      <div class="card-body">
+                        <div class="card-subtitle">Organisation</div>
+                        <input
+                          id="ex1"
+                          type="text"
+                          data-slider-ticks="[0, 100, 200, 300, 400]"
+                          data-slider-ticks-snap-bounds="30"
+                          data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                        />
+                        <br />
+                        <br />
+                        <div class="card-subtitle">Teamwork</div>
+                        <input
+                          id="ex2"
+                          type="text"
+                          data-slider-ticks="[0, 100, 200, 300, 400]"
+                          data-slider-ticks-snap-bounds="30"
+                          data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                        />
+                        <br />
+                        <br />
+                        <div class="card-subtitle">Time Management</div>
+                        <input
+                          id="ex3"
+                          type="text"
+                          data-slider-ticks="[0, 100, 200, 300, 400]"
+                          data-slider-ticks-snap-bounds="30"
+                          data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                        />
+                        <br />
+                        <br />
+                        <div class="card-subtitle">Course Knowledge</div>
+                        <input
+                          id="ex4"
+                          type="text"
+                          data-slider-ticks="[0, 100, 200, 300, 400]"
+                          data-slider-ticks-snap-bounds="30"
+                          data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                        />
+                        <br />
+                        <br />
+                        <div class="card-subtitle">Student Engagement</div>
+                        <input
+                          id="ex5"
+                          type="text"
+                          data-slider-ticks="[0, 100, 200, 300, 400]"
+                          data-slider-ticks-snap-bounds="30"
+                          data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                        />
+                      </div>
+                    </div>
+                    <div class="main-card mb-3 card">
+                      <div class="card-body">
+                        <h5 class="card-subtitle">Comments</h5>
+                        <div>
+                          <textarea
+                            name="text"
+                            id="exampleText"
+                            class="form-control"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="mt-1 btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
+    <script src="../styles/seiyria-slider/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <script>
+      var slider1 = new Slider("#ex1", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider2 = new Slider("#ex2", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider3 = new Slider("#ex3", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider4 = new Slider("#ex4", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider5 = new Slider("#ex5", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+    </script>
     <div class="jvectormap-tip"></div>
   </body>
 </html>
