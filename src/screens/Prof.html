@@ -157,7 +157,26 @@
 						<div class="row">
 							<!-- Quick Post a job by ZH (Drafts) -->
                             <div class="col-md-12 col-lg-6">
-                                <div class="mb-3 card">
+                                <div class="mb-3 card"><h5 class="card-title">Post A New Job</h5>
+    <form class="">
+        <div class="position-relative form-group"><label for="jobTitleSearch" class="">Job Title</label><input name="jobtitle" id="jobTitleSearch" placeholder="Job Title" class="form-control"></div>
+        
+        <div class="position-relative form-group"><label for="payPost" class="">Pay Rate</label><input name="payrate" id="payPost" placeholder="Pay Rate" type="number" class="form-control"></div>
+        <div class="position-relative form-group"><label for="facultySelection" class="">Type</label><select name="typeselect" id="typeSelection" class="form-control">
+            <option>-----Select One-----</option>
+            <option>Hourly</option>
+            <option>Weekly</option>
+            <option>Monthly</option>
+        </select></div>
+        <div class="position-relative form-group"><label for="workHours" class="">Work Hours Per Week</label><input name="hours" id="workHours" placeholder="Work Hours" type="number" class="form-control"></div>
+        <div class="position-relative form-group"><label for="jobDescriptionSearch" class="">Job Discription</label><input name="jobdescription" id="jobDescriptionSearch" placeholder="Job Description" class="form-control"></div>
+        <div class="position-relative form-group"><label for="jobRequirementSearch" class="">Job Requirement</label><input name="jobrequirement" id="jobRequirementSearch" placeholder="Job Requirement" class="form-control"></div>
+        <div class="position-relative form-group"><label for="additionInfoSearch" class="">Additional Info</label><textarea name="additioninfo" id="additionInfoSearch" class="form-control"></textarea></div>
+        <div class="position-relative form-group"><label for="ddlPost" class="">Application Deadline</label><input name="ddl" id="ddlPost" placeholder="" type="date" class="form-control"></div>
+        <button class="mt-1 btn btn-primary">Post the job</button>
+        <button class="mt-1 btn btn-primary">Save as Draft</button>
+    </form>
+</div>
                                     
                                     
                                 </div>
@@ -174,7 +193,93 @@
 						
 						<!-- Recent job postings by ZH-->
                         <div class="row">
-						
+				<div class="main-card mb-3 card">
+    <div class="card-body"><h5 class="card-title">Recent Postings</h5>
+        <table class="mb-0 table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>Job ID</th>
+                    <th>Course Name</th>
+                    <th>Course Code</th>
+                    <th>Tags</th>
+                    <th>Time</th>
+                    <th>Instructor</th>
+                    <th>Rate of Pay</th>
+                    <th>Application deadline</th>
+                    <th>Application status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><a href="">99999</a></th>
+                    <td>Introduction to Computer System</td>
+                    <td>CSCI 1120</td>
+                    <td><div class="mb-2 mr-2 badge badge-secondary">System</div></td>
+                    <td>MWF 11.30-12.30</td>
+                    <td>Someone</td>
+                    <td>21</td>
+                    <td>2077.02.31</td>
+                    <td><div class="mb-2 mr-2 badge badge-success">Approved</div>
+                    </td></tr>
+                    <tr>
+                        <th scope="row"><a href="">99998</a></th>
+                        <td>Introduction to Computer System</td>
+                        <td>CSCI 1120</td>
+                        <td><div class="mb-2 mr-2 badge badge-secondary">System</div></td>
+                        <td>MWF 11.30-12.30</td>
+                        <td>Someone</td>
+                        <td>21</td>
+                        <td>2077.02.31</td>
+                        <td><div class="mb-2 mr-2 badge badge-primary">Processing</div>
+                        </td></tr>
+                        <tr>
+                            <th scope="row"><a href="">99997</a></th>
+                            <td>Introduction to Computer System</td>
+                            <td>CSCI 1120</td>
+                            <td><div class="mb-2 mr-2 badge badge-secondary">System</div></td>
+                            <td>MWF 11.30-12.30</td>
+                            <td>Someone</td>
+                            <td>21</td>
+                            <td>2077.02.31</td>
+                            <td><div class="mb-2 mr-2 badge badge-danger">Not Approved</div>
+                            </td></tr>
+                            <tr>
+                                <th scope="row"><a href="">99996</a></th>
+                                <td>Introduction to Computer System</td>
+                                <td>CSCI 1120</td>
+                                <td><div class="mb-2 mr-2 badge badge-secondary">System</div></td>
+                                <td>MWF 11.30-12.30</td>
+                                <td>Someone</td>
+                                <td>21</td>
+                                <td>2077.02.31</td>
+                                <td><div class="mb-2 mr-2 badge badge-info">Applied</div>
+                                </td></tr>
+                                <tr>
+                                    <th scope="row"><a href="">99995</a></th>
+                                    <td>Introduction to Computer System</td>
+                                    <td>CSCI 1120</td>
+                                    <td><div class="mb-2 mr-2 badge badge-secondary">System</div></td>
+                                    <td>MWF 11.30-12.30</td>
+                                    <td>Someone</td>
+                                    <td>21</td>
+                                    <td>2077.02.31</td>
+                                    <td>
+                                    </td></tr>
+                                </tbody>
+                            </table>
+                            <nav class="" aria-label="Page navigation example">
+                                <ul class="pagination pagination-sm">
+                                    <li class="page-item"><a href="javascript:void(0);" class="page-link" aria-label="Previous"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+                                    <li class="page-item"><a href="javascript:void(0);" class="page-link">1</a></li>
+                                    <li class="page-item"><a href="javascript:void(0);" class="page-link">2</a></li>
+                                    <li class="page-item"><a href="javascript:void(0);" class="page-link">3</a></li>
+                                    <li class="page-item"><a href="javascript:void(0);" class="page-link">4</a></li>
+                                    <li class="page-item"><a href="javascript:void(0);" class="page-link">5</a></li>
+                                    <li class="page-item"><a href="javascript:void(0);" class="page-link" aria-label="Next"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+                                </ul>
+                            </nav>
+                        </div> 
+                    </div>		
                         </div>
                     </div>
                         </div>
