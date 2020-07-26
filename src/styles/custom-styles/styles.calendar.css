@@ -1,0 +1,47 @@
+.calendar__week,
+.calendar__header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+}
+.calendar__week { 
+  grid-auto-rows: 100px;
+}
+
+.calendar__week > p {
+  text-align: center;
+}
+
+.calendar__date {
+  text-align: right;
+}
+
+.calendar__header {
+  grid-auto-rows: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.calendar__day {
+  padding: 16px;
+  text-align: right;
+}
+
+
+.calendar {
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  width: 270px;
+  position: absolute;
+  right: 150px;
+}
+
+
+.calendar__header > div {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.calendar__day {
+  border-right: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+}
