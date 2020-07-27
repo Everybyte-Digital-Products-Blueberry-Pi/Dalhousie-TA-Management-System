@@ -230,7 +230,32 @@
             <div class="row">
               <!-- Hours of submission by Ab -->
               <div class="col-md-12 col-lg-6">
-                <div class="mb-3 card"></div>
+                <div class="mb-3 card">
+                  <div class="ml-3 mt-3 card-title">Hour Submission</div>
+                  <div class="ml-3 mr-3 position-relative form-group">
+                    <label for="exampleCustomSelect" class=""
+                      >Select Course</label
+                    ><select
+                      type="select"
+                      id="exampleCustomSelect"
+                      name="customSelect"
+                      class="custom-select"
+                    >
+                      <option value="">Select</option>
+                      <option>CSCI 1800 MK</option>
+                      <option>CSCI 2100 TA</option>
+                      <option>CSCI 3000 MK</option>
+                    </select>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn ml-2 mb-2 mr-2 btn-primary"
+                    data-toggle="modal"
+                    data-target="#modalTAHSub"
+                  >
+                    Feedback
+                  </button>
+                </div>
               </div>
 
               <!-- Calendar by Su -->
@@ -284,6 +309,153 @@
       </div>
     </div>
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
+    <!-- Modal TA Hour Submission-->
+    <div
+      class="modal fade"
+      id="modalTAHSub"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style="display: none;"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card-body">
+              <h5 class="card-title">Basic Information</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Emplyoyee Name: Abdullah X
+                </li>
+                <li class="list-group-item">Current Dal Student: Yes</li>
+                <li class="list-group-item">ID# B00xxxxxx</li>
+                <li class="list-group-item">Instructor: Andrew X</li>
+                <li class="list-group-item">
+                  Course ID &amp; CRN no: CSCI 8000 / 123456
+                </li>
+                <li class="list-group-item">Term: Summer</li>
+                <li class="list-group-item">Year: 2020</li>
+              </ul>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">
+                Teaching Assistant Duties Form
+              </h5>
+              <h6 class="card-subtitle">
+                Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
+              </h6>
+              <form class="">
+                <div class="form-row">
+                  <div class="col-md-auto">
+                    <div class="position-relative form-group">
+                      <label for="exampleCustomSelect" class=""
+                        >Total Hours</label
+                      ><select
+                        type="select"
+                        id="exampleCustomSelect"
+                        name="customSelect"
+                        class="custom-select"
+                      >
+                        <option value="">Select</option>
+                        <option>25</option>
+                        <option>35</option>
+                        <option>45</option>
+                        <option>65</option>
+                        <option>90</option>
+                        <option>110</option>
+                        <option>130</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                    <div class="position-relative form-group">
+                      <label for="examplePassword11" class=""
+                        >Note: Above TA assignment together with other TA
+                        assignments for other courses cannot exceed 130 hours
+                        per semester - as per (^) </label
+                      ><input
+                        placeholder="Enter total hours"
+                        type="text"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-prepend" style="width: 30%;">
+                        <span class="input-group-text" style="width: 100%;"
+                          >In-Class Duties</span
+                        >
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter hours"
+                      />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                      <div class="input-group-prepend" style="width: 30%;">
+                        <span class="input-group-text" style="width: 100%;"
+                          >Office Duties</span
+                        >
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter hours"
+                      />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                      <div class="input-group-prepend" style="width: 30%;">
+                        <span class="input-group-text" style="width: 100%;"
+                          >Marking, Grading, Invigilating</span
+                        >
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter hours"
+                      />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                      <div class="input-group-prepend" style="width: 30%;">
+                        <span class="input-group-text" style="width: 100%;"
+                          >Others</span
+                        >
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter hours"
+                      />
+                    </div>
+                    <br />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="jvectormap-tip"></div>
   </body>
 </html>
