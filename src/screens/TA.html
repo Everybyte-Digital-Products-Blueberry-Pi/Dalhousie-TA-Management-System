@@ -456,6 +456,86 @@
         </div>
       </div>
     </div>
+    <!-- Modal Marker Hour Submission-->
+    <div
+      class="modal fade"
+      id="modalMKSub"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style="display: none;"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card-body">
+              <h5 class="card-title">Basic Information</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Emplyoyee Name: Abdullah X
+                </li>
+                <li class="list-group-item">Current Dal Student: Yes</li>
+                <li class="list-group-item">ID# B00xxxxxx</li>
+                <li class="list-group-item">Instructor: Andrew X</li>
+                <li class="list-group-item">
+                  Course ID &amp; CRN no: CSCI 8000 / 123456
+                </li>
+                <li class="list-group-item">Term: Summer</li>
+                <li class="list-group-item">Year: 2020</li>
+              </ul>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">
+                Marker Form
+              </h5>
+              <h6 class="card-subtitle">
+                *Please note that the estimated # of hours is for budget
+                forecasting only and should not be interpreted as an employment
+                contract for a specific number of hours of work. Reporting hours
+                will be done through Timesheets to be submitted bi-weekly by
+                approver to timesheets@cs.dal.ca by due dates outlined in Marker
+                Timesheets. (^)
+              </h6>
+              <form class="">
+                <div class="form-row">
+                  <div class="col-md-auto">
+                    <div class="position-relative form-group">
+                      <label for="examplePassword11" class=""
+                        >Estimated # of marking hours</label
+                      ><input
+                        placeholder="Enter hours"
+                        type="number"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <button class="mt-2 btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="jvectormap-tip"></div>
   </body>
 </html>
