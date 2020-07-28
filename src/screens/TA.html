@@ -50,6 +50,22 @@
       charset="UTF-8"
       src="http://maps.google.com/maps-api-v3/api/js/41/7/intl/en_gb/util.js"
     ></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+          var optionValue = $(this).attr("value");
+          if(optionValue){
+            $(".box").not("." + optionValue).hide();
+            $("." + optionValue).show();
+          } else{
+            $(".box").hide();
+          }
+        });
+      }).change();
+    });
+  </script>
   </head>
   <body>
     <div
@@ -368,10 +384,10 @@
                         <option>90</option>
                         <option>110</option>
                         <option>130</option>
-                        <option>Other</option>
+                        <option value="True">Other</option>
                       </select>
                     </div>
-                    <div class="position-relative form-group">
+                    <div class="position-relative form-group True box">
                       <label for="examplePassword11" class=""
                         >Note: Above TA assignment together with other TA
                         assignments for other courses cannot exceed 130 hours
