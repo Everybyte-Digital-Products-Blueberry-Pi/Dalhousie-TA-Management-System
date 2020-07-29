@@ -16,6 +16,10 @@
     />
     <meta name="msapplication-tap-highlight" content="no" />
     <link href="./main.css" rel="stylesheet" />
+    <link
+      href="../styles/seiyria-slider/bootstrap-slider/dist/css/bootstrap-slider.min.css"
+      rel="stylesheet"
+    />
     <style type="text/css">
       /* Chart.js */
       @-webkit-keyframes chartjs-render-animation {
@@ -227,7 +231,7 @@
                 <div class="main-card mb-3 card">
                   <h4>Winter 2020</h4>
                   <div class="card-body">
-                    <h5 class="card-title">Course A</h5>
+                    <h5 class="card-title">CSCI 1800</h5>
                     <table class="mb-0 table table-hover table-responsive">
                       <thead>
                         <tr>
@@ -237,50 +241,69 @@
                           <th>B00 Number</th>
                           <th>Position</th>
                           <th>Total hours</th>
+                          <th>Feedback</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">1</th>
                           <td>45213</td>
                           <td>Joel Miller</td>
                           <td>B00123456</td>
                           <td>TA</td>
                           <td>45</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">2</th>
                           <td>75412</td>
                           <td>Chance Morris</td>
                           <td>B00789456</td>
                           <td>Marker</td>
                           <td>75</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">3</th>
                           <td>10052</td>
                           <td>Noctis Lucis Caelum</td>
                           <td>B00412563</td>
                           <td>TA/Marker</td>
                           <td>100</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title">Course B</h5>
+                    <h5 class="card-title">CSCI 3100</h5>
                     <table class="mb-0 table table-hover table-responsive">
                       <thead>
                         <tr>
@@ -290,44 +313,63 @@
                           <th>B00 Number</th>
                           <th>Position</th>
                           <th>Total hours</th>
+                          <th>Feedback</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">1</th>
                           <td>45213</td>
                           <td>Joel Miller</td>
                           <td>B00123456</td>
                           <td>TA</td>
                           <td>45</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">2</th>
                           <td>75412</td>
                           <td>Chance Morris</td>
                           <td>B00789456</td>
                           <td>Marker</td>
                           <td>75</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">3</th>
                           <td>10052</td>
                           <td>Noctis Lucis Caelum</td>
                           <td>B00412563</td>
                           <td>TA/Marker</td>
                           <td>100</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -336,7 +378,7 @@
                 <div class="main-card mb-3 card">
                   <h4>Fall 2019</h4>
                   <div class="card-body">
-                    <h5 class="card-title">Course A</h5>
+                    <h5 class="card-title">CSCI 1800</h5>
                     <table class="mb-0 table table-hover table-responsive">
                       <thead>
                         <tr>
@@ -346,50 +388,69 @@
                           <th>B00 Number</th>
                           <th>Position</th>
                           <th>Total hours</th>
+                          <th>Feedback</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">1</th>
                           <td>45213</td>
                           <td>Joel Miller</td>
                           <td>B00123456</td>
                           <td>TA</td>
                           <td>45</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">2</th>
                           <td>75412</td>
                           <td>Chance Morris</td>
                           <td>B00789456</td>
                           <td>Marker</td>
                           <td>75</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">3</th>
                           <td>10052</td>
                           <td>Noctis Lucis Caelum</td>
                           <td>B00412563</td>
                           <td>TA/Marker</td>
                           <td>100</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title">Course B</h5>
+                    <h5 class="card-title">CSCI 3100</h5>
                     <table class="mb-0 table table-hover table-responsive">
                       <thead>
                         <tr>
@@ -399,44 +460,63 @@
                           <th>B00 Number</th>
                           <th>Position</th>
                           <th>Total hours</th>
+                          <th>Feedback</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">1</th>
                           <td>45213</td>
                           <td>Joel Miller</td>
                           <td>B00123456</td>
                           <td>TA</td>
                           <td>45</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">2</th>
                           <td>75412</td>
                           <td>Chance Morris</td>
                           <td>B00789456</td>
                           <td>Marker</td>
                           <td>75</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
-                        <tr
-                          data-toggle="modal"
-                          data-id="1"
-                          data-target="#Coursedetail"
-                        >
+                        <tr>
                           <th scope="row">3</th>
                           <td>10052</td>
                           <td>Noctis Lucis Caelum</td>
                           <td>B00412563</td>
                           <td>TA/Marker</td>
                           <td>100</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn mt-1 btn-primary"
+                              data-toggle="modal"
+                              data-target="#feedbackEval"
+                            >
+                              Evaluate
+                            </button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -448,53 +528,147 @@
         </div>
       </div>
     </div>
+    >
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
+    <!--Modal Feedback Evaluation-->
+    <div
+      class="modal fade"
+      id="feedbackEval"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style="display: none;"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Mark Robbers (TA) | CSCI 1800 | Feedback
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="main-card mb-3 card">
+              <div class="card-body">
+                <div class="card-subtitle">Organisation</div>
+                <input
+                  id="ex1"
+                  type="text"
+                  data-slider-ticks="[0, 100, 200, 300, 400]"
+                  data-slider-ticks-snap-bounds="30"
+                  data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                />
+                <br />
+                <br />
+                <div class="card-subtitle">Teamwork</div>
+                <input
+                  id="ex2"
+                  type="text"
+                  data-slider-ticks="[0, 100, 200, 300, 400]"
+                  data-slider-ticks-snap-bounds="30"
+                  data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                />
+                <br />
+                <br />
+                <div class="card-subtitle">Time Management</div>
+                <input
+                  id="ex3"
+                  type="text"
+                  data-slider-ticks="[0, 100, 200, 300, 400]"
+                  data-slider-ticks-snap-bounds="30"
+                  data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                />
+                <br />
+                <br />
+                <div class="card-subtitle">Course Knowledge</div>
+                <input
+                  id="ex4"
+                  type="text"
+                  data-slider-ticks="[0, 100, 200, 300, 400]"
+                  data-slider-ticks-snap-bounds="30"
+                  data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                />
+                <br />
+                <br />
+                <div class="card-subtitle">Student Engagement</div>
+                <input
+                  id="ex5"
+                  type="text"
+                  data-slider-ticks="[0, 100, 200, 300, 400]"
+                  data-slider-ticks-snap-bounds="30"
+                  data-slider-ticks-labels='["Poor", "Okay", "Moderate", "Good", "Excellent"]'
+                />
+              </div>
+            </div>
+            <div class="main-card mb-3 card">
+              <div class="card-body">
+                <h5 class="card-subtitle">Comments</h5>
+                <div>
+                  <textarea
+                    name="text"
+                    id="exampleText"
+                    class="form-control"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              Save Changes
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../styles/seiyria-slider/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <script>
+      var slider1 = new Slider("#ex1", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider2 = new Slider("#ex2", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider3 = new Slider("#ex3", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider4 = new Slider("#ex4", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider5 = new Slider("#ex5", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+    </script>
     <script
       type="text/javascript"
       src="../scripts/scripts.pcourses.js"
     ></script>
+
     <div class="jvectormap-tip"></div>
   </body>
 </html>
-
-<div
-  id="Coursedetail"
-  class="modal fade"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="myLargeModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Course Detail</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-        <p>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-          Close
-        </button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
