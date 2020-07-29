@@ -50,12 +50,6 @@
       charset="UTF-8"
       src="http://maps.google.com/maps-api-v3/api/js/41/7/intl/en_gb/util.js"
     ></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script
-      type="text/javascript"
-      charset="UTF-8"
-      src="../scripts/scripts.TA.js"
-    ></script>
   </head>
   <body>
     <div
@@ -63,8 +57,7 @@
     >
       <div class="app-header header-shadow">
         <div class="app-header__logo">
-          <div><h5>DALTAMS</h5></div>
-          <div><h6>TA Dashboard</h6></div>
+          <div class="logo-src"></div>
           <div class="header__pane ml-auto">
             <div>
               <button
@@ -142,8 +135,7 @@
       <div class="app-main">
         <div class="app-sidebar sidebar-shadow">
           <div class="app-header__logo">
-            <div><h5>DALTAMS</h5></div>
-            <div><h6>TA Dashboard</h6></div>
+            <div class="logo-src"></div>
             <div class="header__pane ml-auto">
               <div>
                 <button
@@ -195,14 +187,21 @@
                 <li>
                   <a href="profile.html" class="mm-active">
                     <i class="metismenu-icon pe-7s-user"></i>
-                    My Dashboard
+                    My profile
                   </a>
                 </li>
 
                 <li>
-                  <a href="TAcourses.html">
+                  <a href="courses.html">
                     <i class="metismenu-icon pe-7s-file"></i>
-                    My Courses
+                    Courses
+                  </a>
+                </li>
+
+                <li>
+                  <a href="feedback.html">
+                    <i class="metismenu-icon pe-7s-id"></i>
+                    Feedback
                   </a>
                 </li>
               </ul>
@@ -226,42 +225,80 @@
             </div>
           </div>
         </div>
+        <?php
+        session_start();
+        $_SESSION['cc'] = "hj";
+          $courses=array();
+          $courses['CSCI 1800']=array(
+              "eName" => "John Doe", 
+              "CurrStudent" => "Yes", 
+              "Id" => "B00123456", 
+              "CourseID" => "CSCI 1800",
+              "Term" =>"Fall",
+              "year"=>"2021", 
+              "iName" => "Andrew X",
+              "CRN" => "1234" 
+          );
+          $courses['CSCI 2100']=array(
+              "eName" => "Don Joe", 
+              "CurrStudent" => "Yes", 
+              "Id" => "B00456123", 
+              "CourseID" => "CSCI 2100",
+              "Term" =>"Winter",
+              "year"=>"2021", 
+              "iName" => "David Y",
+              "CRN" => "4561" 
+          );
+          $courses['CSCI 3000']=array(
+              "eName" => "John Noe", 
+              "CurrStudent" => "Yes", 
+              "Id" => "B00987654", 
+              "CourseID" => "CSCI 3000",
+              "Term" =>"Summer",
+              "year"=>"2022", 
+              "iName" => "Andrew Z",
+              "CRN" => "4563" 
+          );
+          
+        ?>
         <div class="app-main__outer">
           <div class="app-main__inner">
             <div class="row">
               <!-- Hours of submission by Ab -->
-              <div class="col-md-12 col-lg-6">
+              <form class="col-md-12 col-lg-6" method="post" action="TA.php"> 
                 <div class="mb-3 card">
                   <div class="ml-3 mt-3 card-title">Hour Submission</div>
                   <div class="ml-3 mr-3 position-relative form-group">
                     <label for="exampleCustomSelect" class=""
                       >Select Course</label
                     ><select
-                      type="select"
-                      id="exampleCustomSelect"
-                      name="customSelect"
+                      name="Courses"
                       class="custom-select"
                     >
                       <option value="">Select</option>
-                      <option>CSCI 1800 MK</option>
-                      <option>CSCI 2100 TA</option>
-                      <option>CSCI 3000 MK</option>
+                      <option value="CSCI 1800">CSCI 1800 MK</option>
+                      <option value="CSCI 2100">CSCI 2100 TA</option>
+                      <option value="CSCI 3000">CSCI 3000 MK</option>
                     </select>
                   </div>
-                  <div class="col-md-6 mb-3">
-                    <button
-                      type="submit"
-                      data-toggle="modal"
-                      data-id="1"
-                      data-target="#modalTAHSub"
-                      class="btn btn-primary"
-                    >
-                      Proceed
-                    </button>
-                  </div>
+                  <input
+                    type="submit"
+                    name="submit"
+                    class="btn ml-2 mb-2 mr-2 btn-primary"
+                    value= "Feedback"
+                  />
+                  <button type="button" lass="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
+                    data-target="#modalTAHSub">Submit</button>
                 </div>
-              </div>
+              </form>
 
+              <?php
+                if(isset($_POST['submit']))
+                {  
+                  $course = $_POST['Courses'];  // Storing Selected Value In Variable
+                  $_SESSION['course'] = $course;
+                }
+              ?>
               <!-- Calendar by Su -->
               <div class="col-md-12 col-lg-6">
                 <div class="mb-3 card">
@@ -269,6 +306,10 @@
                     <div class="card-title">Mon</div>
                     <div class="card-title">Tue</div>
                     <div class="card-title">Wed</div>
+                    <!-- <div>thu</div>
+                                        <div>fri</div>
+                                        <div>sat</div>
+                                        <div>sun</div> -->
                   </div>
                   <div class="calendar__week">
                     <div class="calendar__day">
@@ -337,16 +378,16 @@
               <h5 class="card-title">Basic Information</h5>
               <ul class="list-group">
                 <li class="list-group-item">
-                  Emplyoyee Name: Abdullah X
+                  Emplyoyee Name: <?php echo $courses[$course]['eName']  ?>
                 </li>
-                <li class="list-group-item">Current Dal Student: Yes</li>
-                <li class="list-group-item">ID# B00xxxxxx</li>
-                <li class="list-group-item">Instructor: Andrew X</li>
+                <li class="list-group-item">Current Dal Student: <?php echo $courses[$course]['CurrStudent']  ?></li>
+                <li class="list-group-item">ID#: <?php echo $courses[$course]['Id']  ?></li>
+                <li class="list-group-item">Instructor: <?php echo $courses[$course]['iName']  ?></li>
                 <li class="list-group-item">
-                  Course ID &amp; CRN no: CSCI 8000 / 123456
+                  Course ID &amp; CRN no: <?php echo $courses[$course]['CourseID']  ?> / <?php echo $courses[$course]['CRN']  ?>
                 </li>
-                <li class="list-group-item">Term: Summer</li>
-                <li class="list-group-item">Year: 2020</li>
+                <li class="list-group-item">Term: <?php echo $courses[$course]['Term']  ?></li>
+                <li class="list-group-item">Year: <?php echo $courses[$course]['year']  ?></li>
               </ul>
             </div>
 
@@ -357,7 +398,7 @@
               <h6 class="card-subtitle">
                 Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
               </h6>
-              <form class="">
+              <form class="" method="post" action="insert.php">
                 <div class="form-row">
                   <div class="col-md-auto">
                     <div class="position-relative form-group">
@@ -366,21 +407,21 @@
                       ><select
                         type="select"
                         id="exampleCustomSelect"
-                        name="customSelect"
+                        name="tHours"
                         class="custom-select"
                       >
                         <option value="">Select</option>
-                        <option>25</option>
-                        <option>35</option>
-                        <option>45</option>
-                        <option>65</option>
-                        <option>90</option>
-                        <option>110</option>
-                        <option>130</option>
-                        <option value="True">Other</option>
+                        <option value="25">25</option>
+                        <option value="35">35</option>
+                        <option value="45">45</option>
+                        <option value="65">65</option>
+                        <option value="90">90</option>
+                        <option value="110">110</option>
+                        <option value="130">130</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
-                    <div class="position-relative form-group True box">
+                    <div class="position-relative form-group">
                       <label for="examplePassword11" class=""
                         >Note: Above TA assignment together with other TA
                         assignments for other courses cannot exceed 130 hours
@@ -389,6 +430,7 @@
                         placeholder="Enter total hours"
                         type="text"
                         class="form-control"
+						name="otherTHours"
                       />
                     </div>
                     <div class="input-group">
@@ -401,6 +443,7 @@
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"
+						            name="inclassDuties"
                       />
                     </div>
                     <br />
@@ -414,6 +457,7 @@
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"
+						name="officeDuties"
                       />
                     </div>
                     <br />
@@ -427,6 +471,7 @@
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"
+						name="markingHours"
                       />
                     </div>
                     <br />
@@ -440,20 +485,29 @@
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"
+						name="otherHours"
                       />
                     </div>
                     <br />
                   </div>
                 </div>
+                <?php
+                $page = "insert.php";
+                $target = "_blank" 
+                ?>
+				<?php echo '<input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">' ?>
+				</input>
               </form>
+			 <?php echo $_POST['OtherHours'].$courses[$course]['eName']?>
             </div>
           </div>
-          <div class="modal-footer">
+          <!-- <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-dismiss="modal">
               Submit
             </button>
-          </div>
+          </div> -->
         </div>
+        
       </div>
     </div>
     <!-- Modal Marker Hour Submission-->
@@ -523,6 +577,8 @@
                     </div>
                   </div>
                 </div>
+
+                <button class="mt-2 btn btn-primary">Submit</button>
               </form>
             </div>
           </div>
