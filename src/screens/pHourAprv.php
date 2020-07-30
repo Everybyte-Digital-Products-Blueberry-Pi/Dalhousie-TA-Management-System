@@ -280,6 +280,7 @@
                             <th>Details</th>
                           </tr>
                         </thead>
+<<<<<<< HEAD:src/screens/pHourAprv.php
 <<<<<<< HEAD:src/screens/pHourAprv.html
                         <tbody>
                           <tr>
@@ -436,6 +437,8 @@
                             </td>
                           </tr>
 =======
+=======
+>>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.html
                         <?php 
                         include_once 'connect.php';
                         $sql = "SELECT E_name, DalId, CourseID, id FROM form ORDER BY form.id DESC";
@@ -497,7 +500,10 @@
                             }
                         }
                         ?>
+<<<<<<< HEAD:src/screens/pHourAprv.php
 >>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.php
+=======
+>>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.html
                         </tbody>
                       </table>
                     </div>
@@ -830,6 +836,7 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD:src/screens/pHourAprv.php
 <<<<<<< HEAD:src/screens/pHourAprv.html
 
     <script
@@ -842,6 +849,8 @@
 </script>
 =======
 >>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.php
+=======
+>>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.html
     <div class="jvectormap-tip"></div>
   </body>
 </html>
