@@ -1,0 +1,723 @@
+<!-- Courses will show on click in prof.html. Show courses that a prof is teaching. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Prof Dashboard</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="This is an example dashboard created using build-in elements and components."
+    />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link href="./main.css" rel="stylesheet" />
+    <link
+      href="../styles/seiyria-slider/bootstrap-slider/dist/css/bootstrap-slider.min.css"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      /* Chart.js */
+      @-webkit-keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .chartjs-render-monitor {
+        -webkit-animation: chartjs-render-animation 0.001s;
+        animation: chartjs-render-animation 0.001s;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="http://maps.google.com/maps-api-v3/api/js/41/7/intl/en_gb/common.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="http://maps.google.com/maps-api-v3/api/js/41/7/intl/en_gb/util.js"
+    ></script>
+  </head>
+  <body>
+    <div
+      class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header"
+    >
+      <div class="app-header header-shadow">
+        <div class="app-header__logo">
+          <div><h5>DALTAMS</h5></div>
+          <div><h6>Professor Dashboard</h6></div>
+          <div class="header__pane ml-auto">
+            <div>
+              <button
+                type="button"
+                class="hamburger close-sidebar-btn hamburger--elastic"
+                data-class="closed-sidebar"
+              >
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="app-header__mobile-menu">
+          <div>
+            <button
+              type="button"
+              class="hamburger hamburger--elastic mobile-toggle-nav"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="app-header__menu">
+          <span>
+            <button
+              type="button"
+              class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+            >
+              <span class="btn-icon-wrapper">
+                <i class="fa fa-ellipsis-v fa-w-6"></i>
+              </span>
+            </button>
+          </span>
+        </div>
+        <div class="app-header__content">
+          <div class="app-header-right">
+            <div class="header-btn-lg pr-0">
+              <div class="widget-content p-0">
+                <div class="widget-content-wrapper">
+                  <div class="widget-content-left">
+                    <div class="btn-group">
+                      <a
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        class="p-0 btn"
+                      >
+                        <img
+                          width="42"
+                          class="rounded-circle"
+                          src="assets/images/avatars/1.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="widget-content-left ml-3 header-user-info">
+                    <div class="widget-heading">
+                      BlueBerry Pi
+                    </div>
+                    <div class="widget-subheading">
+                      Professor
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-main">
+        <div class="app-sidebar sidebar-shadow">
+          <div class="app-header__logo">
+            <div class="logo-src"></div>
+            <div class="header__pane ml-auto">
+              <div>
+                <button
+                  type="button"
+                  class="hamburger close-sidebar-btn hamburger--elastic"
+                  data-class="closed-sidebar"
+                >
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="app-header__mobile-menu">
+            <div>
+              <button
+                type="button"
+                class="hamburger hamburger--elastic mobile-toggle-nav"
+              >
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="app-header__menu">
+            <span>
+              <button
+                type="button"
+                class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+              >
+                <span class="btn-icon-wrapper">
+                  <i class="fa fa-ellipsis-v fa-w-6"></i>
+                </span>
+              </button>
+            </span>
+          </div>
+          <div class="scrollbar-sidebar ps ps--active-y">
+            <div class="app-sidebar__inner">
+              <ul class="vertical-nav-menu metismenu">
+                <li>
+                  <a href="Prof.html">
+                    <i class="metismenu-icon pe-7s-user"></i>
+                    My Dashboard
+                  </a>
+                </li>
+
+                <li>
+                  <a href="jobposting.html">
+                    <i class="metismenu-icon pe-7s-file"></i>
+                    View Jobs
+                  </a>
+                </li>
+
+                <li>
+                  <a href="pcourses.html">
+                    <i class="metismenu-icon pe-7s-id"></i>
+                    My Courses
+                  </a>
+                </li>
+
+                <li>
+                  <a href="pHourAprv.html" class="mm-active">
+                    <i class="metismenu-icon pe-7s-file"></i>
+                    Hours Approval
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+              <div
+                class="ps__thumb-x"
+                tabindex="0"
+                style="left: 0px; width: 0px;"
+              ></div>
+            </div>
+            <div
+              class="ps__rail-y"
+              style="top: 0px; height: 706px; right: 0px;"
+            >
+              <div
+                class="ps__thumb-y"
+                tabindex="0"
+                style="top: 0px; height: 589px;"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="app-main__outer">
+          <div class="app-main__inner">
+            <ul
+              class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav"
+            >
+              <li class="nav-item">
+                <a
+                  role="tab"
+                  class="nav-link show active"
+                  id="tab-0"
+                  data-toggle="tab"
+                  href="#tab-content-0"
+                  aria-selected="true"
+                >
+                  <span>TA</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  role="tab"
+                  class="nav-link show"
+                  id="tab-1"
+                  data-toggle="tab"
+                  href="#tab-content-1"
+                  aria-selected="false"
+                >
+                  <span>Marker</span>
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div
+                class="tab-pane tabs-animation fade active show"
+                id="tab-content-0"
+                role="tabpanel"
+              >
+                <div class="main-card mb-3 card">
+                  <div class="card-body">
+                    <h5 class="card-title">TA Hours Approval</h5>
+                    <div class="table-responsive">
+                      <table class="mb-0 table table-hover">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Full Name</th>
+                            <th>B00#</th>
+                            <th>Course ID</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark Otto</td>
+                            <td>B00891215</td>
+                            <td>CSCI 1180</td>
+                            <td>
+                              <div class="mb-2 mr-2 badge badge-success">
+                                Approved
+                              </div>
+                            </td>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn mr-2 mb-2 btn-primary"
+                                data-toggle="modal"
+                                data-target="#exampleModalTAY"
+                              >
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Sreya Goshal</td>
+                            <td>B00891216</td>
+                            <td>CSCI 1183</td>
+                            <td>
+                              <div class="mb-2 mr-2 badge badge-danger">
+                                Declined
+                              </div>
+                            </td>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn mr-2 mb-2 btn-primary"
+                                data-toggle="modal"
+                                data-target="#exampleModalTAY"
+                              >
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Hassan Saleh</td>
+                            <td>B00891217</td>
+                            <td>CSCI 1186</td>
+                            <td>
+                              <div class="mb-2 mr-2 badge badge-warning">
+                                Pending
+                              </div>
+                            </td>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn mr-2 mb-2 btn-primary"
+                                data-toggle="modal"
+                                data-target="#exampleModalTAN"
+                              >
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane tabs-animation fade"
+                id="tab-content-1"
+                role="tabpanel"
+              >
+                <div class="main-card mb-3 card">
+                  <div class="card-body">
+                    <h5 class="card-title">Markers Hours Approval</h5>
+                    <div class="table-responsive">
+                      <table class="mb-0 table table-hover">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Full Name</th>
+                            <th>B00#</th>
+                            <th>Course ID</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark Otto</td>
+                            <td>B00891215</td>
+                            <td>CSCI 1180</td>
+                            <td>
+                              <div class="mb-2 mr-2 badge badge-success">
+                                Approved
+                              </div>
+                            </td>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn mr-2 mb-2 btn-primary"
+                                data-toggle="modal"
+                                data-target="#exampleModalMkY"
+                              >
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Sreya Goshal</td>
+                            <td>B00891216</td>
+                            <td>CSCI 1183</td>
+                            <td>
+                              <div class="mb-2 mr-2 badge badge-danger">
+                                Declined
+                              </div>
+                            </td>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn mr-2 mb-2 btn-primary"
+                                data-toggle="modal"
+                                data-target="#exampleModalMkY"
+                              >
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Hassan Saleh</td>
+                            <td>B00891217</td>
+                            <td>CSCI 1186</td>
+                            <td>
+                              <div class="mb-2 mr-2 badge badge-warning">
+                                Pending
+                              </div>
+                            </td>
+                            <td>
+                              <button
+                                type="button"
+                                class="btn mr-2 mb-2 btn-primary"
+                                data-toggle="modal"
+                                data-target="#exampleModalMkN"
+                              >
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    >
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
+    <!--Modal Feedback Evaluation-->
+    <!-- Modal TA Done-->
+    <div
+      class="modal fade"
+      id="exampleModalTAY"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style="display: none;"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Emplyoyee Name: Abdullah X
+                </li>
+                <li class="list-group-item">Current Dal Student: Yes</li>
+                <li class="list-group-item">ID# B00xxxxxx</li>
+                <li class="list-group-item">
+                  Course ID &amp; CRN no: CSCI 8000 &sol; 123456
+                </li>
+                <li class="list-group-item">Term: Summer</li>
+                <li class="list-group-item">Year: 2020</li>
+                <li class="list-group-item">
+                  Submission Time: 12:30PM, Jan 18, 2020
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">Position: TA</li>
+                <li class="list-group-item">Total Hours: 130</li>
+                <li class="list-group-item">In-Class Duties: 70</li>
+                <li class="list-group-item">Office Duties: 10</li>
+                <li class="list-group-item">
+                  Marking, Grading, Invigilating: 10
+                </li>
+                <li class="list-group-item">Others (Labs): 40</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal TA Undone-->
+    <div
+      class="modal fade"
+      id="exampleModalTAN"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style="display: none;"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Emplyoyee Name: Abdullah X
+                </li>
+                <li class="list-group-item">Current Dal Student: Yes</li>
+                <li class="list-group-item">ID# B00xxxxxx</li>
+                <li class="list-group-item">
+                  Course ID &amp; CRN no: CSCI 8000 &sol; 123456
+                </li>
+                <li class="list-group-item">Term: Summer</li>
+                <li class="list-group-item">Year: 2020</li>
+                <li class="list-group-item">
+                  Submission Time: 12:30PM, Jan 18, 2020
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">Position: TA</li>
+                <li class="list-group-item">Total Hours: 130</li>
+                <li class="list-group-item">In-Class Duties: 70</li>
+                <li class="list-group-item">Office Duties: 10</li>
+                <li class="list-group-item">
+                  Marking, Grading, Invigilating: 10
+                </li>
+                <li class="list-group-item">Others (Labs): 40</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">
+              Approve
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Decline
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Marker Done-->
+    <div
+      class="modal fade"
+      id="exampleModalMkY"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style="display: none;"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Emplyoyee Name: Abdullah X
+                </li>
+                <li class="list-group-item">Current Dal Student: Yes</li>
+                <li class="list-group-item">ID# B00xxxxxx</li>
+                <li class="list-group-item">
+                  Course ID &amp; CRN no: CSCI 8000 &sol; 123456
+                </li>
+                <li class="list-group-item">Term: Summer</li>
+                <li class="list-group-item">Year: 2020</li>
+                <li class="list-group-item">
+                  Submission Time: 12:30PM, Jan 18, 2020
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">Position: Marker</li>
+                <li class="list-group-item">Total Hours: 20</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal TA Undone-->
+    <div
+      class="modal fade"
+      id="exampleModalMkN"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style="display: none;"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Emplyoyee Name: Abdullah X
+                </li>
+                <li class="list-group-item">Current Dal Student: Yes</li>
+                <li class="list-group-item">ID# B00xxxxxx</li>
+                <li class="list-group-item">
+                  Course ID &amp; CRN no: CSCI 8000 &sol; 123456
+                </li>
+                <li class="list-group-item">Term: Summer</li>
+                <li class="list-group-item">Year: 2020</li>
+                <li class="list-group-item">
+                  Submission Time: 12:30PM, Jan 18, 2020
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">Position: Marker</li>
+                <li class="list-group-item">Total Hours: 10</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">
+              Approve
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Decline
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="../scripts/scripts.pcourses.js"
+    ></script>
+
+    <div class="jvectormap-tip"></div>
+  </body>
+</html>
