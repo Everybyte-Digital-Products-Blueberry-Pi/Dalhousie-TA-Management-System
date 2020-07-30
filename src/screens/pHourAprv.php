@@ -280,6 +280,7 @@
                             <th>Details</th>
                           </tr>
                         </thead>
+<<<<<<< HEAD:src/screens/pHourAprv.html
                         <tbody>
                           <tr>
                             <th scope="row">1</th>
@@ -434,6 +435,69 @@
                               </button>
                             </td>
                           </tr>
+=======
+                        <?php 
+                        include_once 'connect.php';
+                        $sql = "SELECT E_name, DalId, CourseID, id FROM form ORDER BY form.id DESC";
+                        $index = 1;
+                        $result = mysqli_query($conn,$sql);
+                        $firstAppId = "";
+                        $secondAppId = "";
+                        $thirdAppId = "";
+                        if(mysqli_num_rows($result)>0)
+                        {
+                            while($row = mysqli_fetch_assoc($result))
+                            {
+                                $eName = $row["E_name"];
+                                $B00 = $row["DalId"];
+                                $cID = $row["CourseID"];
+                                $id = $row["id"];
+                                if($index<4)
+                                {
+                                    echo '<tbody>
+                                    <tr>
+                                    <th scope="row">'.$index.'</th>
+                                    <td>'.$eName.'</td>
+                                    <td>'.$B00.'</td>
+                                    <td>'.$cID.'</td>
+                                    <td>
+                                        <div class="mb-2 mr-2 badge badge-success">
+                                        Approved
+                                        </div>
+                                    </td>
+                                    <td>';
+                                    if($index == 1)
+                                    {
+                                      $modalId = "exampleModalTAY";
+                                      $firstAppId = $id;
+                                    }
+                                    else if($index == 2)
+                                    {
+                                      $modalId = "exampleModalTAN";
+                                      $secondAppId = $id;
+                                    }
+                                    else 
+                                    {
+                                      $modalId = "exampleModalMKY";
+                                      $thirdAppId = $id;
+                                    }
+                                       echo  '<button
+                                        type="button"
+                                        class="btn mr-2 mb-2 btn-primary"
+                                        data-toggle="modal"
+                                        data-target="#'.$modalId.'"
+                                        >
+                                        View
+                                        </button>
+                                    </td>
+                                    </tr>';
+                                }
+                                
+                                $index ++;
+                            }
+                        }
+                        ?>
+>>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.php
                         </tbody>
                       </table>
                     </div>
@@ -445,10 +509,27 @@
         </div>
       </div>
     </div>
-    >
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
     <!--Modal Feedback Evaluation-->
     <!-- Modal TA Done-->
+    <?php
+    $fSql = "SELECT E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, id FROM form WHERE form.id = $firstAppId";
+    $fResult = mysqli_query($conn, $fSql);
+    $fModal = mysqli_fetch_assoc($fResult);
+    $fEName = $fModal["E_name"];
+    $fCurrStd = $fModal["Curr_Dal_stu"];
+    $fDalId = $fModal["DalId"];
+    $fIName = $fModal["IName"];
+    $fCourseId = $fModal["CourseID"];
+    $fCRN = $fModal["CRN"];
+    $fTerm = $fModal["Term"];
+    $fYear = $fModal["Year"];
+    $fTHours = $fModal["Total_hour"];
+    $fCHours = $fModal["IClass_hours"];
+    $fOHours = $fModal["Office_hours"];
+    $fGHours = $fModal["Grading_hours"];
+    $fOHours = $fModal["Other_hours"];
+    ?>
     <div
       class="modal fade"
       id="exampleModalTAY"
@@ -475,15 +556,15 @@
             <div class="card-body">
               <ul class="list-group">
                 <li class="list-group-item">
-                  Emplyoyee Name: Abdullah X
+                  Emplyoyee Name: <?php echo $fEName ?>
                 </li>
                 <li class="list-group-item">Current Dal Student: Yes</li>
-                <li class="list-group-item">ID# B00xxxxxx</li>
+                <li class="list-group-item">ID# <?php echo $fDalId ?></li>
                 <li class="list-group-item">
-                  Course ID &amp; CRN no: CSCI 8000 &sol; 123456
+                  Course ID &amp; CRN no: <?php echo $fCourseId ?> &sol; <?php echo $fCRN ?>
                 </li>
-                <li class="list-group-item">Term: Summer</li>
-                <li class="list-group-item">Year: 2020</li>
+                <li class="list-group-item">Term: <?php echo $fTerm ?></li>
+                <li class="list-group-item">Year: <?php echo $fYear ?></li>
                 <li class="list-group-item">
                   Submission Time: 12:30PM, Jan 18, 2020
                 </li>
@@ -492,13 +573,13 @@
             <div class="card-body">
               <ul class="list-group">
                 <li class="list-group-item">Position: TA</li>
-                <li class="list-group-item">Total Hours: 130</li>
-                <li class="list-group-item">In-Class Duties: 70</li>
-                <li class="list-group-item">Office Duties: 10</li>
+                <li class="list-group-item">Total Hours: <?php echo $fTHours ?></li>
+                <li class="list-group-item">In-Class Duties: <?php echo $fCHours ?></li>
+                <li class="list-group-item">Office Duties: <?php echo $fOHours ?></li>
                 <li class="list-group-item">
-                  Marking, Grading, Invigilating: 10
+                  Marking, Grading, Invigilating: <?php echo $fGHours ?>
                 </li>
-                <li class="list-group-item">Others (Labs): 40</li>
+                <li class="list-group-item">Others (Labs): <?php echo $fOtHours ?></li>
               </ul>
             </div>
           </div>
@@ -515,6 +596,24 @@
       </div>
     </div>
     <!-- Modal TA Undone-->
+    <?php
+    $sSql = "SELECT E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, id FROM form WHERE form.id = $secondAppId";
+    $sResult = mysqli_query($conn, $sSql);
+    $sModal = mysqli_fetch_assoc($sResult);
+    $sEName = $sModal["E_name"];
+    $sCurrStd = $sModal["Curr_Dal_stu"];
+    $sDalId = $sModal["DalId"];
+    $sIName = $sModal["IName"];
+    $sCourseId = $sModal["CourseID"];
+    $sCRN = $sModal["CRN"];
+    $sTerm = $sModal["Term"];
+    $sYear = $sModal["Year"];
+    $sTHours = $sModal["Total_hour"];
+    $sCHours = $sModal["IClass_hours"];
+    $sOHours = $sModal["Office_hours"];
+    $sGHours = $sModal["Grading_hours"];
+    $sOtHours = $sModal["Other_hours"];
+    ?>
     <div
       class="modal fade"
       id="exampleModalTAN"
@@ -541,15 +640,15 @@
             <div class="card-body">
               <ul class="list-group">
                 <li class="list-group-item">
-                  Emplyoyee Name: Abdullah X
+                  Emplyoyee Name: <?php echo $sEName ?>
                 </li>
                 <li class="list-group-item">Current Dal Student: Yes</li>
-                <li class="list-group-item">ID# B00xxxxxx</li>
+                <li class="list-group-item">ID# <?php echo $sDalId ?></li>
                 <li class="list-group-item">
-                  Course ID &amp; CRN no: CSCI 8000 &sol; 123456
+                  Course ID &amp; CRN no: <?php echo $sCourseId ?> &sol; <?php echo $sCRN ?>
                 </li>
-                <li class="list-group-item">Term: Summer</li>
-                <li class="list-group-item">Year: 2020</li>
+                <li class="list-group-item">Term: <?php echo $sTerm ?></li>
+                <li class="list-group-item">Year: <?php echo $sYear ?></li>
                 <li class="list-group-item">
                   Submission Time: 12:30PM, Jan 18, 2020
                 </li>
@@ -558,13 +657,13 @@
             <div class="card-body">
               <ul class="list-group">
                 <li class="list-group-item">Position: TA</li>
-                <li class="list-group-item">Total Hours: 130</li>
-                <li class="list-group-item">In-Class Duties: 70</li>
-                <li class="list-group-item">Office Duties: 10</li>
+                <li class="list-group-item">Total Hours: <?php echo $sTHours ?></li>
+                <li class="list-group-item">In-Class Duties: <?php echo $sCHours ?></li>
+                <li class="list-group-item">Office Duties: <?php echo $sOHours ?></li>
                 <li class="list-group-item">
-                  Marking, Grading, Invigilating: 10
+                  Marking, Grading, Invigilating: <?php echo $sGHours ?>
                 </li>
-                <li class="list-group-item">Others (Labs): 40</li>
+                <li class="list-group-item">Others (Labs): <?php echo $sOtHours ?></li>
               </ul>
             </div>
           </div>
@@ -586,6 +685,25 @@
         </div>
       </div>
     </div>
+
+    <?php
+    $tSql = "SELECT E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, id FROM form WHERE form.id = $thirdAppId";
+    $tResult = mysqli_query($conn, $tSql);
+    $tModal = mysqli_fetch_assoc($tResult);
+    $tEName = $tModal["E_name"];
+    $tCurrStd = $tModal["Curr_Dal_stu"];
+    $tDalId = $tModal["DalId"];
+    $tIName = $tModal["IName"];
+    $tCourseId = $tModal["CourseID"];
+    $tCRN = $tModal["CRN"];
+    $tTerm = $tModal["Term"];
+    $tYear = $tModal["Year"];
+    $tTHours = $tModal["Total_hour"];
+    $tCHours = $tModal["IClass_hours"];
+    $tOHours = $tModal["Office_hours"];
+    $tGHours = $tModal["Grading_hours"];
+    $tOtHours = $tModal["Other_hours"];
+    ?>
     <!-- Modal Marker Done-->
     <div
       class="modal fade"
@@ -613,15 +731,15 @@
             <div class="card-body">
               <ul class="list-group">
                 <li class="list-group-item">
-                  Emplyoyee Name: Abdullah X
+                  Emplyoyee Name: <?php echo $tEName ?>
                 </li>
-                <li class="list-group-item">Current Dal Student: Yes</li>
-                <li class="list-group-item">ID# B00xxxxxx</li>
+                <li class="list-group-item">Current Dal Student: <?php echo $CurrStudent ?></li>
+                <li class="list-group-item">ID#: <?php echo $tDalId ?></li>
                 <li class="list-group-item">
-                  Course ID &amp; CRN no: CSCI 8000 &sol; 123456
+                  Course ID &amp; CRN no: <?php echo $tCourseId ?> &sol; <?php echo $tCRN ?>
                 </li>
-                <li class="list-group-item">Term: Summer</li>
-                <li class="list-group-item">Year: 2020</li>
+                <li class="list-group-item">Term: <?php echo $tTerm ?></li>
+                <li class="list-group-item">Year: <?php echo $tYear ?></li>
                 <li class="list-group-item">
                   Submission Time: 12:30PM, Jan 18, 2020
                 </li>
@@ -630,7 +748,7 @@
             <div class="card-body">
               <ul class="list-group">
                 <li class="list-group-item">Position: Marker</li>
-                <li class="list-group-item">Total Hours: 20</li>
+                <li class="list-group-item">Total Hours: <?php echo $tTHours ?></li>
               </ul>
             </div>
           </div>
@@ -712,6 +830,7 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD:src/screens/pHourAprv.html
 
     <script
       type="text/javascript"
@@ -721,6 +840,8 @@
   type="text/javascript"
   src="../scripts/scripts.pHourAprv.js">
 </script>
+=======
+>>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.php
     <div class="jvectormap-tip"></div>
   </body>
 </html>
