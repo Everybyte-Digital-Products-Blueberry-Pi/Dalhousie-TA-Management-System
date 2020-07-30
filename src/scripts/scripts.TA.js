@@ -22,30 +22,42 @@ by comparing the sum of all sub-hours to total hours
 */
 
 function checkTotalHours(){
-  var arr = document.getElementsByName('hour');
+
+  var arr = document.getElementsByName('hour'); //get the sub-hours from input and put in the array
   var total = 0;
   var checkTotal = 0
   var e = document.getElementById("HourSub");
 
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.getElementsByClassName('needs-validation');
+
+//loop through the array and calculate the sum of the sub-hours
   for (var i = 0; i < arr.length; i++){
     if (parseInt(arr[i].value))
       total += parseInt(arr[i].value);
   }
 
+/*if the user choose other, set the value to 0 and compare the
+new total hour the user put in to the sub-hours */
   if (e.options[e.selectedIndex].value == 0){
     checkTotal = document.getElementById('totalHours').value;
 
-    if (checkTotal == total){
-      alert('Correct');
+    if (!(checkTotal > 0 &&
+        checkTotal < 130 &&
+        checkTotal == total)){
+      alert('Total hours does not match, please check the value in the sub-hours section');
+    } else{
+      alert('Everything seems correct');
     }
   }
-
+/*if the user choose one of the givenn option, calculate the
+sum of sub-hours to the total hours that the user choose*/
   if (e.options[e.selectedIndex].value != 0){
 
-    if (e.options[e.selectedIndex].value == total){
-      alert('Correct');
+    if (e.options[e.selectedIndex].value != total){
+      alert('Total hours does not match, please check the value in the sub-hours section');
+    } else{
+      alert('Everything seems correct');
     }
   }
-
-
 }

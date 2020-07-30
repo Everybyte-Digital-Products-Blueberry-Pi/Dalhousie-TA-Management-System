@@ -332,7 +332,7 @@
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">
+          <div class="">
             <div class="card-body">
               <h5 class="card-title">Basic Information</h5>
               <ul class="list-group">
@@ -357,7 +357,7 @@
               <h6 class="card-subtitle">
                 Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
               </h6>
-              <form class="">
+              <form class="needs-validation">
                 <div class="form-row">
                   <div class="col-md-auto">
                     <div class="position-relative form-group">
@@ -386,6 +386,7 @@
                         assignments for other courses cannot exceed 130 hours
                         per semester - as per (^) </label
                       ><input
+                        id="totalHours"
                         placeholder="Enter total hours"
                         type="text"
                         class="form-control"
@@ -401,7 +402,7 @@
                         name="hour"
                         type="text"
                         class="form-control"
-                        placeholder="Enter hours"
+                        placeholder="Enter hours" required
                       />
                     </div>
                     <br />
@@ -415,7 +416,7 @@
                         name="hour"
                         type="text"
                         class="form-control"
-                        placeholder="Enter hours"
+                        placeholder="Enter hours" required
                       />
                     </div>
                     <br />
@@ -429,7 +430,7 @@
                         name="hour"
                         type="text"
                         class="form-control"
-                        placeholder="Enter hours"
+                        placeholder="Enter hours" required
                       />
                     </div>
                     <br />
@@ -449,11 +450,14 @@
                     <br />
                   </div>
                 </div>
+                <button type="submit" class="btn btn-primary" onclick="checkTotalHours()">
+                  Check values
+                </button>
               </form>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" onclick="checkTotalHours()" data-dismiss="modal">
+            <button type="submit" class="btn btn-primary" data-dismiss="modal">
               Submit
             </button>
           </div>
