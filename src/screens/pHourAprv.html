@@ -329,7 +329,7 @@
                             <td>B00891217</td>
                             <td>CSCI 1186</td>
                             <td>
-                              <div class="mb-2 mr-2 badge badge-warning">
+                              <div id="status" class="mb-2 mr-2 badge badge-warning">
                                 Pending
                               </div>
                             </td>
@@ -569,10 +569,10 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-dismiss="modal">
+            <button id="approved" type="button" class="btn btn-success" onclick="changeValue()" data-dismiss="modal">
               Approve
             </button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">
+            <button id="declined" type="button" class="btn btn-danger" data-dismiss="modal">
               Decline
             </button>
             <button
@@ -695,10 +695,10 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-dismiss="modal">
+            <button name="status" type="button" class="btn btn-success" data-dismiss="modal">
               Approve
             </button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">
+            <button name="status" type="button" class="btn btn-danger" data-dismiss="modal">
               Decline
             </button>
             <button
@@ -717,7 +717,10 @@
       type="text/javascript"
       src="../scripts/scripts.pcourses.js"
     ></script>
-
+<script
+  type="text/javascript"
+  src="../scripts/scripts.pHourAprv.js">
+</script>
     <div class="jvectormap-tip"></div>
   </body>
 </html>
