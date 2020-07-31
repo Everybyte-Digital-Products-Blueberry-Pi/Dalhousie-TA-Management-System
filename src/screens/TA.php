@@ -226,11 +226,11 @@
             </div>
           </div>
         </div>
-		<?php	 
+		<?php
         session_start();
          include_once 'course-list.php';
-          
-        ?>		  
+
+        ?>
         <div class="app-main__outer">
           <div class="app-main__inner">
             <div class="row">
@@ -266,15 +266,15 @@
 
 		      <?php
                 if(isset($_POST['submit']))
-                {  
+                {
                   $course = $_POST['Courses'];  // Storing Selected Value In Variable
                   $_SESSION['course'] = $course;
                 }
-              ?>   
-				   
-																					 
-												
-				 
+              ?>
+
+
+
+
               <!-- Calendar by Su -->
               <div class="col-md-12 col-lg-6">
                 <div class="mb-3 card">
@@ -282,10 +282,10 @@
                     <div class="card-title">Mon</div>
                     <div class="card-title">Tue</div>
                     <div class="card-title">Wed</div>
-													 
-									   
-													  
-													  
+
+
+
+
                   </div>
                   <div class="calendar__week">
                     <div class="calendar__day">
@@ -407,7 +407,7 @@
                         placeholder="Enter total hours"
                         type="text"
                         class="form-control"
-						name="otherTHours"					
+						name="otherTHours"
                       />
                     </div>
                     <div class="input-group">
@@ -461,7 +461,7 @@
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"
-												 
+
                       />
                     </div>
                     <br />
@@ -470,26 +470,26 @@
 
 				<?php
                 $page = "insert.php";
-                $target = "_blank" 
+                $target = "_blank"
                 ?>
 				<?php echo '<input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">' ?>
-				</input>																																				
+				</input>
               </form>
             </div>
           </div>
           <!-- <div class="modal-footer">
-				   
-						   
+
+
             <button type="button" class="btn btn-primary" data-dismiss="modal">
 										 
-								  
-			 
+
+
 >>>>>>> fca9ca8918be5f7162fdc5907f2e41c019638e54:src/screens/TA.php
               Submit
             </button>
           </div> -->
         </div>
-			  
+
       </div>
     </div>
     <!-- Modal Marker Hour Submission-->
@@ -559,7 +559,7 @@
                     </div>
                   </div>
                 </div>
-					  
+
 
               </form>
             </div>
