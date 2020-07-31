@@ -282,7 +282,7 @@
                         </thead>
                         <!---PHP-->
 
-                        <?php 
+                        <?php          
                         include_once 'connect.php';
                         $sql = "SELECT E_name,  DalId, CourseID,id FROM form ORDER BY form.id DESC";
                         $index = 1;
@@ -298,18 +298,36 @@
                                 $cID = $row["CourseID"];
                                 $id = $row["id"];
                                 $idList[$id] = $modal.$id;
-                                
+                                $status_sql = "SELECT status FROM status WHERE status.id=$id";
+                                $statusRow = mysqli_fetch_assoc(mysqli_query($conn, $status_sql));
+                                $status = $statusRow["status"]; 
                                 echo '<tbody>
                                 <tr>
                                 <th scope="row">'.$index.'</th>
                                 <td>'.$empName.'</td>
                                 <td>'.$BId.'</td>
                                 <td>'.$cID.'</td>
-                                <td>
-                                    <div class="mb-2 mr-2 badge badge-success">
-                                    Approved
-                                    </div>
-                                </td>
+                                <td>';
+                                if($status=="approved")
+                                {
+                                  echo '<div class="mb-2 mr-2 badge badge-success">
+                                  Approved
+                                  </div>';
+                                }
+                                else if($status == "declined")
+                                {
+                                  echo '<div class="mb-2 mr-2 badge badge-danger">
+                                  Declined
+                                  </div>';
+                                }
+                                else
+                                {
+                                  echo '<div class="mb-2 mr-2 badge badge-warning">
+                                  Pending
+                                  </div>';
+                                }
+
+                                echo '</td>
                                 <td>';
                                 
                                     echo  '<button
@@ -481,13 +499,19 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-dismiss="modal"
-          >
-            Close
-          </button>
+        <a href = "status.php?id='.$keys[$i].'&status=approved" class="btn btn-success">
+              Approve
+        </a>
+        <a href = "status.php?id='.$keys[$i].'&status=declined" class="btn btn-danger">
+          Decline
+        </a>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-dismiss="modal"
+      >
+        Close
+      </button>
         </div>
       </div>
     </div>
