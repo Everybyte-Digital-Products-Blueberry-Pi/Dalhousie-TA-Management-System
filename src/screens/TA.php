@@ -374,8 +374,7 @@
               <h6 class="card-subtitle">
                 Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
               </h6>
-              <form class="" method="post" action="insert.php">
-
+              <form class="" method="post" action="insert.php" >
                 <div class="form-row">
                   <div class="col-md-auto">
                     <div class="position-relative form-group">
