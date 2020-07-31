@@ -265,7 +265,7 @@
                 id="tab-content-0"
                 role="tabpanel"
               >
-                <div class="main-card mb-3 card">
+              <div class="main-card mb-3 card">
                   <div class="card-body">
                     <h5 class="card-title">TA Hours Approval</h5>
                     <div class="table-responsive">
@@ -280,230 +280,62 @@
                             <th>Details</th>
                           </tr>
                         </thead>
-<<<<<<< HEAD:src/screens/pHourAprv.php
-<<<<<<< HEAD:src/screens/pHourAprv.html
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark Otto</td>
-                            <td>B00891215</td>
-                            <td>CSCI 1180</td>
-                            <td>
-                              <div class="mb-2 mr-2 badge badge-success">
-                                Approved
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                type="button"
-                                class="btn mr-2 mb-2 btn-primary"
-                                data-toggle="modal"
-                                data-target="#exampleModalTAY"
-                              >
-                                View
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Sreya Goshal</td>
-                            <td>B00891216</td>
-                            <td>CSCI 1183</td>
-                            <td>
-                              <div class="mb-2 mr-2 badge badge-danger">
-                                Declined
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                type="button"
-                                class="btn mr-2 mb-2 btn-primary"
-                                data-toggle="modal"
-                                data-target="#exampleModalTAY"
-                              >
-                                View
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Hassan Saleh</td>
-                            <td>B00891217</td>
-                            <td>CSCI 1186</td>
-                            <td>
-                              <div id="status" class="mb-2 mr-2 badge badge-warning">
-                                Pending
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                type="button"
-                                class="btn mr-2 mb-2 btn-primary"
-                                data-toggle="modal"
-                                data-target="#exampleModalTAN"
-                              >
-                                View
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="tab-pane tabs-animation fade"
-                id="tab-content-1"
-                role="tabpanel"
-              >
-                <div class="main-card mb-3 card">
-                  <div class="card-body">
-                    <h5 class="card-title">Markers Hours Approval</h5>
-                    <div class="table-responsive">
-                      <table class="mb-0 table table-hover">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>Full Name</th>
-                            <th>B00#</th>
-                            <th>Course ID</th>
-                            <th>Status</th>
-                            <th>Details</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark Otto</td>
-                            <td>B00891215</td>
-                            <td>CSCI 1180</td>
-                            <td>
-                              <div class="mb-2 mr-2 badge badge-success">
-                                Approved
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                type="button"
-                                class="btn mr-2 mb-2 btn-primary"
-                                data-toggle="modal"
-                                data-target="#exampleModalMkY"
-                              >
-                                View
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Sreya Goshal</td>
-                            <td>B00891216</td>
-                            <td>CSCI 1183</td>
-                            <td>
-                              <div class="mb-2 mr-2 badge badge-danger">
-                                Declined
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                type="button"
-                                class="btn mr-2 mb-2 btn-primary"
-                                data-toggle="modal"
-                                data-target="#exampleModalMkY"
-                              >
-                                View
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Hassan Saleh</td>
-                            <td>B00891217</td>
-                            <td>CSCI 1186</td>
-                            <td>
-                              <div class="mb-2 mr-2 badge badge-warning">
-                                Pending
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                type="button"
-                                class="btn mr-2 mb-2 btn-primary"
-                                data-toggle="modal"
-                                data-target="#exampleModalMkN"
-                              >
-                                View
-                              </button>
-                            </td>
-                          </tr>
-=======
-=======
->>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.html
+                        <!---PHP-->
+
                         <?php 
                         include_once 'connect.php';
-                        $sql = "SELECT E_name, DalId, CourseID, id FROM form ORDER BY form.id DESC";
+                        $sql = "SELECT E_name,  DalId, CourseID,id FROM form ORDER BY form.id DESC";
                         $index = 1;
                         $result = mysqli_query($conn,$sql);
-                        $firstAppId = "";
-                        $secondAppId = "";
-                        $thirdAppId = "";
+                        $idList = array();
+                        $modal = "ExampleModalTAY";
                         if(mysqli_num_rows($result)>0)
                         {
                             while($row = mysqli_fetch_assoc($result))
                             {
-                                $eName = $row["E_name"];
-                                $B00 = $row["DalId"];
+                                $empName = $row["E_name"];
+                                $BId = $row["DalId"];
                                 $cID = $row["CourseID"];
                                 $id = $row["id"];
-                                if($index<4)
-                                {
-                                    echo '<tbody>
-                                    <tr>
-                                    <th scope="row">'.$index.'</th>
-                                    <td>'.$eName.'</td>
-                                    <td>'.$B00.'</td>
-                                    <td>'.$cID.'</td>
-                                    <td>
-                                        <div class="mb-2 mr-2 badge badge-success">
-                                        Approved
-                                        </div>
-                                    </td>
-                                    <td>';
-                                    if($index == 1)
-                                    {
-                                      $modalId = "exampleModalTAY";
-                                      $firstAppId = $id;
-                                    }
-                                    else if($index == 2)
-                                    {
-                                      $modalId = "exampleModalTAN";
-                                      $secondAppId = $id;
-                                    }
-                                    else 
-                                    {
-                                      $modalId = "exampleModalMKY";
-                                      $thirdAppId = $id;
-                                    }
-                                       echo  '<button
-                                        type="button"
-                                        class="btn mr-2 mb-2 btn-primary"
-                                        data-toggle="modal"
-                                        data-target="#'.$modalId.'"
-                                        >
-                                        View
-                                        </button>
-                                    </td>
-                                    </tr>';
-                                }
+                                $idList[$id] = $modal.$id;
+                                
+                                echo '<tbody>
+                                <tr>
+                                <th scope="row">'.$index.'</th>
+                                <td>'.$empName.'</td>
+                                <td>'.$BId.'</td>
+                                <td>'.$cID.'</td>
+                                <td>
+                                    <div class="mb-2 mr-2 badge badge-success">
+                                    Approved
+                                    </div>
+                                </td>
+                                <td>';
+                                
+                                    echo  '<button
+                                    type="button"
+                                    class="btn mr-2 mb-2 btn-primary"
+                                    data-toggle="modal"
+                                    data-target="#'.$idList[$id].'"
+                                    >
+                                    View
+                                    </button>
+                                </td>
+                                </tr>';
+                                
                                 
                                 $index ++;
                             }
                         }
+
+                        else
+                        {
+                          echo "You haven't recieved any applications yet.";
+                        }
                         ?>
-<<<<<<< HEAD:src/screens/pHourAprv.php
->>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.php
-=======
->>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.html
+
+                        
+                         
                         </tbody>
                       </table>
                     </div>
@@ -515,342 +347,155 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="./assets/scripts/main.js"></script>
-    <!--Modal Feedback Evaluation-->
-    <!-- Modal TA Done-->
-    <?php
-    $fSql = "SELECT E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, id FROM form WHERE form.id = $firstAppId";
-    $fResult = mysqli_query($conn, $fSql);
-    $fModal = mysqli_fetch_assoc($fResult);
-    $fEName = $fModal["E_name"];
-    $fCurrStd = $fModal["Curr_Dal_stu"];
-    $fDalId = $fModal["DalId"];
-    $fIName = $fModal["IName"];
-    $fCourseId = $fModal["CourseID"];
-    $fCRN = $fModal["CRN"];
-    $fTerm = $fModal["Term"];
-    $fYear = $fModal["Year"];
-    $fTHours = $fModal["Total_hour"];
-    $fCHours = $fModal["IClass_hours"];
-    $fOHours = $fModal["Office_hours"];
-    $fGHours = $fModal["Grading_hours"];
-    $fOHours = $fModal["Other_hours"];
-    ?>
-    <div
-      class="modal fade"
-      id="exampleModalTAY"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      style="display: none;"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  Emplyoyee Name: <?php echo $fEName ?>
-                </li>
-                <li class="list-group-item">Current Dal Student: Yes</li>
-                <li class="list-group-item">ID# <?php echo $fDalId ?></li>
-                <li class="list-group-item">
-                  Course ID &amp; CRN no: <?php echo $fCourseId ?> &sol; <?php echo $fCRN ?>
-                </li>
-                <li class="list-group-item">Term: <?php echo $fTerm ?></li>
-                <li class="list-group-item">Year: <?php echo $fYear ?></li>
-                <li class="list-group-item">
-                  Submission Time: 12:30PM, Jan 18, 2020
-                </li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">Position: TA</li>
-                <li class="list-group-item">Total Hours: <?php echo $fTHours ?></li>
-                <li class="list-group-item">In-Class Duties: <?php echo $fCHours ?></li>
-                <li class="list-group-item">Office Duties: <?php echo $fOHours ?></li>
-                <li class="list-group-item">
-                  Marking, Grading, Invigilating: <?php echo $fGHours ?>
-                </li>
-                <li class="list-group-item">Others (Labs): <?php echo $fOtHours ?></li>
-              </ul>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal TA Undone-->
-    <?php
-    $sSql = "SELECT E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, id FROM form WHERE form.id = $secondAppId";
-    $sResult = mysqli_query($conn, $sSql);
-    $sModal = mysqli_fetch_assoc($sResult);
-    $sEName = $sModal["E_name"];
-    $sCurrStd = $sModal["Curr_Dal_stu"];
-    $sDalId = $sModal["DalId"];
-    $sIName = $sModal["IName"];
-    $sCourseId = $sModal["CourseID"];
-    $sCRN = $sModal["CRN"];
-    $sTerm = $sModal["Term"];
-    $sYear = $sModal["Year"];
-    $sTHours = $sModal["Total_hour"];
-    $sCHours = $sModal["IClass_hours"];
-    $sOHours = $sModal["Office_hours"];
-    $sGHours = $sModal["Grading_hours"];
-    $sOtHours = $sModal["Other_hours"];
-    ?>
-    <div
-      class="modal fade"
-      id="exampleModalTAN"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      style="display: none;"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  Emplyoyee Name: <?php echo $sEName ?>
-                </li>
-                <li class="list-group-item">Current Dal Student: Yes</li>
-                <li class="list-group-item">ID# <?php echo $sDalId ?></li>
-                <li class="list-group-item">
-                  Course ID &amp; CRN no: <?php echo $sCourseId ?> &sol; <?php echo $sCRN ?>
-                </li>
-                <li class="list-group-item">Term: <?php echo $sTerm ?></li>
-                <li class="list-group-item">Year: <?php echo $sYear ?></li>
-                <li class="list-group-item">
-                  Submission Time: 12:30PM, Jan 18, 2020
-                </li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">Position: TA</li>
-                <li class="list-group-item">Total Hours: <?php echo $sTHours ?></li>
-                <li class="list-group-item">In-Class Duties: <?php echo $sCHours ?></li>
-                <li class="list-group-item">Office Duties: <?php echo $sOHours ?></li>
-                <li class="list-group-item">
-                  Marking, Grading, Invigilating: <?php echo $sGHours ?>
-                </li>
-                <li class="list-group-item">Others (Labs): <?php echo $sOtHours ?></li>
-              </ul>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button id="approved" type="button" class="btn btn-success" onclick="changeValue()" data-dismiss="modal">
-              Approve
-            </button>
-            <button id="declined" type="button" class="btn btn-danger" data-dismiss="modal">
-              Decline
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <?php
-    $tSql = "SELECT E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, id FROM form WHERE form.id = $thirdAppId";
-    $tResult = mysqli_query($conn, $tSql);
-    $tModal = mysqli_fetch_assoc($tResult);
-    $tEName = $tModal["E_name"];
-    $tCurrStd = $tModal["Curr_Dal_stu"];
-    $tDalId = $tModal["DalId"];
-    $tIName = $tModal["IName"];
-    $tCourseId = $tModal["CourseID"];
-    $tCRN = $tModal["CRN"];
-    $tTerm = $tModal["Term"];
-    $tYear = $tModal["Year"];
-    $tTHours = $tModal["Total_hour"];
-    $tCHours = $tModal["IClass_hours"];
-    $tOHours = $tModal["Office_hours"];
-    $tGHours = $tModal["Grading_hours"];
-    $tOtHours = $tModal["Other_hours"];
-    ?>
-    <!-- Modal Marker Done-->
-    <div
-      class="modal fade"
-      id="exampleModalMkY"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      style="display: none;"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  Emplyoyee Name: <?php echo $tEName ?>
-                </li>
-                <li class="list-group-item">Current Dal Student: <?php echo $CurrStudent ?></li>
-                <li class="list-group-item">ID#: <?php echo $tDalId ?></li>
-                <li class="list-group-item">
-                  Course ID &amp; CRN no: <?php echo $tCourseId ?> &sol; <?php echo $tCRN ?>
-                </li>
-                <li class="list-group-item">Term: <?php echo $tTerm ?></li>
-                <li class="list-group-item">Year: <?php echo $tYear ?></li>
-                <li class="list-group-item">
-                  Submission Time: 12:30PM, Jan 18, 2020
-                </li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">Position: Marker</li>
-                <li class="list-group-item">Total Hours: <?php echo $tTHours ?></li>
-              </ul>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal TA Undone-->
-    <div
-      class="modal fade"
-      id="exampleModalMkN"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      style="display: none;"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Details</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  Emplyoyee Name: Abdullah X
-                </li>
-                <li class="list-group-item">Current Dal Student: Yes</li>
-                <li class="list-group-item">ID# B00xxxxxx</li>
-                <li class="list-group-item">
-                  Course ID &amp; CRN no: CSCI 8000 &sol; 123456
-                </li>
-                <li class="list-group-item">Term: Summer</li>
-                <li class="list-group-item">Year: 2020</li>
-                <li class="list-group-item">
-                  Submission Time: 12:30PM, Jan 18, 2020
-                </li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">Position: Marker</li>
-                <li class="list-group-item">Total Hours: 10</li>
-              </ul>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button name="status" type="button" class="btn btn-success" data-dismiss="modal">
-              Approve
-            </button>
-            <button name="status" type="button" class="btn btn-danger" data-dismiss="modal">
-              Decline
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-<<<<<<< HEAD:src/screens/pHourAprv.php
-<<<<<<< HEAD:src/screens/pHourAprv.html
-
     <script
       type="text/javascript"
-      src="../scripts/scripts.pcourses.js"
+      src="../styles/architectui-html-free/architectui-html-free/assets/scripts/main.js"
     ></script>
-<script
-  type="text/javascript"
-  src="../scripts/scripts.pHourAprv.js">
-</script>
-=======
->>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.php
-=======
->>>>>>> f5338c8db5a728b6f6179a1a4feda1a0b5c67530:src/screens/pHourAprv.html
-    <div class="jvectormap-tip"></div>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+
+    <!-- Modal TA Done-->
+    <?php
+    $i = 0;
+    $keys = array_keys($idList);
+    while($i<sizeof($idList))
+    {
+      $sql = "SELECT E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, id FROM form WHERE form.id = $keys[$i]";
+      $result = mysqli_query($conn, $sql);
+      $modal = mysqli_fetch_assoc($result);
+      $eName = $modal["E_name"];
+      $currStd = $modal["Curr_Dal_stu"];
+      $dalId = $modal["DalId"];
+      $iName = $modal["IName"];
+      $courseId = $modal["CourseID"];
+      $CRN = $modal["CRN"];
+      $Term = $modal["Term"];
+      $Year = $modal["Year"];
+      $THours = $modal["Total_hour"];
+      $CHours = $modal["IClass_hours"];
+      $OHours = $modal["Office_hours"];
+      $GHours = $modal["Grading_hours"];
+      $OtHours = $modal["Other_hours"];
+
+      echo '<div
+    class="modal fade"
+    id="'.$idList[$keys[$i]].'"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    style="display: none;"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                Emplyoyee Name: '.$eName.'
+              </li>
+              <li class="list-group-item">Current Dal Student: Yes</li>
+              <li class="list-group-item">ID#: '.$dalId.' </li>
+              <li class="list-group-item">
+                Course ID &amp; CRN no: '. $courseId.' &sol; '. $CRN.'
+              </li>
+              <li class="list-group-item">Term: '.$Term.'</li>
+              <li class="list-group-item">Year: '.$Year.'</li>
+              <li class="list-group-item">
+                Submission Time: 12:30PM, Jan 18, 2020
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">Position: TA</li>
+              <li class="list-group-item">Total Hours: '.$THours.'</li>
+              <li class="list-group-item">In-Class Duties: '.$CHours.' </li>
+              <li class="list-group-item">Office Duties: '.$OHours.'</li>
+              <li class="list-group-item">
+                Marking, Grading, Invigilating: '.$GHours.'
+              </li>
+              <li class="list-group-item">Others (Labs): '.$OtHours.'</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>';
+    $i++;
+    }
+    
+    ?>
+            <div class="jvectormap-tip"></div>
   </body>
 </html>

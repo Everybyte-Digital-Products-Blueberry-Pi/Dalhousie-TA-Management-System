@@ -374,11 +374,8 @@
               <h6 class="card-subtitle">
                 Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
               </h6>
-<<<<<<< HEAD:src/screens/TA.html
-              <form class="needs-validation">
-=======
               <form class="" method="post" action="insert.php">
->>>>>>> fca9ca8918be5f7162fdc5907f2e41c019638e54:src/screens/TA.php
+
                 <div class="form-row">
                   <div class="col-md-auto">
                     <div class="position-relative form-group">
@@ -424,12 +421,7 @@
                         name="inclassDuties"
                         type="text"
                         class="form-control"
-<<<<<<< HEAD:src/screens/TA.html
-                        placeholder="Enter hours" required
-=======
-                        placeholder="Enter hours"
-												 
->>>>>>> fca9ca8918be5f7162fdc5907f2e41c019638e54:src/screens/TA.php
+
                       />
                     </div>
                     <br />
@@ -443,12 +435,6 @@
                         name="officeDuties"
                         type="text"
                         class="form-control"
-<<<<<<< HEAD:src/screens/TA.html
-                        placeholder="Enter hours" required
-=======
-                        placeholder="Enter hours"
-												 
->>>>>>> fca9ca8918be5f7162fdc5907f2e41c019638e54:src/screens/TA.php
                       />
                     </div>
                     <br />
@@ -462,12 +448,6 @@
                         name="markingHours"
                         type="text"
                         class="form-control"
-<<<<<<< HEAD:src/screens/TA.html
-                        placeholder="Enter hours" required
-=======
-                        placeholder="Enter hours"
-												 
->>>>>>> fca9ca8918be5f7162fdc5907f2e41c019638e54:src/screens/TA.php
                       />
                     </div>
                     <br />
@@ -488,16 +468,7 @@
                     <br />
                   </div>
                 </div>
-<<<<<<< HEAD:src/screens/TA.html
-                <button type="submit" class="btn btn-primary" onclick="checkTotalHours()">
-                  Check values
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" data-dismiss="modal">
-=======
+
 				<?php
                 $page = "insert.php";
                 $target = "_blank" 
