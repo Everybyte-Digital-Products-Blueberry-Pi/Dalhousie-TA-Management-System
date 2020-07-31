@@ -417,7 +417,8 @@
                         >
                       </div>
                       <input
-                        name="hour"
+                        id="inclassDuties"
+                        name="inclassDuties"
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"
@@ -431,7 +432,8 @@
                         >
                       </div>
                       <input
-                        name="hour"
+                        id="officeDuties"
+                        name="officeDuties"
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"
@@ -445,7 +447,8 @@
                         >
                       </div>
                       <input
-                        name="hour"
+                        id="markingHours"
+                        name="markingHours"
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"
@@ -459,7 +462,8 @@
                         >
                       </div>
                       <input
-                        name="hour"
+                        id="otherHours"
+                        name="otherHours"
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"

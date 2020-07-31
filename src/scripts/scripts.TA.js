@@ -22,8 +22,17 @@ by comparing the sum of all sub-hours to total hours
 */
 
 function checkTotalHours(){
+  var hour1 = document.getElementById('inclassDuties').value;
 
-  var arr = document.getElementsByName('hour'); //get the sub-hours from input and put in the array
+  var hour2 = document.getElementById('officeDuties').value;
+  var hour3 = document.getElementById('markingHours').value;
+  var hour4 = document.getElementById('otherHours').value;
+  var arr = [];
+  arr.push(hour1);
+  arr.push(hour2);
+  arr.push(hour3);
+  arr.push(hour4);
+  //get the sub-hours from input and put in the array
   var total = 0;
   var checkTotal = 0
   var e = document.getElementById("HourSub");
@@ -32,10 +41,9 @@ function checkTotalHours(){
   var y = document.getElementById('hourSubmit')
 //loop through the array and calculate the sum of the sub-hours
   for (var i = 0; i < arr.length; i++){
-    if (parseInt(arr[i].value))
-      total += parseInt(arr[i].value);
+    if (parseInt(arr[i]))
+      total += parseInt(arr[i]);
   }
-
 /*if the user choose other, set the value to 0 and compare the
 new total hour the user put in to the sub-hours */
   if (e.options[e.selectedIndex].value == 0){
@@ -64,15 +72,5 @@ sum of sub-hours to the total hours that the user choose*/
       alert('Everything seems correct \nClick Submit button');
 
     }
-  }
-}
-
-
-function myFunction() {
-  var x = document.getElementById('validate');
-  var y = document.getElementById('hourSubmit')
-  if (y.style.visibility === 'hidden') {
-    y.style.visibility = 'visible';
-    x.style.visibility = 'hidden';
   }
 }
