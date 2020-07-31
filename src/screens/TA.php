@@ -417,10 +417,10 @@
                         >
                       </div>
                       <input
-                        name="inclassDuties"
+                        name="hour"
                         type="text"
                         class="form-control"
-
+                        placeholder="Enter hours"
                       />
                     </div>
                     <br />
@@ -431,9 +431,10 @@
                         >
                       </div>
                       <input
-                        name="officeDuties"
+                        name="hour"
                         type="text"
                         class="form-control"
+                        placeholder="Enter hours"
                       />
                     </div>
                     <br />
@@ -444,9 +445,10 @@
                         >
                       </div>
                       <input
-                        name="markingHours"
+                        name="hour"
                         type="text"
                         class="form-control"
+                        placeholder="Enter hours"
                       />
                     </div>
                     <br />
@@ -457,22 +459,25 @@
                         >
                       </div>
                       <input
-                        name="otherHours"
+                        name="hour"
                         type="text"
                         class="form-control"
                         placeholder="Enter hours"
-
                       />
                     </div>
                     <br />
                   </div>
                 </div>
+                <button id="validate" type="button" onclick="checkTotalHours()" class="btn btn-primary" >
+                Validate
+              </button>
+              <br />
 
 				<?php
                 $page = "insert.php";
                 $target = "_blank"
                 ?>
-				<?php echo '<input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">' ?>
+				<?php echo '<input onsubmit="window.open('.$page.','.$target.')" style="visibility: hidden" id="hourSubmit" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">' ?>
 				</input>
               </form>
             </div>
@@ -481,7 +486,7 @@
 
 
             <button type="button" class="btn btn-primary" data-dismiss="modal">
-										 
+
 
 
 >>>>>>> fca9ca8918be5f7162fdc5907f2e41c019638e54:src/screens/TA.php
