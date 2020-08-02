@@ -263,8 +263,9 @@
                     name="submit"
                     class="btn ml-2 mb-2 mr-2 btn-primary"
                     value= "Confirm Selection"
-                  />
+
                   <button id="detail" type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
+                  <button type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
                     data-target="#modalTAHSub">Proceed</button>
                 </div>
               </form>
