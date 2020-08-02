@@ -260,7 +260,7 @@
                     value= "Confirm Selection"
                   />
                   <button type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
-                    data-target="#modalTAHSub">Feedback</button>
+                    data-target="#modalTAHSub">Proceed</button>
                 </div>
               </form>
 
