@@ -23,7 +23,6 @@ by comparing the sum of all sub-hours to total hours
 
 function checkTotalHours(){
   var hour1 = document.getElementById('inclassDuties').value;
-
   var hour2 = document.getElementById('officeDuties').value;
   var hour3 = document.getElementById('markingHours').value;
   var hour4 = document.getElementById('otherHours').value;
@@ -39,6 +38,7 @@ function checkTotalHours(){
 
   var x = document.getElementById('validate');
   var y = document.getElementById('hourSubmit')
+  var z = document.getElementById('validated');
 //loop through the array and calculate the sum of the sub-hours
   for (var i = 0; i < arr.length; i++){
     if (parseInt(arr[i]))
@@ -55,9 +55,8 @@ new total hour the user put in to the sub-hours */
       alert('Total hours does not match, please check the value in the sub-hours section');
     } else{
       y.style.visibility = 'visible';
-      x.style.visibility = 'hidden';
-      alert('Everything seems correct \nClick Submit button');
-
+      x.style.display = 'none';
+      z.style.visibility = 'visible';
     }
   }
 /*if the user choose one of the givenn option, calculate the
@@ -68,9 +67,22 @@ sum of sub-hours to the total hours that the user choose*/
       alert('Total hours does not match, please check the value in the sub-hours section');
     } else{
       y.style.visibility = 'visible';
-      x.style.visibility = 'hidden';
-      alert('Everything seems correct \nClick Submit button');
+      x.style.display = 'none';
+      z.style.display = 'block';
 
     }
+  }
+}
+
+function readSelect(){
+  var course = document.getElementById("courseSelect");
+  var back = document.getElementById("backButton");
+  var detail = document.getElementById("detail");
+  var confirm = document.getElementById("confirmButton");
+
+  if (course.options[course.selectedIndex].value != 0){
+    back.style.display = 'block';
+    confirm.style.display = 'none';
+    detail.style.display = 'block';
   }
 }
