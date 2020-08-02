@@ -237,30 +237,35 @@
               <!-- Hours of submission by Ab -->
               <form class="col-md-12 col-lg-6" method="post" action="TA.php">
                 <div class="mb-3 card">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
                   <div class="ml-3 mt-3 card-title">Hour Submission</div>
+                  <button id="backButton" style="display: none" type="button" class="ml-3 mt-3 mr-2 btn-primary btn-sm">
+                    Back</button></div>
                   <div class="ml-3 mr-3 position-relative form-group">
                     <label for="exampleCustomSelect" class=""
                       >Select Course</label
                     ><select
                       type="select"
-                      id="exampleCustomSelect"
+                      id="courseSelect"
                       name="Courses"
                       class="custom-select"
                     >
-                      <option value="">Select</option>
+                      <option value="0">Select</option>
                       <option value="CSCI 1800">CSCI 1800 MK</option>
                       <option value="CSCI 2100">CSCI 2100 TA</option>
                       <option value="CSCI 3000">CSCI 3000 MK</option>
                     </select>
                   </div>
                   <input
+                    onclick="readSelect()"
+                    id="confirmButton"
                     type="submit"
                     name="submit"
                     class="btn ml-2 mb-2 mr-2 btn-primary"
                     value= "Confirm Selection"
                   />
-                  <button type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
-                    data-target="#modalTAHSub">Feedback</button>
+                  <button id="detail" type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
+                    data-target="#modalTAHSub">Proceed</button>
                 </div>
               </form>
 
@@ -407,7 +412,7 @@
                         placeholder="Enter total hours"
                         type="text"
                         class="form-control"
-						name="otherTHours"
+						              name="otherTHours"
                       />
                     </div>
                     <div class="input-group">
@@ -469,9 +474,10 @@
                         placeholder="Enter hours"
                       />
                     </div>
-                    <br />
+                    <br/>
                   </div>
                 </div>
+                <div class="alert alert-success" role="alert" style="display: none" id="validated"> Everything seems correct</div>
                 <button id="validate" type="button" onclick="checkTotalHours()" class="btn btn-primary" >
                 Validate
               </button>
@@ -481,7 +487,7 @@
                 $page = "insert.php";
                 $target = "_blank"
                 ?>
-				<?php echo '<input onsubmit="window.open('.$page.','.$target.')" style="visibility: hidden" id="hourSubmit" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">' ?>
+				<?php echo '<input onsubmit="window.open('.$page.','.$target.')" style="visibility: hidden" id="hourSubmit" type="submit" name="hourSubmit" value="Submit" class="btn btn-success">' ?>
 				</input>
               </form>
             </div>
@@ -574,7 +580,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">
+            <button type="button" class="btn btn-success" data-dismiss="modal">
               Submit
             </button>
           </div>
