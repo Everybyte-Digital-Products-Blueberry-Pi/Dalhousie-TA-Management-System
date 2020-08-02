@@ -248,9 +248,9 @@
                       class="custom-select"
                     >
                       <option value="">Select</option>
-                      <option value="CSCI 1800">CSCI 1800 MK</option>
-                      <option value="CSCI 2100">CSCI 2100 TA</option>
-                      <option value="CSCI 3000">CSCI 3000 MK</option>
+                      <option value="CSCI 1800 MK">CSCI 1800 MK</option>
+                      <option value="CSCI 2100 TA">CSCI 2100 TA</option>
+                      <option value="CSCI 3000 MK">CSCI 3000 MK</option>
                     </select>
                   </div>
                   <input
@@ -260,14 +260,17 @@
                     value= "Confirm Selection"
                   />
                   <button type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
-                    data-target="#modalTAHSub">Proceed</button>
+                    data-target="#modalTAHSub">Feedback</button>
                 </div>
               </form>
 
 		      <?php
                 if(isset($_POST['submit']))
                 {
-                  $course = $_POST['Courses'];  // Storing Selected Value In Variable
+                  $input = $_POST['Courses']; 
+                  $position = substr($input, 10, 11);
+                  $_SESSION['position'] = $position;
+                  $course =  substr($input, 0, 9);
                   $_SESSION['course'] = $course;
                 }
               ?>
@@ -407,81 +410,93 @@
                         placeholder="Enter total hours"
                         type="text"
                         class="form-control"
-						name="otherTHours"
+						name="tHours"
                       />
                     </div>
-                    <div class="input-group">
-                      <div class="input-group-prepend" style="width: 30%;">
-                        <span class="input-group-text" style="width: 100%;"
-                          >In-Class Duties</span
-                        >
+                    <?php 
+                      if($position == "TA")
+                      {
+                          echo '<div class="input-group">
+                          <div class="input-group-prepend" style="width: 30%;">
+                            <span class="input-group-text" style="width: 100%;"
+                              >In-Class Duties</span
+                            >
+                          </div>
+                          <input
+                            id="inclassDuties"
+                            name="inclassDuties"
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter hours"
+                          />
+                        </div>
+                        <br />
+                        <div class="input-group">
+                          <div class="input-group-prepend" style="width: 30%;">
+                            <span class="input-group-text" style="width: 100%;"
+                              >Office Duties</span
+                            >
+                          </div>
+                          <input
+                            id="officeDuties"
+                            name="officeDuties"
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter hours"
+                          />
+                        </div>
+                        <br />
+                        <div class="input-group">
+                          <div class="input-group-prepend" style="width: 30%;">
+                            <span class="input-group-text" style="width: 100%;"
+                              >Marking, Grading, Invigilating</span
+                            >
+                          </div>
+                          <input
+                            id="markingHours"
+                            name="markingHours"
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter hours"
+                          />
+                        </div>
+                        <br />
+                        <div class="input-group">
+                          <div class="input-group-prepend" style="width: 30%;">
+                            <span class="input-group-text" style="width: 100%;"
+                              >Others</span
+                            >
+                          </div>
+                          <input
+                            id="otherHours"
+                            name="otherHours"
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter hours"
+                          />
+                        </div>
+                        <br />
                       </div>
-                      <input
-                        id="inclassDuties"
-                        name="inclassDuties"
-                        type="text"
-                        class="form-control"
-                        placeholder="Enter hours"
-                      />
                     </div>
-                    <br />
-                    <div class="input-group">
-                      <div class="input-group-prepend" style="width: 30%;">
-                        <span class="input-group-text" style="width: 100%;"
-                          >Office Duties</span
-                        >
-                      </div>
-                      <input
-                        id="officeDuties"
-                        name="officeDuties"
-                        type="text"
-                        class="form-control"
-                        placeholder="Enter hours"
-                      />
-                    </div>
-                    <br />
-                    <div class="input-group">
-                      <div class="input-group-prepend" style="width: 30%;">
-                        <span class="input-group-text" style="width: 100%;"
-                          >Marking, Grading, Invigilating</span
-                        >
-                      </div>
-                      <input
-                        id="markingHours"
-                        name="markingHours"
-                        type="text"
-                        class="form-control"
-                        placeholder="Enter hours"
-                      />
-                    </div>
-                    <br />
-                    <div class="input-group">
-                      <div class="input-group-prepend" style="width: 30%;">
-                        <span class="input-group-text" style="width: 100%;"
-                          >Others</span
-                        >
-                      </div>
-                      <input
-                        id="otherHours"
-                        name="otherHours"
-                        type="text"
-                        class="form-control"
-                        placeholder="Enter hours"
-                      />
-                    </div>
-                    <br />
-                  </div>
-                </div>
-                <button id="validate" type="button" onclick="checkTotalHours()" class="btn btn-primary" >
+                    <button id="validate" type="button" onclick="checkTotalHours()" class="btn btn-primary" >
                 Validate
               </button>
-              <br />
+              <br />';
+              $page = "insert.php";
+              $target = "_blank";
+              echo '<input onsubmit="window.open('.$page.','.$target.')" style="visibility: hidden" id="hourSubmit" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">';
+                  }
+                  else
+                  {
+                    $page = "insert.php";
+                    $target = "_blank";
+                    echo '<input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">';
+                  }
+                    ?>
+                    
+                
+              
 
-				<?php
-                $page = "insert.php";
-                $target = "_blank"
-                ?>
-				<?php echo '<input onsubmit="window.open('.$page.','.$target.')" style="visibility: hidden" id="hourSubmit" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">' ?>
 				</input>
               </form>
             </div>
