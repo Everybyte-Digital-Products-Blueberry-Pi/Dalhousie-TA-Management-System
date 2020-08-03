@@ -189,13 +189,6 @@
                 </li>
 
                 <li>
-                  <a href="jobposting.html">
-                    <i class="metismenu-icon pe-7s-file"></i>
-                    View Jobs
-                  </a>
-                </li>
-
-                <li>
                   <a href="pcourses.html">
                     <i class="metismenu-icon pe-7s-id"></i>
                     My Courses
@@ -205,9 +198,17 @@
                 <li>
                   <a href="pHourAprv.html" class="mm-active">
                     <i class="metismenu-icon pe-7s-file"></i>
-                    Hours Approval
+                    My Job Postings
                   </a>
                 </li>
+
+                <li>
+                  <a href="jobs.html">
+                    <i class="metismenu-icon pe-7s-file"></i>
+                    View Jobs
+                  </a>
+                </li>
+
               </ul>
             </div>
             <div class="ps__rail-x" style="left: 0px; bottom: 0px;">

@@ -321,7 +321,49 @@
               </div>
             </div>
             <!-- Courses and Feedback by Nh or Ab (Need to decide) -->
-            <div class="row"></div>
+            <div class="row">
+              <div class="col-md-12 col-lg-12"> 
+                <div class="mb-3 card">
+                  <div class="card-body">
+                    <h5 class="card-title">Current Courses</h5>
+                    <table class="mb-0 table table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Course ID</th>
+                          <th>Instructor</th>
+                          <th>Position</th>
+                          <th>Feedback Stats</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>CSCI XXXX</td>
+                          <td>Joe Miller</td>
+                          <td>TA</td>
+                          <td><button data-toggle="modal" data-id="1" data-target="#Feedback" class="btn btn-primary">View</button></td>
+                        </tr>
+                        <tr data-toggle="modal" data-id="2" data-target="#TAdetail">
+                          <th scope="row">2</th>
+                          <td>CSCI XXXX</td>
+                          <td>John Snow</td>
+                          <td>Marker</td>
+                          <td><button data-toggle="modal" data-id="1" data-target="#Feedback" class="btn btn-primary">View</button></td>
+                        </tr>
+                        <tr data-toggle="modal" data-id="3" data-target="#TAdetail">
+                          <th scope="row">3</th>
+                          <td>CSCI XXXX</td>
+                          <td>Noctis Lucis Caelum</td>
+                          <td>TA</td>
+                          <td><button data-toggle="modal" data-id="1" data-target="#Feedback" class="btn btn-primary">View</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <!-- This is the basic information by Su-->
             <div class="row"></div>
