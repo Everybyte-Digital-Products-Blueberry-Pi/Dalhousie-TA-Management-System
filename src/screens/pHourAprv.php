@@ -119,12 +119,46 @@
                           src="assets/images/avatars/1.jpg"
                           alt=""
                         />
+                        <i class="fa fa-angle-down ml-2 opacity-8"></i>
                       </a>
+                      <div
+                        tabindex="-1"
+                        role="menu"
+                        aria-hidden="true"
+                        class="dropdown-menu dropdown-menu-right"
+                        x-placement="bottom-end"
+                        style="
+                          position: absolute;
+                          will-change: transform;
+                          top: 0px;
+                          left: 0px;
+                          transform: translate3d(-180px, 44px, 0px);
+                        "
+                      >
+                        <div class="card-body">
+                          <img
+                            width="60"
+                            src="assets/images/avatars/4.jpg"
+                            alt="Card image cap"
+                            class="rounded-circle"
+                          />
+                          <br />
+                          <br />
+                          <h5 class="card-title">John Doe</h5>
+                          <h6 class="card-subtitle">
+                            Professor
+                          </h6>
+                          <p>
+                            Email: ab12345@dal.ca<br />Phone: (123) 456 789<br />Courses:
+                            CSCI 1234, CSCI 5678
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="widget-content-left ml-3 header-user-info">
                     <div class="widget-heading">
-                      BlueBerry Pi
+                      Alina Mclourd
                     </div>
                     <div class="widget-subheading">
                       Professor

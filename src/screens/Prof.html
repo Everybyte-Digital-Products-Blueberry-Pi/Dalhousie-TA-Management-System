@@ -1183,12 +1183,46 @@
                           src="assets/images/avatars/1.jpg"
                           alt=""
                         />
+                        <i class="fa fa-angle-down ml-2 opacity-8"></i>
                       </a>
+                      <div
+                        tabindex="-1"
+                        role="menu"
+                        aria-hidden="true"
+                        class="dropdown-menu dropdown-menu-right"
+                        x-placement="bottom-end"
+                        style="
+                          position: absolute;
+                          will-change: transform;
+                          top: 0px;
+                          left: 0px;
+                          transform: translate3d(-180px, 44px, 0px);
+                        "
+                      >
+                        <div class="card-body">
+                          <img
+                            width="60"
+                            src="assets/images/avatars/4.jpg"
+                            alt="Card image cap"
+                            class="rounded-circle"
+                          />
+                          <br />
+                          <br />
+                          <h5 class="card-title">John Doe</h5>
+                          <h6 class="card-subtitle">
+                            Professor
+                          </h6>
+                          <p>
+                            Email: ab12345@dal.ca<br />Phone: (123) 456 789<br />Courses:
+                            CSCI 1234, CSCI 5678
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="widget-content-left ml-3 header-user-info">
                     <div class="widget-heading">
-                      BlueBerry Pi
+                      Alina Mclourd
                     </div>
                     <div class="widget-subheading">
                       Professor
@@ -1425,218 +1459,6 @@
                       </tbody>
                     </table>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Recent job postings by ZH-->
-            <div class="row col-md-12">
-              <div class="main-card mb-3 card">
-                <div class="card-body">
-                  <h5 class="card-title">Recent Postings</h5>
-                  <table class="mb-0 table table-hover table-responsive">
-                    <thead>
-                      <tr>
-                        <th>Job ID</th>
-                        <th>Course Code</th>
-                        <th>Instructor</th>
-                        <th>Rate of Pay</th>
-                        <th>Application status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">
-                          <a href="indivJobDet.html">99999</a>
-                        </th>
-                        <td>CSCI 1120</td>
-                        <td>Someone</td>
-                        <td>21</td>
-                        <td>
-                          <div class="mb-2 mr-2 badge badge-success">
-                            Approved
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">
-                          <a href="indivJobDet.html">99999</a>
-                        </th>
-                        <td>CSCI 1120</td>
-                        <td>Someone</td>
-                        <td>21</td>
-                        <td>
-                          <div class="mb-2 mr-2 badge badge-success">
-                            Approved
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">
-                          <a href="indivJobDet.html">99999</a>
-                        </th>
-                        <td>CSCI 1120</td>
-                        <td>Someone</td>
-                        <td>21</td>
-                        <td>
-                          <div class="mb-2 mr-2 badge badge-success">
-                            Approved
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <nav class="" aria-label="Page navigation example">
-                    <ul class="pagination pagination-sm">
-                      <li class="page-item">
-                        <a
-                          href="javascript:void(0);"
-                          class="page-link"
-                          aria-label="Previous"
-                          ><span aria-hidden="true">«</span
-                          ><span class="sr-only">Previous</span></a
-                        >
-                      </li>
-                      <li class="page-item">
-                        <a href="javascript:void(0);" class="page-link">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a href="javascript:void(0);" class="page-link">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a href="javascript:void(0);" class="page-link">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a href="javascript:void(0);" class="page-link">4</a>
-                      </li>
-                      <li class="page-item">
-                        <a href="javascript:void(0);" class="page-link">5</a>
-                      </li>
-                      <li class="page-item">
-                        <a
-                          href="javascript:void(0);"
-                          class="page-link"
-                          aria-label="Next"
-                          ><span aria-hidden="true">»</span
-                          ><span class="sr-only">Next</span></a
-                        >
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-
-            <!-- Applications -->
-            <div class="row col-md-12">
-              <div class="main-card mb-3 card">
-                <div class="card-body">
-                  <h5 class="card-title">Application</h5>
-                  <table class="mb-0 table table-hover table-responsive">
-                    <thead>
-                      <tr>
-                        <th>Job ID</th>
-                        <th>Course ID</th>
-                        <th>Applicants</th>
-                        <th>Deadline</th>
-                        <th>Details</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">99999</th>
-                        <td>CSCI 1120</td>
-                        <td class="badge">13</td>
-                        <td>2077-02-31 12.00</td>
-                        <td>
-                          <button
-                            class="mb-2 mr-2 btn-transition btn btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">99998</th>
-                        <td>CSCI 1120</td>
-                        <td class="badge">17</td>
-                        <td>2077-02-31 12.00</td>
-                        <td>
-                          <button
-                            class="mb-2 mr-2 btn-transition btn btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">99997</th>
-                        <td>CSCI 1120</td>
-                        <td class="badge">15</td>
-                        <td>2077-02-31 12.00</td>
-                        <td>
-                          <button
-                            class="mb-2 mr-2 btn-transition btn btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">99996</th>
-                        <td>CSCI 1120</td>
-                        <td class="badge">18</td>
-                        <td>2077-02-31 12.00</td>
-                        <td>
-                          <button
-                            class="mb-2 mr-2 btn-transition btn btn-outline-secondary"
-                          >
-                            View
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <!--Interviews-->
-            <div class="row col-md-12">
-              <div class="main-card mb-3 card">
-                <div class="card-body">
-                  <h5 class="card-title">Interview</h5>
-                  <table class="mb-0 table table-hover table-responsive">
-                    <thead>
-                      <tr>
-                        <th>Job ID</th>
-                        <th>Course ID</th>
-                        <th>Interviewee</th>
-                        <th>Date of Interview</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">99999</th>
-                        <td>CSCI 1120</td>
-                        <td>First Last</td>
-                        <td>2077-02-31 12.00</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">99999</th>
-
-                        <td>CSCI 1120</td>
-                        <td>First Last</td>
-                        <td>2077-02-31 12.00</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">99999</th>
-                        <td>CSCI 1120</td>
-                        <td>First Last</td>
-                        <td>2077-02-31 12.00</td>
-                      </tr>
-                    </tbody>
-                  </table>
                 </div>
               </div>
             </div>
