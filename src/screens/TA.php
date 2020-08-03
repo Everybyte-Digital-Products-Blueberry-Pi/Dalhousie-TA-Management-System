@@ -410,7 +410,7 @@
                         placeholder="Enter total hours"
                         type="text"
                         class="form-control"
-						name="otherTHours"
+						            name="otherTHours"
                       />
                     </div>
                     <?php 

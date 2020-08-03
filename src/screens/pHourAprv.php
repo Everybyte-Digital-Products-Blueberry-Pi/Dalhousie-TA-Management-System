@@ -284,7 +284,7 @@
 
                         <?php          
                         include_once 'connect.php';
-                        $sql = "SELECT E_name,  DalId, CourseID,id FROM form ORDER BY form.id DESC";
+                        $sql = "SELECT E_name,  DalId, CourseID,id, Position FROM form ORDER BY form.id DESC";
                         $index = 1;
                         $result = mysqli_query($conn,$sql);
                         $idList = array();
@@ -298,6 +298,7 @@
                                 $cID = $row["CourseID"];
                                 $id = $row["id"];
                                 $idList[$id] = $modal.$id;
+                                $position = $row["Position"];
                                 $status_sql = "SELECT status FROM status WHERE status.id=$id";
                                 $statusRow = mysqli_fetch_assoc(mysqli_query($conn, $status_sql));
                                 $status = $statusRow["status"]; 
