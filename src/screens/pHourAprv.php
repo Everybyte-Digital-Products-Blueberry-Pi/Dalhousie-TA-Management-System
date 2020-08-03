@@ -279,6 +279,8 @@
                             <th>Position</th>
                             <th>Status</th>
                             <th>Details</th>
+                            <th>Position</th>
+                            
                           </tr>
                         </thead>
                         <!---PHP-->
@@ -335,6 +337,7 @@
                                 }
 
                                 echo '</td>
+                                <td>'.$position.'</td>
                                 <td>';
                                 
                                     echo  '<button
