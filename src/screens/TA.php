@@ -372,52 +372,52 @@
             </div>
 
             <div class="card-body">
-              <h5 class="card-title">
-                Teaching Assistant Duties Form
-              </h5>
-              <h6 class="card-subtitle">
-                Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
-              </h6>
-              <form class="" method="post" action="insert.php" >
-                <div class="form-row">
-                  <div class="col-md-auto">
-                    <div class="position-relative form-group">
-                      <label for="exampleCustomSelect" class=""
-                        >Total Hours</label
-                      ><select
-                        type="select"
-                        id="HourSub"
-                        name="tHours"
-                        class="custom-select"
-                      >
-                        <option value="">Select</option>
-                        <option value="25">25</option>
-                        <option value="35">35</option>
-                        <option value="45">45</option>
-                        <option value="65">65</option>
-                        <option value="90">90</option>
-                        <option value="110">110</option>
-                        <option value="130">130</option>
-                        <option value="0">Other</option>
-                      </select>
-                    </div>
-                    <div class="position-relative form-group 0 box">
-                      <label for="examplePassword11" class=""
-                        >Note: Above TA assignment together with other TA
-                        assignments for other courses cannot exceed 130 hours
-                        per semester - as per (^) </label
-                      ><input
-                        id="totalHours"
-                        placeholder="Enter total hours"
-                        type="text"
-                        class="form-control"
-						            name="otherTHours"
-                      />
-                    </div>
                     <?php 
                       if($position == "TA")
                       {
-                          echo '<div class="input-group">
+                          echo '<h5 class="card-title">
+                          Teaching Assistant Duties Form
+                        </h5>
+                        <h6 class="card-subtitle">
+                          Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
+                        </h6>
+                        <form class="" method="post" action="insert.php" >
+                          <div class="form-row">
+                            <div class="col-md-auto">
+                              <div class="position-relative form-group">
+                                <label for="exampleCustomSelect" class=""
+                                  >Total Hours</label
+                                ><select
+                                  type="select"
+                                  id="HourSub"
+                                  name="tHours"
+                                  class="custom-select"
+                                >
+                                  <option value="">Select</option>
+                                  <option value="25">25</option>
+                                  <option value="35">35</option>
+                                  <option value="45">45</option>
+                                  <option value="65">65</option>
+                                  <option value="90">90</option>
+                                  <option value="110">110</option>
+                                  <option value="130">130</option>
+                                  <option value="0">Other</option>
+                                </select>
+                              </div>
+                              <div class="position-relative form-group 0 box">
+                                <label for="examplePassword11" class=""
+                                  >Note: Above TA assignment together with other TA
+                                  assignments for other courses cannot exceed 130 hours
+                                  per semester - as per (^) </label
+                                ><input
+                                  id="totalHours"
+                                  placeholder="Enter total hours"
+                                  type="text"
+                                  class="form-control"
+                                  name="otherTHours"
+                                />
+                              </div>
+                          <div class="input-group">
                           <div class="input-group-prepend" style="width: 30%;">
                             <span class="input-group-text" style="width: 100%;"
                               >In-Class Duties</span
@@ -490,7 +490,52 @@
                   {
                     $page = "insert.php";
                     $target = "_blank";
-                    echo '<input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">';
+                    echo '<h5 class="card-title">
+                    Marker Form
+                  </h5>
+                  <h6 class="card-subtitle">
+                    Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
+                  </h6>
+                  <form class="" method="post" action="insert.php" >
+                    <div class="form-row">
+                      <div class="col-md-auto">
+                        <div class="position-relative form-group">
+                          <label for="exampleCustomSelect" class=""
+                            >Total Hours</label
+                          ><select
+                            type="select"
+                            id="HourSub"
+                            name="tHours"
+                            class="custom-select"
+                          >
+                            <option value="">Select</option>
+                            <option value="25">25</option>
+                            <option value="35">35</option>
+                            <option value="45">45</option>
+                            <option value="65">65</option>
+                            <option value="90">90</option>
+                            <option value="110">110</option>
+                            <option value="130">130</option>
+                            <option value="0">Other</option>
+                          </select>
+                        </div>
+                        <div class="position-relative form-group 0 box">
+                          <label for="examplePassword11" class=""
+                            >*Please note that the estimated # of hours is for budget
+                            forecasting only and should not be interpreted as an employment
+                            contract for a specific number of hours of work. Reporting hours
+                            will be done through Timesheets to be submitted bi-weekly by
+                            approver to timesheets@cs.dal.ca by due dates outlined in Marker
+                            Timesheets. (^) </label
+                          ><input
+                            id="totalHours"
+                            placeholder="Enter total hours"
+                            type="text"
+                            class="form-control"
+                            name="otherTHours"
+                          />
+                        </div>
+                    <input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">';
                   }
                     ?>
                     
