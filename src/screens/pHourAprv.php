@@ -180,35 +180,37 @@
           </div>
           <div class="scrollbar-sidebar ps ps--active-y">
             <div class="app-sidebar__inner">
-              <ul class="vertical-nav-menu metismenu">
+            <ul class="vertical-nav-menu metismenu">
                 <li>
                   <a href="Prof.html">
                     <i class="metismenu-icon pe-7s-user"></i>
                     My Dashboard
                   </a>
                 </li>
-
                 <li>
                   <a href="pcourses.html">
                     <i class="metismenu-icon pe-7s-id"></i>
                     My Courses
                   </a>
                 </li>
-
+                <li>
+                  <a href="pPostings.html">
+                    <i class="metismenu-icon pe-7s-file"></i>
+                    My Postings
+                  </a>
+                </li>
                 <li>
                   <a href="pHourAprv.php" class="mm-active">
                     <i class="metismenu-icon pe-7s-file"></i>
-                    Hours Approval 
+                    Hours Approval
                   </a>
                 </li>
-
                 <li>
-                  <a href="jobs.html">
+                  <a href="pJobs.html" target="_blank">
                     <i class="metismenu-icon pe-7s-file"></i>
                     View Jobs
                   </a>
                 </li>
-
               </ul>
             </div>
             <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
