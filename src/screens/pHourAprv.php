@@ -428,7 +428,7 @@
     $keys = array_keys($idList);
     while($i<sizeof($idList))
     {
-      $sql = "SELECT E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, id FROM form WHERE form.id = $keys[$i]";
+      $sql = "SELECT E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, id, Position FROM form WHERE form.id = $keys[$i]";
       $result = mysqli_query($conn, $sql);
       $modal = mysqli_fetch_assoc($result);
       $eName = $modal["E_name"];
@@ -444,6 +444,11 @@
       $OHours = $modal["Office_hours"];
       $GHours = $modal["Grading_hours"];
       $OtHours = $modal["Other_hours"];
+      $position = $modal["Position"];
+      if($position=="MK")
+      {
+        $position = "Marker";
+      }
 
       echo '<div
     class="modal fade"
@@ -487,15 +492,19 @@
           </div>
           <div class="card-body">
             <ul class="list-group">
-              <li class="list-group-item">Position: TA</li>
-              <li class="list-group-item">Total Hours: '.$THours.'</li>
-              <li class="list-group-item">In-Class Duties: '.$CHours.' </li>
-              <li class="list-group-item">Office Duties: '.$OHours.'</li>
-              <li class="list-group-item">
-                Marking, Grading, Invigilating: '.$GHours.'
-              </li>
-              <li class="list-group-item">Others (Labs): '.$OtHours.'</li>
-            </ul>
+              <li class="list-group-item">Position: '.$position.'</li>
+              <li class="list-group-item">Total Hours: '.$THours.'</li>';
+              if($position == "TA")
+              {
+                echo '<li class="list-group-item">In-Class Duties: '.$CHours.' </li>
+                <li class="list-group-item">Office Duties: '.$OHours.'</li>
+                <li class="list-group-item">
+                  Marking, Grading, Invigilating: '.$GHours.'
+                </li>
+                <li class="list-group-item">Others (Labs): '.$OtHours.'</li>';
+              }
+
+            echo '</ul>
           </div>
         </div>
         <div class="modal-footer">
