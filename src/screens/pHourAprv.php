@@ -196,9 +196,9 @@
                 </li>
 
                 <li>
-                  <a href="pHourAprv.html" class="mm-active">
+                  <a href="pHourAprv.php" class="mm-active">
                     <i class="metismenu-icon pe-7s-file"></i>
-                    My Job Postings
+                    Hours Approval 
                   </a>
                 </li>
 
