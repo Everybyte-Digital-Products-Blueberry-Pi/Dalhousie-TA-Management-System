@@ -282,36 +282,39 @@
               <!-- Calendar by Su -->
               <div class="col-md-12 col-lg-6">
                 <div class="mb-3 card">
-                  <div class="calendar__header">
-                    <div class="card-title">Mon</div>
-                    <div class="card-title">Tue</div>
-                    <div class="card-title">Wed</div>
-
-
-
-
-                  </div>
-                  <div class="calendar__week">
-                    <div class="calendar__day">
-                      <div class="calender_date card-title">1</div>
-                      <p class="card-subtitle">
-                        11:35-12:25 <br />
-                        Busy
-                      </p>
+                  <div class="card-body">
+                    <div class="card-title">Schedule</div>
+                    <div class="calendar__header">
+                      <div class="card-title">Mon</div>
+                      <div class="card-title">Tue</div>
+                      <div class="card-title">Wed</div>
+                      <!-- <div>thu</div>
+                                        <div>fri</div>
+                                        <div>sat</div>
+                                        <div>sun</div> -->
                     </div>
-                    <div class="calendar__day">
-                      <div class="calender_date card-title">2</div>
-                      <p class="card-subtitle">
-                        2:25-3:55 <br />
-                        Busy
-                      </p>
-                    </div>
-                    <div class="calendar__day">
-                      <div class="calender_date card-title">3</div>
-                      <p class="card-subtitle">
-                        4:35-5:25 <br />
-                        Busy
-                      </p>
+                    <div class="calendar__week">
+                      <div class="calendar__day">
+                        <div class="calender_date card-title">Jul 1</div>
+                        <p>
+                          11:35-12:25 <br />
+                          Job Interview
+                        </p>
+                      </div>
+                      <div class="calendar__day">
+                        <div class="calender_date card-title">Jul 2</div>
+                        <p>
+                          2:25-3:55 <br />
+                          CSCI 2110 Cls
+                        </p>
+                      </div>
+                      <div class="calendar__day">
+                        <div class="calender_date card-title">Jul 3</div>
+                        <p>
+                          4:35-5:25 <br />
+                          CSCI 3100 TA
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
