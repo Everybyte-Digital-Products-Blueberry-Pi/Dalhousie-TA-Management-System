@@ -279,7 +279,6 @@
                             <th>Position</th>
                             <th>Status</th>
                             <th>Details</th>
-                            <th>Position</th>
                             
                           </tr>
                         </thead>
@@ -337,7 +336,6 @@
                                 }
 
                                 echo '</td>
-                                <td>'.$position.'</td>
                                 <td>';
                                 
                                     echo  '<button
@@ -361,9 +359,6 @@
                           echo "You haven't recieved any applications yet.";
                         }
                         ?>
-
-                        
-                         
                         </tbody>
                       </table>
                     </div>
