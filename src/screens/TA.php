@@ -490,18 +490,23 @@
                   {
                     $page = "insert.php";
                     $target = "_blank";
-                    echo '<h5 class="card-title">
+                    echo ' <h5 class="card-title">
                     Marker Form
                   </h5>
                   <h6 class="card-subtitle">
-                    Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
+                    *Please note that the estimated # of hours is for budget
+                    forecasting only and should not be interpreted as an employment
+                    contract for a specific number of hours of work. Reporting hours
+                    will be done through Timesheets to be submitted bi-weekly by
+                    approver to timesheets@cs.dal.ca by due dates outlined in Marker
+                    Timesheets. (^)
                   </h6>
                   <form class="" method="post" action="insert.php" >
                     <div class="form-row">
                       <div class="col-md-auto">
                         <div class="position-relative form-group">
                           <label for="exampleCustomSelect" class=""
-                            >Total Hours</label
+                            >Estimated # of hours:</label
                           ><select
                             type="select"
                             id="HourSub"
@@ -521,18 +526,13 @@
                         </div>
                         <div class="position-relative form-group 0 box">
                           <label for="examplePassword11" class=""
-                            >*Please note that the estimated # of hours is for budget
-                            forecasting only and should not be interpreted as an employment
-                            contract for a specific number of hours of work. Reporting hours
-                            will be done through Timesheets to be submitted bi-weekly by
-                            approver to timesheets@cs.dal.ca by due dates outlined in Marker
-                            Timesheets. (^) </label
+                            >Enter hours</label
                           ><input
                             id="totalHours"
                             placeholder="Enter total hours"
                             type="text"
                             class="form-control"
-                            name="otherTHours"
+                            name="tHours"
                           />
                         </div>
                     <input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">';
