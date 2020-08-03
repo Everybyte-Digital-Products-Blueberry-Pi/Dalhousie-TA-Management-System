@@ -185,15 +185,9 @@
           <div class="scrollbar-sidebar ps ps--active-y">
             <div class="app-sidebar__inner">
               <ul class="vertical-nav-menu metismenu">
-                <li>
-                  <a href="jobs.html" target="_blank">
-                    <i class="metismenu-icon pe-7s-pendrive"></i>
-                    Jobs
-                  </a>
-                </li>
 
                 <li>
-                  <a href="profile.html" class="mm-active">
+                  <a href="TA.php" class="mm-active">
                     <i class="metismenu-icon pe-7s-user"></i>
                     My Dashboard
                   </a>
@@ -203,6 +197,13 @@
                   <a href="TAcourses.html">
                     <i class="metismenu-icon pe-7s-file"></i>
                     My Courses
+                  </a>
+                </li>
+
+                <li>
+                  <a href="jobs.html" target="_blank">
+                    <i class="metismenu-icon pe-7s-pendrive"></i>
+                    View Jobs
                   </a>
                 </li>
               </ul>
@@ -257,8 +258,8 @@
                     type="submit"
                     name="submit"
                     class="btn ml-2 mb-2 mr-2 btn-primary"
-                    value= "Confirm Selection"
-                  />
+                    value= "Confirm Selection">
+
                   <button type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
                     data-target="#modalTAHSub">Proceed</button>
                 </div>
