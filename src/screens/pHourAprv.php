@@ -276,6 +276,7 @@
                             <th>Full Name</th>
                             <th>B00#</th>
                             <th>Course ID</th>
+                            <th>Position</th>
                             <th>Status</th>
                             <th>Details</th>
                           </tr>
@@ -299,6 +300,10 @@
                                 $id = $row["id"];
                                 $idList[$id] = $modal.$id;
                                 $position = $row["Position"];
+                                if($position=="MK")
+                                {
+                                  $position = "Marker";
+                                }
                                 $status_sql = "SELECT status FROM status WHERE status.id=$id";
                                 $statusRow = mysqli_fetch_assoc(mysqli_query($conn, $status_sql));
                                 $status = $statusRow["status"]; 
@@ -308,6 +313,7 @@
                                 <td>'.$empName.'</td>
                                 <td>'.$BId.'</td>
                                 <td>'.$cID.'</td>
+                                <td>'.$position.'</td>
                                 <td>';
                                 if($status=="approved")
                                 {
