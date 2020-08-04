@@ -255,7 +255,7 @@
                   echo '<form class="col-md-12 col-lg-6">
                   <div class="mb-3 card">
                   <div class="ml-3 mt-3 card-title">Hour Submission</div>
-                  <div class="ml-3 mr-3 position-relative form-group">
+                  <div class="ml-3 mr-3 position-relative form-group alert alert-success" role="alert">
                   You\'ve selected '.$_SESSION['course']. '.
                   Thank you for your selection. <br>Click proceed to fill out the Hour Submission Form.
                   </div>
