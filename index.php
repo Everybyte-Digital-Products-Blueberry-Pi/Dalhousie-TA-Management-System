@@ -1,3 +1,3 @@
 <?php
- echo "hello world";
+header("Location: src/screens/index.html");
 ?>
