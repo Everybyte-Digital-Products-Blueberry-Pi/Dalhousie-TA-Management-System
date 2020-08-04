@@ -37,7 +37,7 @@ $iName = $courses[$_SESSION['course']]['iName'];
 $CRN = $courses[$_SESSION['course']]['CRN'];
 $position  = $_SESSION['position'];
 
-$sql = "INSERT INTO form (E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, Position) VALUES ('$eName', '$CurrStudent','$Id','$iName','$CourseID', $CRN, '$Term', $Year, $Total_Hours,$Inclass_Duties, $Office_Duties, $Marking_Hours, $Other_Hours, '$position')";
+$sql = "INSERT INTO form (E_name, Curr_Dal_stu, DalId, IName, CourseID, CRN, Term, Year, Total_hour, IClass_hours, Office_hours, Grading_hours, Other_hours, Position) VALUES ('".$eName."', '".$CurrStudent."','".$Id."','".$iName."','".$CourseID."', ".$CRN."', '".$Term."', $Year, $Total_Hours,$Inclass_Duties, $Office_Duties, $Marking_Hours, $Other_Hours, '".$position."')";
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
   } else {
