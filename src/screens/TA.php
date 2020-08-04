@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Language" content="en" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>TA dashboard</title>
+    <title>TA Dashboard</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
@@ -116,12 +116,12 @@
                       </a>
                       <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(60px, 44px, 0px);">
                         <div class="card-body">
-                          <img width="60" src="assets/images/avatars/4.jpg" alt="Card image cap" class="rounded-circle">
+                          <img width="60" src="assets/images/avatars/1.jpg" alt="Card image cap" class="rounded-circle">
                           <br>
                           <br>
                           <h5 class="card-title">John Doe</h5>
                           <h6 class="card-subtitle">
-                            Professor
+                            TA
                           </h6>
                           <p>
                             Email: ab12345@dal.ca<br>Phone: (123) 456 789<br>Courses:
@@ -133,10 +133,10 @@
                   </div>
                   <div class="widget-content-left ml-3 header-user-info">
                     <div class="widget-heading">
-                      Alina Mclourd
+                      John Doe
                     </div>
                     <div class="widget-subheading">
-                      Professor
+                      TA
                     </div>
                   </div>
                 </div>
