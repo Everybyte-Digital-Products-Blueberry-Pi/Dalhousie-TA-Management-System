@@ -274,7 +274,7 @@
 		      <?php
                 if(isset($_POST['submit']))
                 {
-                  $input = $_POST['Courses']; 
+                  $input = $_POST['Courses'];
                   $position = substr($input, 10, 11);
                   $_SESSION['position'] = $position;
                   $course =  substr($input, 0, 9);
@@ -328,7 +328,7 @@
             </div>
             <!-- Courses and Feedback by Nh or Ab (Need to decide) -->
             <div class="row">
-              <div class="col-md-12 col-lg-12"> 
+              <div class="col-md-12 col-lg-12">
                 <div class="mb-3 card">
                   <div class="card-body">
                     <h5 class="card-title">Current Courses</h5>
@@ -423,7 +423,7 @@
             </div>
 
             <div class="card-body">
-                    <?php 
+                    <?php
                       if($position == "TA")
                       {
                           echo '<h5 class="card-title">
@@ -589,8 +589,8 @@
                     <input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">';
                   }
                     ?>
-                    
-                
+
+
               <br />
 
 				</input>
