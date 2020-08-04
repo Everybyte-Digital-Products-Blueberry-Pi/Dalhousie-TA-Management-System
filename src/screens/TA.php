@@ -242,34 +242,7 @@
           <div class="app-main__inner">
             <div class="row">
               <!-- Hours of submission by Ab -->
-              <form class="col-md-12 col-lg-6" method="post" action="TA.php">
-                <div class="mb-3 card">
-                  <div class="ml-3 mt-3 card-title">Hour Submission</div>
-                  <div class="ml-3 mr-3 position-relative form-group">
-                    <label for="exampleCustomSelect" class=""
-                      >Select Course</label
-                    ><select
-                      type="select"
-                      id="exampleCustomSelect"
-                      name="Courses"
-                      class="custom-select"
-                    >
-                      <option value="">Select</option>
-                      <option value="CSCI 1800 MK">CSCI 1800 MK</option>
-                      <option value="CSCI 2100 TA">CSCI 2100 TA</option>
-                      <option value="CSCI 3000 MK">CSCI 3000 MK</option>
-                    </select>
-                  </div>
-                  <input
-                    type="submit"
-                    name="submit"
-                    class="btn ml-2 mb-2 mr-2 btn-primary"
-                    value= "Confirm Selection">
-
-                  <button type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
-                    data-target="#modalTAHSub">Proceed</button>
-                </div>
-              </form>
+              
 
 		      <?php
                 if(isset($_POST['submit']))
@@ -279,6 +252,47 @@
                   $_SESSION['position'] = $position;
                   $course =  substr($input, 0, 9);
                   $_SESSION['course'] = $course;
+                  echo '<div class="mb-3 card">
+                  <div class="ml-3 mt-3 card-title">Hour Submission</div>
+                  
+                  You\'ve selected '.$_SESSION['course']. '.                            
+                  Thank you for your selection. <br>Click proceed to fill out the Hour Submission Form.
+                  <br>
+                  
+                  
+                  
+                  <button type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
+                  data-target="#modalTAHSub">Proceed</button>
+                  </div>' ;
+                }
+                else
+                {
+                  echo '<form class="col-md-12 col-lg-6" method="post" action="TA.php">
+                  <div class="mb-3 card">
+                    <div class="ml-3 mt-3 card-title">Hour Submission</div>
+                    
+                      <div class="ml-3 mr-3 position-relative form-group">
+                      <label for="exampleCustomSelect" class=""
+                        >Select Course</label
+                      ><select
+                        type="select"
+                        id="exampleCustomSelect"
+                        name="Courses"
+                        class="custom-select"
+                      >
+                        <option value="">Select</option>
+                        <option value="CSCI 1800 MK">CSCI 1800 MK</option>
+                        <option value="CSCI 2100 TA">CSCI 2100 TA</option>
+                        <option value="CSCI 3000 MK">CSCI 3000 MK</option>
+                      </select>
+                    </div>
+                    <input
+                      type="submit"
+                      name="submit"
+                      class="btn ml-2 mb-2 mr-2 btn-primary"
+                      value= "Confirm Selection">
+                  </div>
+                </form>';
                 }
               ?>
 
@@ -583,7 +597,7 @@
                             placeholder="Enter total hours"
                             type="text"
                             class="form-control"
-                            name="tHours"
+                            name="otherTHours"
                           />
                         </div>
                     <input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">';
