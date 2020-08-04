@@ -242,7 +242,7 @@
           <div class="app-main__inner">
             <div class="row">
               <!-- Hours of submission by Ab -->
-              
+
 
 		      <?php
                 if(isset($_POST['submit']))
@@ -252,25 +252,26 @@
                   $_SESSION['position'] = $position;
                   $course =  substr($input, 0, 9);
                   $_SESSION['course'] = $course;
-                  echo '<div class="mb-3 card">
+                  echo '<form class="col-md-12 col-lg-6">
+                  <div class="mb-3 card">
                   <div class="ml-3 mt-3 card-title">Hour Submission</div>
-                  
-                  You\'ve selected '.$_SESSION['course']. '.                            
+                  <div class="ml-3 mr-3 position-relative form-group">
+                  You\'ve selected '.$_SESSION['course']. '.
                   Thank you for your selection. <br>Click proceed to fill out the Hour Submission Form.
-                  <br>
-                  
-                  
-                  
+                  </div>
+
+
                   <button type="button" class="btn ml-2 mb-2 mr-2 btn-primary" data-toggle="modal"
                   data-target="#modalTAHSub">Proceed</button>
-                  </div>' ;
+                  </div>
+                  </form>' ;
                 }
                 else
                 {
                   echo '<form class="col-md-12 col-lg-6" method="post" action="TA.php">
                   <div class="mb-3 card">
                     <div class="ml-3 mt-3 card-title">Hour Submission</div>
-                    
+
                       <div class="ml-3 mr-3 position-relative form-group">
                       <label for="exampleCustomSelect" class=""
                         >Select Course</label
@@ -544,12 +545,15 @@
                         <br />
                       </div>
                     </div>
+                    <div style="display:none" id="validated" class="alert alert-success" role="alert">
+                      Validated
+                    </div>
                     <button id="validate" type="button" onclick="checkTotalHours()" class="btn btn-primary" >
                 Validate
               </button>';
               $page = "insert.php";
               $target = "_blank";
-              echo '<input onsubmit="window.open('.$page.','.$target.')" style="visibility: hidden" id="hourSubmit" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">';
+              echo '<input onsubmit="window.open('.$page.','.$target.')" style="visibility: hidden" id="hourSubmit" type="submit" name="hourSubmit" value="Submit" class="btn btn-success">';
                   }
                   else
                   {
@@ -600,7 +604,7 @@
                             name="otherTHours"
                           />
                         </div>
-                    <input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-primary">';
+                    <input onsubmit="window.open('.$page.','.$target.')" type="submit" name="hourSubmit" value="Submit" class="btn btn-success">';
                   }
                     ?>
 
