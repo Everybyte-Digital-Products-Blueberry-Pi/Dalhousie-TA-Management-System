@@ -4,12 +4,12 @@ include_once 'connect.php';
 session_start();
 include_once 'course-list.php';
 
-
+//extract information from the hour submission modal
 if(isset($_POST['hourSubmit'])){
 $Total_Hours = $_POST['tHours'];
 if($Total_Hours==0)
 {
-  $Total_Hours = $_POST['otherTHours'];
+  $Total_Hours = $_POST['otherTHours']; //for the "Other" option on the modal
 }					
 if($_SESSION['position']=="TA")
 {
@@ -45,5 +45,5 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 
-  header("Location: TA.php");
+  header("Location: TA.php"); //redirect to TA.php as soon as data is entered into the table 
 ?>

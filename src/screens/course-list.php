@@ -1,4 +1,5 @@
 <?php
+//an array with the basic information for the three courses that can be selected in TA.php
 $courses=array();
 $courses['CSCI 1800']=array(
     "eName" => "John Doe", 
