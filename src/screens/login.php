@@ -119,7 +119,7 @@
       <?php
       if($user == "stu")
       {
-        echo '<a class="btn btn-lg btn-primary btn-block" href="Prof.html">
+        echo '<a class="btn btn-lg btn-primary btn-block" href="jobs.html">
         Sign in
       </a>
       <a class="btn btn-lg btn-primary btn-block" href="jobs.html">
