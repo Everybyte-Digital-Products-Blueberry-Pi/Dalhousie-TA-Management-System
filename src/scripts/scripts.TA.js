@@ -56,7 +56,7 @@ new total hour the user put in to the sub-hours */
     } else{
       y.style.visibility = 'visible';
       x.style.display = 'none';
-      z.style.visibility = 'visible';
+      z.style.display = 'block';
     }
   }
 /*if the user choose one of the givenn option, calculate the
@@ -69,20 +69,6 @@ sum of sub-hours to the total hours that the user choose*/
       y.style.visibility = 'visible';
       x.style.display = 'none';
       z.style.display = 'block';
-
     }
-  }
-}
-
-function readSelect(){
-  var course = document.getElementById("courseSelect");
-  var back = document.getElementById("backButton");
-  var detail = document.getElementById("detail");
-  var confirm = document.getElementById("confirmButton");
-
-  if (course.options[course.selectedIndex].value != 0){
-    back.style.display = 'block';
-    confirm.style.display = 'none';
-    detail.style.display = 'block';
   }
 }
