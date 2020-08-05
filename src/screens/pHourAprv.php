@@ -295,11 +295,11 @@
 
                         <?php          
                         include_once 'connect.php';
-                        $sql = "SELECT E_name,  DalId, CourseID,id, Position FROM form ORDER BY form.id DESC";
+                        $sql = "SELECT E_name,  DalId, CourseID,id, Position FROM form ORDER BY form.id DESC"; //Extracting data from the form table
                         $index = 1;
                         $result = mysqli_query($conn,$sql);
-                        $idList = array();
-                        $modal = "ExampleModalTAY";
+                        $idList = array(); //an array holding all the ids
+                        $modal = "ExampleModalTAY"; //the class name for the modals
                         if(mysqli_num_rows($result)>0)
                         {
                             while($row = mysqli_fetch_assoc($result))
@@ -308,12 +308,14 @@
                                 $BId = $row["DalId"];
                                 $cID = $row["CourseID"];
                                 $id = $row["id"];
-                                $idList[$id] = $modal.$id;
+                                $idList[$id] = $modal.$id; //generating the modal class name for creating required amount of modals
                                 $position = $row["Position"];
+                                //To display Marker instead of MK
                                 if($position=="MK")
                                 {
                                   $position = "Marker";
                                 }
+                                //Command to extract status information
                                 $status_sql = "SELECT status FROM status WHERE status.id=$id";
                                 $statusRow = mysqli_fetch_assoc(mysqli_query($conn, $status_sql));
                                 $status = $statusRow["status"]; 
@@ -351,7 +353,7 @@
                                     type="button"
                                     class="btn mr-2 mb-2 btn-primary"
                                     data-toggle="modal"
-                                    data-target="#'.$idList[$id].'"
+                                    data-target="#'.$idList[$id].'" 
                                     >
                                     View
                                     </button>
@@ -438,6 +440,7 @@
 
     <!-- Modal TA Done-->
     <?php
+    //Get the ids from the idList array to extract form information based on the the id
     $i = 0;
     $keys = array_keys($idList);
     while($i<sizeof($idList))
