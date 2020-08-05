@@ -33,55 +33,58 @@
       rel="stylesheet"
     />
     <style>
-      .form-signin {
-        width: 100%;
-        max-width: 330px;
-        padding: 15px;
-        margin: 0 auto;
-      }
-      body {
-        height: 100%;
-        display: -ms-flexbox;
-        display: -webkit-box;
-        display: flex;
-        -ms-flex-align: center;
-        -ms-flex-pack: center;
-        -webkit-box-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        justify-content: center;
-        padding-bottom: 40px;
-      }
-      html {
-        line-height: 1.15;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        -ms-overflow-style: scrollbar;
-      }
+    .form-signin {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: 0 auto;
+    }
+    body {
+      height: 100%;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -ms-flex-align: center;
+      -ms-flex-pack: center;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      padding-bottom: 80px;
+    }
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+    .form-signin input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
     </style>
   </head>
 
   <body class="text-center">
     <form class="form-signin" method="get">
       <img
-        class="mb-4"
+        class=""
         src="../assets/img/dal_cs_logo.png"
         alt="Company Logo"
         width="300"
         height="154"
       />
-      <h1 class="h1 mb-3 font-weight-normal">DalTAMS</h1>
-      <h3 class="h3 mb-3 font-weight-normal">Select your user type</h3>
-      <a type="button" class="btn btn-lg btn-primary btn-block" href="login.php?user=stu">
+      <h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
+      <h4 class="h4 mb-3 font-weight-normal">Select your user type</h4>
+      <a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=stu">
         Student
       </a>
-      <a type="button" class="btn btn-lg btn-primary btn-block" href="login.php?user=TA">
+      <a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=TA">
         TA
     </a>
-      <a type="button" class="btn btn-lg btn-primary btn-block" href="login.php?user=prof">
+      <a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=prof">
         Professor
     </a>
-      <a type="button" class="btn btn-lg btn-primary btn-block" href="login.php?user=office">
+      <a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=office">
         Office
     </a>
     </form>

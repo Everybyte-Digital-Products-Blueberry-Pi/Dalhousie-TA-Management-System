@@ -50,7 +50,7 @@
         align-items: center;
         -webkit-box-pack: center;
         justify-content: center;
-        padding-bottom: 40px;
+        padding-bottom: 80px;
       }
       html, body {
         margin: 0;
@@ -70,32 +70,39 @@
   <body class="text-center">
     <form class="form-signin">
       <img
-        class="mb-4"
+        class=""
         src="../assets/img/dal_cs_logo.png"
         alt="Company Logo"
         width="300"
         height="154"
       />
-      <h1 class="h1 mb-3 font-weight-normal">DalTAMS</h1>
+      <h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
       <?php
       if($user == "stu" || $user == "TA")
       {
-        echo '<label for="inputEmail" class="sr-only">Net ID</label>';
+        echo '<label for="inputEmail" class="sr-only">Net ID</label>
+        <input
+          type="email"
+          id="inputEmail"
+          class="form-control"
+          placeholder="NetID"
+          required=""
+          autofocus=""
+        />';
       }
-      else if($user == "prof")
+      else if($user == "prof" || $user == "office")
       {
-        echo '<label for="inputEmail" class="sr-only">Email address</label>';
-      } 
+        echo '<label for="inputEmail" class="sr-only">Username</label>
+        <input
+          type="text"
+          id="inputUsername"
+          class="form-control"
+          placeholder="Username"
+          required=""
+          autofocus=""
+        />';
+      }
       ?>
-      
-      <input
-        type="email"
-        id="inputEmail"
-        class="form-control"
-        placeholder="NetID"
-        required=""
-        autofocus=""
-      />
       <label for="inputPassword" class="sr-only">Password</label>
       <input
         type="password"
@@ -118,7 +125,7 @@
       <a class="btn btn-lg btn-primary btn-block" href="jobs.html">
         Register
       </button>';
-      } 
+      }
       else if($user=="prof")
       {
         echo '<a class="btn btn-lg btn-primary btn-block" href="Prof.html">
@@ -137,8 +144,16 @@
         Register
       </button>';
       }
+      else {
+        echo '<a class="btn btn-lg btn-primary btn-block" href="">
+        Sign in
+      </a>
+      <a class="btn btn-lg btn-primary btn-block" href="">
+        Register
+      </button>';
+      }
       ?>
-      
+
     </form>
     <script>
       type = "text/javascript";
