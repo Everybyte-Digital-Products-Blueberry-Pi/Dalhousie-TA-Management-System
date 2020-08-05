@@ -268,34 +268,6 @@
         </div>
         <div class="app-main__outer">
           <div class="app-main__inner">
-            <ul
-              class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav"
-            >
-              <li class="nav-item">
-                <a
-                  role="tab"
-                  class="nav-link show active"
-                  id="tab-0"
-                  data-toggle="tab"
-                  href="#tab-content-0"
-                  aria-selected="true"
-                >
-                  <span>TA</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  role="tab"
-                  class="nav-link show"
-                  id="tab-1"
-                  data-toggle="tab"
-                  href="#tab-content-1"
-                  aria-selected="false"
-                >
-                  <span>Marker</span>
-                </a>
-              </li>
-            </ul>
             <div class="tab-content">
               <div
                 class="tab-pane tabs-animation fade active show"
