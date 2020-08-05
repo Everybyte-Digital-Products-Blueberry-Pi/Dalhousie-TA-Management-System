@@ -1,5 +1,6 @@
 <?php
 include_once 'connect.php';
+//get the status and corresponding id from pHourAprv.php
 $id = $_GET['id'];
 $status = $_GET['status'];
 

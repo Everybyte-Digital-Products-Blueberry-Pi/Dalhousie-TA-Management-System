@@ -245,6 +245,7 @@
 
 
 		      <?php
+                //extract data, set variables and show the proceed button if form is submitted
                 if(isset($_POST['submit']))
                 {
                   $input = $_POST['Courses'];
@@ -266,7 +267,7 @@
                   </div>
                   </form>' ;
                 }
-                else
+                else //if form is not submitted, show the course selection
                 {
                   echo '<form class="col-md-12 col-lg-6" method="post" action="TA.php">
                   <div class="mb-3 card">
