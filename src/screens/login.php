@@ -64,7 +64,9 @@
 
     </style>
   </head>
-
+  <?php
+  $user = $_GET['user'];
+  ?>
   <body class="text-center">
     <form class="form-signin">
       <img
@@ -75,7 +77,17 @@
         height="154"
       />
       <h1 class="h1 mb-3 font-weight-normal">DalTAMS</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
+      <?php
+      if($user == "stu" || $user == "TA")
+      {
+        echo '<label for="inputEmail" class="sr-only">Net ID</label>';
+      }
+      else if($user == "prof")
+      {
+        echo '<label for="inputEmail" class="sr-only">Email address</label>';
+      } 
+      ?>
+      
       <input
         type="email"
         id="inputEmail"
@@ -97,12 +109,36 @@
           <input type="checkbox" value="remember-me" /> Remember me
         </label>
       </div>
-      <a class="btn btn-lg btn-primary btn-block" href="Prof.html">
+      <?php
+      if($user == "stu")
+      {
+        echo '<a class="btn btn-lg btn-primary btn-block" href="Prof.html">
         Sign in
       </a>
       <a class="btn btn-lg btn-primary btn-block" href="jobs.html">
         Register
-      </button>
+      </button>';
+      } 
+      else if($user=="prof")
+      {
+        echo '<a class="btn btn-lg btn-primary btn-block" href="Prof.html">
+        Sign in
+      </a>
+      <a class="btn btn-lg btn-primary btn-block" href="Prof.html">
+        Register
+      </button>';
+      }
+      else if($user=="TA")
+      {
+        echo '<a class="btn btn-lg btn-primary btn-block" href="TA.php">
+        Sign in
+      </a>
+      <a class="btn btn-lg btn-primary btn-block" href="TA.php">
+        Register
+      </button>';
+      }
+      ?>
+      
     </form>
     <script>
       type = "text/javascript";
