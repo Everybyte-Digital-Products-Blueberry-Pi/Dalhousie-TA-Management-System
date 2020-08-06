@@ -49,8 +49,8 @@ new total hour the user put in to the sub-hours */
     checkTotal = document.getElementById('totalHours').value;
       if (checkTotal < 0 || checkTotal > 130){
         alert('Hours should be between 0 and 130');
-    }
-        if (!(checkTotal == total &&
+      }
+      else if (!(checkTotal == total &&
               checkTotal > 0 &&
               checkTotal < 130)){
             alert('Total hours does not match, please check the value in the sub-hours section');
