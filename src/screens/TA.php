@@ -255,7 +255,10 @@
                   $_SESSION['course'] = $course;
                   echo '<form class="col-md-12 col-lg-6">
                   <div class="mb-3 card">
-                  <div class="ml-3 mt-3 card-title">Hour Submission</div>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="ml-3 mt-3 card-title">Hour Submission</div>
+                    <button type="button" class="btn ml-2 mb-2 mr-2 mt-2 btn-primary"  value="Back" onclick="window.history.back()">Back</button>
+                  </div>
                   <div class="ml-3 mr-3 position-relative form-group alert alert-success" role="alert">
                   You\'ve selected '.$_SESSION['course']. '.
                   Thank you for your selection. <br>Click proceed to fill out the Hour Submission Form.
