@@ -222,7 +222,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="pcourses.html">
+                  <a href="pCourses.html">
                     <i class="metismenu-icon pe-7s-id"></i>
                     My Courses
                   </a>
@@ -240,7 +240,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="pJobs.html" target="_blank">
+                  <a href="jobsP.html" target="_blank">
                     <i class="metismenu-icon pe-7s-file"></i>
                     View Jobs
                   </a>
