@@ -216,7 +216,7 @@
             <div class="app-sidebar__inner">
             <ul class="vertical-nav-menu metismenu">
                 <li>
-                  <a href="Prof.html">
+                  <a href="prof.html">
                     <i class="metismenu-icon pe-7s-user"></i>
                     My Dashboard
                   </a>

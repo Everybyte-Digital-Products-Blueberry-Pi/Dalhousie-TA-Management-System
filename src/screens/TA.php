@@ -1,4 +1,4 @@
-<!-- TA main Dashboard and profile page -->
+<!-- TA Main Dashboard -->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -240,11 +240,10 @@
         ?>
         <div class="app-main__outer">
           <div class="app-main__inner">
+            <!-- Hour Submission and Schedule -->
             <div class="row">
-              <!-- Hours of submission by Ab -->
-
-
-		      <?php
+              <!-- Hours of Submission -->
+		          <?php
                 //extract data, set variables and show the proceed button if form is submitted
                 if(isset($_POST['submit']))
                 {
@@ -300,11 +299,7 @@
                 </form>';
                 }
               ?>
-
-
-
-
-              <!-- Calendar by Su -->
+              <!-- Schedule for TA -->
               <div class="col-md-12 col-lg-6">
                 <div class="mb-3 card">
                   <div class="card-body">
@@ -345,7 +340,7 @@
                 </div>
               </div>
             </div>
-            <!-- Courses and Feedback by Nh or Ab (Need to decide) -->
+            <!-- Current Courses -->
             <div class="row">
               <div class="col-md-12 col-lg-12">
                 <div class="mb-3 card">
@@ -389,18 +384,13 @@
                 </div>
               </div>
             </div>
-
-            <!-- This is the basic information by Su-->
-            <div class="row"></div>
-
-            <!-- This is the Hours of Work and payrate of the TA by Undecided.-->
-            <div class="row"></div>
           </div>
         </div>
       </div>
     </div>
+
     <script type="text/javascript" src="./assets/scripts/main.js"></script>
-    <!-- Modal TA Hour Submission-->
+    <!-- Modal for TA Hour Submission-->
     <div
       class="modal fade"
       id="modalTAHSub"
@@ -408,8 +398,7 @@
       role="dialog"
       aria-labelledby="exampleModalLabel"
       style="display: none;"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -619,22 +608,11 @@
               </form>
             </div>
           </div>
-          <!-- <div class="modal-footer">
-
-
-            <button type="button" class="btn btn-primary" data-dismiss="modal">
-
-
-
->>>>>>> fca9ca8918be5f7162fdc5907f2e41c019638e54:src/screens/TA.php
-              Submit
-            </button>
-          </div> -->
         </div>
 
       </div>
     </div>
-    <!-- Modal Marker Hour Submission-->
+    <!-- Modal for Marker Hour Submission-->
     <div
       class="modal fade"
       id="modalMKSub"
@@ -642,8 +620,7 @@
       role="dialog"
       aria-labelledby="exampleModalLabel"
       style="display: none;"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
