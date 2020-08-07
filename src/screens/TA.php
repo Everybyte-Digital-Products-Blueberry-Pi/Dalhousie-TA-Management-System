@@ -248,7 +248,24 @@
                 //extract data, set variables and show the proceed button if form is submitted
                 if(isset($_POST['submit']))
                 {
-                  $input = $_POST['Courses'];
+                  if(empty($_POST['Courses']))
+                  {
+                    echo '<form class="col-md-12 col-lg-6">
+                  <div class="mb-3 card">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                  </div>
+                  <div class="ml-3 mr-3 position-relative form-group alert alert-danger" role="alert">
+                  You have not selected a course. <br>Click the button below to select a course.
+                  </div>
+
+
+                  <button type="button" class="btn ml-2 mb-2 mr-2 btn-primary" onclick="window.history.back()">Try Again</button>
+                  </div>
+                  </form>' ;
+                  }
+                  else
+                  {
+                    $input = $_POST['Courses'];
                   $position = substr($input, 10, 11);
                   $_SESSION['position'] = $position;
                   $course =  substr($input, 0, 9);
@@ -269,6 +286,7 @@
                   data-target="#modalTAHSub">Proceed</button>
                   </div>
                   </form>' ;
+                  }
                 }
                 else //if form is not submitted, show the course selection
                 {
