@@ -467,6 +467,11 @@
         $position = "Marker";
       }
 
+      $sql2 = "SELECT status FROM status WHERE id = $keys[$i]";
+      $result2 = mysqli_query($conn, $sql2);
+      $statusRow = mysqli_fetch_assoc($result2);
+      $statusVal = $statusRow["status"];
+
       echo '<div
     class="modal fade"
     id="'.$idList[$keys[$i]].'"
@@ -524,14 +529,33 @@
             echo '</ul>
           </div>
         </div>
-        <div class="modal-footer">
-        <a href = "status.php?id='.$keys[$i].'&status=approved" class="btn btn-success">
-              Approve
-        </a>
-        <a href = "status.php?id='.$keys[$i].'&status=declined" class="btn btn-danger">
-          Decline
-        </a>
-      <button
+        <div class="modal-footer">';
+        if(mysqli_num_rows($result2)>0)
+        {
+          if($statusVal=="approved")
+          {
+            echo '<a href = "status.php?id='.$keys[$i].'&status=declined" class="btn btn-danger">
+            Decline
+          </a>';
+          }
+          else
+          {
+            echo '<a href = "status.php?id='.$keys[$i].'&status=approved" class="btn btn-success">
+            Approve
+          </a>';
+          }
+        }
+        else
+        {
+          echo '<a href = "status.php?id='.$keys[$i].'&status=approved" class="btn btn-success">
+          Approve
+    </a>
+    <a href = "status.php?id='.$keys[$i].'&status=declined" class="btn btn-danger">
+      Decline
+    </a>';
+        }
+        
+      echo '<button
         type="button"
         class="btn btn-secondary"
         data-dismiss="modal"
