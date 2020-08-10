@@ -30,7 +30,7 @@
   * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 <link
-href="../styles/architectui-html-free/architectui-html-free/main.css"
+href="main.css"
 rel="stylesheet"
 />
 <style>
