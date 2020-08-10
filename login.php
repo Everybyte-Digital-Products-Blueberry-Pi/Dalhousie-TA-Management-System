@@ -70,13 +70,11 @@ $user = $_GET['user'];
 ?>
 <body class="text-center">
 	<form class="form-signin">
-		<img
-		class=""
-		src="../assets/img/dal_cs_logo.png"
+	<img
+		src="./assets/images/logo/company-logo.jpg"
 		alt="Company Logo"
-		width="300"
-		height="154"
-		/>
+		height="120"
+	/>
 		<h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
 		<?php
 		if($user == "stu" || $user == "TA")

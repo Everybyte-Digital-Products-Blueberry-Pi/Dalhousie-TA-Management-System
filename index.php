@@ -68,11 +68,9 @@ rel="stylesheet"
 <body class="text-center">
 	<form class="form-signin" method="get">
 		<img
-		class=""
-		src="../assets/img/dal_cs_logo.png"
+		src="./assets/images/logo/company-logo.jpg"
 		alt="Company Logo"
-		width="300"
-		height="154"
+		height="120"
 		/>
 		<h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
 		<h4 class="h4 mb-3 font-weight-normal">Select your user type</h4>
