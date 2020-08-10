@@ -1,0 +1,976 @@
+<!-- The Professor Dashboard for quick actions and basic information -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Professor Dashboard</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="This is an example dashboard created using build-in elements and components."
+    />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link href="./styles/main.css" rel="stylesheet" />
+    <link href="./styles/custom-styles/styles.calendar.css" rel="stylesheet" />
+    <style type="text/css">
+      /* Chart.js */
+      @-webkit-keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .chartjs-render-monitor {
+        -webkit-animation: chartjs-render-animation 0.001s;
+        animation: chartjs-render-animation 0.001s;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="http://maps.google.com/maps-api-v3/api/js/41/7/intl/en_gb/common.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="http://maps.google.com/maps-api-v3/api/js/41/7/intl/en_gb/util.js"
+    ></script>
+    <style type="text/css">
+      /* Chart.js */
+      @-webkit-keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .chartjs-render-monitor {
+        -webkit-animation: chartjs-render-animation 0.001s;
+        animation: chartjs-render-animation 0.001s;
+      }
+    </style>
+    <style type="text/css">
+      /* Copyright 2014-present Evernote Corporation. All rights reserved. */
+      @keyframes caretBlink {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      @keyframes rotateSpinner {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      #text-tool-caret {
+        animation-name: caretBlink;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(1, 0, 0, 1);
+        animation-duration: 1s;
+      }
+
+      #en-markup-loading-spinner {
+        position: absolute;
+        top: calc(50% - 16px);
+        left: calc(50% - 16px);
+        width: 32px;
+        height: 32px;
+      }
+
+      #en-markup-loading-spinner img {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        animation-name: rotateSpinner;
+        animation-duration: 0.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    </style>
+    <style type="text/css">
+      /* Copyright 2014-present Evernote Corporation. All rights reserved. */
+      .skitchToastBoxContainer {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 30px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        pointer-events: none;
+      }
+
+      .skitchToastBox {
+        width: 200px;
+        height: 16px;
+        padding: 12px;
+        background-color: rgba(47, 55, 61, 0.95);
+        border-radius: 4px;
+        color: white;
+        cursor: default;
+        font-size: 10pt;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.32);
+        font-family: "Soleil", Helvetica, Arial, sans-serif;
+        border: 2px rgba(255, 255, 255, 0.38) solid;
+      }
+
+      .lang-zh-cn .skitchToastBox {
+        font-family: "微软雅黑", "Microsoft YaHei", SimSun,
+          "&#x30E1;&#x30A4;&#x30EA;&#x30AA;", Meiryo, "MS PGothic", "Soleil",
+          Helvetica, Arial, sans-serif;
+      }
+
+      .lang-ja-jp .skitchToastBox {
+        font-family: "&#x30E1;&#x30A4;&#x30EA;&#x30AA;", Meiryo, "MS PGothic",
+          "微软雅黑", "Microsoft YaHei", SimSun, "Soleil", Helvetica, Arial,
+          sans-serif;
+      }
+
+      .skitchToast {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: inline-block;
+        height: 10px;
+        color: #f1f5f8;
+        text-align: center;
+      }
+
+      .skitchVisible {
+        /* Don't remove this class it's a hack used by the Evernote Clipper */
+      }
+    </style>
+    <style type="text/css">
+      /* Copyright 2014-present Evernote Corporation. All rights reserved. */
+    </style>
+
+    <style>
+      [touch-action="none"] {
+        -ms-touch-action: none;
+        touch-action: none;
+      }
+      [touch-action="auto"] {
+        -ms-touch-action: auto;
+        touch-action: auto;
+      }
+      [touch-action~="pan-x"] {
+        -ms-touch-action: pan-x;
+        touch-action: pan-x;
+      }
+      [touch-action~="pan-y"] {
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+      }
+      [touch-action~="pan-up"] {
+        -ms-touch-action: pan-up;
+        touch-action: pan-up;
+      }
+      [touch-action~="pan-down"] {
+        -ms-touch-action: pan-down;
+        touch-action: pan-down;
+      }
+      [touch-action~="pan-left"] {
+        -ms-touch-action: pan-left;
+        touch-action: pan-left;
+      }
+      [touch-action~="pan-right"] {
+        -ms-touch-action: pan-right;
+        touch-action: pan-right;
+      }
+    </style>
+    <style type="text/css">
+      /* Chart.js */
+      @-webkit-keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .chartjs-render-monitor {
+        -webkit-animation: chartjs-render-animation 0.001s;
+        animation: chartjs-render-animation 0.001s;
+      }
+    </style>
+    <style type="text/css">
+      /* Copyright 2014-present Evernote Corporation. All rights reserved. */
+      @keyframes caretBlink {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      @keyframes rotateSpinner {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      #text-tool-caret {
+        animation-name: caretBlink;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(1, 0, 0, 1);
+        animation-duration: 1s;
+      }
+
+      #en-markup-loading-spinner {
+        position: absolute;
+        top: calc(50% - 16px);
+        left: calc(50% - 16px);
+        width: 32px;
+        height: 32px;
+      }
+
+      #en-markup-loading-spinner img {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        animation-name: rotateSpinner;
+        animation-duration: 0.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    </style>
+    <style type="text/css">
+      /* Copyright 2014-present Evernote Corporation. All rights reserved. */
+      .skitchToastBoxContainer {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 30px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        pointer-events: none;
+      }
+
+      .skitchToastBox {
+        width: 200px;
+        height: 16px;
+        padding: 12px;
+        background-color: rgba(47, 55, 61, 0.95);
+        border-radius: 4px;
+        color: white;
+        cursor: default;
+        font-size: 10pt;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.32);
+        font-family: "Soleil", Helvetica, Arial, sans-serif;
+        border: 2px rgba(255, 255, 255, 0.38) solid;
+      }
+
+      .lang-zh-cn .skitchToastBox {
+        font-family: "微软雅黑", "Microsoft YaHei", SimSun,
+          "&#x30E1;&#x30A4;&#x30EA;&#x30AA;", Meiryo, "MS PGothic", "Soleil",
+          Helvetica, Arial, sans-serif;
+      }
+
+      .lang-ja-jp .skitchToastBox {
+        font-family: "&#x30E1;&#x30A4;&#x30EA;&#x30AA;", Meiryo, "MS PGothic",
+          "微软雅黑", "Microsoft YaHei", SimSun, "Soleil", Helvetica, Arial,
+          sans-serif;
+      }
+
+      .skitchToast {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: inline-block;
+        height: 10px;
+        color: #f1f5f8;
+        text-align: center;
+      }
+
+      .skitchVisible {
+        /* Don't remove this class it's a hack used by the Evernote Clipper */
+      }
+    </style>
+    <style type="text/css">
+      /* Copyright 2014-present Evernote Corporation. All rights reserved. */
+    </style>
+
+    <style>
+      [touch-action="none"] {
+        -ms-touch-action: none;
+        touch-action: none;
+      }
+      [touch-action="auto"] {
+        -ms-touch-action: auto;
+        touch-action: auto;
+      }
+      [touch-action~="pan-x"] {
+        -ms-touch-action: pan-x;
+        touch-action: pan-x;
+      }
+      [touch-action~="pan-y"] {
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+      }
+      [touch-action~="pan-up"] {
+        -ms-touch-action: pan-up;
+        touch-action: pan-up;
+      }
+      [touch-action~="pan-down"] {
+        -ms-touch-action: pan-down;
+        touch-action: pan-down;
+      }
+      [touch-action~="pan-left"] {
+        -ms-touch-action: pan-left;
+        touch-action: pan-left;
+      }
+      [touch-action~="pan-right"] {
+        -ms-touch-action: pan-right;
+        touch-action: pan-right;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header"
+    >
+      <div class="app-header header-shadow">
+        <div class="app-header__logo">
+          <div class="mr-1"><h5>DALTAMS</h5></div>
+          <div><h6>Professor Dashboard</h6></div>
+          <div class="header__pane ml-auto">
+            <div>
+              <button
+                type="button"
+                class="hamburger close-sidebar-btn hamburger--elastic"
+                data-class="closed-sidebar"
+              >
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="app-header__mobile-menu">
+          <div>
+            <button
+              type="button"
+              class="hamburger hamburger--elastic mobile-toggle-nav"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="app-header__menu">
+          <span>
+            <button
+              type="button"
+              class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+            >
+              <span class="btn-icon-wrapper">
+                <i class="fa fa-ellipsis-v fa-w-6"></i>
+              </span>
+            </button>
+          </span>
+        </div>
+        <div class="app-header__content">
+          <div class="app-header-right">
+            <div class="header-btn-lg pr-0">
+              <div class="widget-content p-0">
+                <div class="widget-content-wrapper">
+                  <div class="widget-content-left">
+                    <div class="btn-group">
+                      <a
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        class="p-0 btn"
+                      >
+                        <img
+                          width="42"
+                          class="rounded-circle"
+                          src="assets/images/avatars/1.jpg"
+                          alt=""
+                        />
+                        <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                      </a>
+                      <div
+                        tabindex="-1"
+                        role="menu"
+                        aria-hidden="true"
+                        class="dropdown-menu dropdown-menu-right"
+                        x-placement="bottom-end"
+                        style="
+                          position: absolute;
+                          will-change: transform;
+                          top: 0px;
+                          left: 0px;
+                          transform: translate3d(-180px, 44px, 0px);
+                        "
+                      >
+                        <div class="card-body">
+                          <img
+                            width="60"
+                            src="assets/images/avatars/4.jpg"
+                            alt="Card image cap"
+                            class="rounded-circle"
+                          />
+                          <br />
+                          <br />
+                          <h5 class="card-title">John Doe</h5>
+                          <h6 class="card-subtitle">
+                            Professor
+                          </h6>
+                          <p>
+                            Email: ab12345@dal.ca<br />Phone: (123) 456 789<br />Courses:
+                            CSCI 1234, CSCI 5678
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="widget-content-left ml-3 header-user-info">
+                    <div class="widget-heading">
+                      Alina Mclourd
+                    </div>
+                    <div class="widget-subheading">
+                      Professor
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-main">
+        <div class="app-sidebar sidebar-shadow">
+          <div class="app-header__logo">
+            <div class="logo-src"></div>
+            <div class="header__pane ml-auto">
+              <div>
+                <button
+                  type="button"
+                  class="hamburger close-sidebar-btn hamburger--elastic"
+                  data-class="closed-sidebar"
+                >
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="app-header__mobile-menu">
+            <div>
+              <button
+                type="button"
+                class="hamburger hamburger--elastic mobile-toggle-nav"
+              >
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="app-header__menu">
+            <span>
+              <button
+                type="button"
+                class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+              >
+                <span class="btn-icon-wrapper">
+                  <i class="fa fa-ellipsis-v fa-w-6"></i>
+                </span>
+              </button>
+            </span>
+          </div>
+          <div class="scrollbar-sidebar ps ps--active-y">
+            <div class="app-sidebar__inner">
+              <ul class="vertical-nav-menu metismenu">
+                <li>
+                  <a href="prof.html" class="mm-active">
+                    <i class="metismenu-icon pe-7s-user"></i>
+                    My Dashboard
+                  </a>
+                </li>
+
+                <li>
+                  <a href="pCourses.html">
+                    <i class="metismenu-icon pe-7s-id"></i>
+                    My Courses
+                  </a>
+                </li>
+                <li>
+                  <a href="pPostings.html">
+                    <i class="metismenu-icon pe-7s-file"></i>
+                    My Postings
+                  </a>
+                </li>
+                <li>
+                  <a href="pHourAprv.php">
+                    <i class="metismenu-icon pe-7s-file"></i>
+                    Hours Approval
+                  </a>
+                </li>
+                <li>
+                  <a href="jobsP.html" target="_blank">
+                    <i class="metismenu-icon pe-7s-file"></i>
+                    View Jobs
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+              <div
+                class="ps__thumb-x"
+                tabindex="0"
+                style="left: 0px; width: 0px;"
+              ></div>
+            </div>
+            <div
+              class="ps__rail-y"
+              style="top: 0px; height: 706px; right: 0px;"
+            >
+              <div
+                class="ps__thumb-y"
+                tabindex="0"
+                style="top: 0px; height: 589px;"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="app-main__outer">
+          <div class="app-main__inner">
+            <div class="row">
+              <!-- Quick Post a job by ZH (Drafts) -->
+              <div class="col-md-12 col-lg-6">
+                <div class="mb-3 card">
+                  <div class="card-body">
+                    <h5 class="card-title">Post A New Job</h5>
+                    <form class="">
+                      <div class="position-relative form-group mt-3">
+                        <select
+                          name="typeselect"
+                          id="typeSelection"
+                          class="form-control"
+                        >
+                          <option>Select Course</option>
+                          <option>CSCI 2100</option>
+                          <option>CSCI 3100</option>
+                          <option>CSCI 4000</option>
+                        </select>
+                      </div>
+
+                      <button
+                        type="button"
+                        class="btn mt-1 btn-primary"
+                        data-toggle="modal"
+                        data-target="#modalJobPost"
+                      >
+                        Draft
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Calendar by Su -->
+              <div class="col-md-12 col-lg-6">
+                <div class="mb-3 card">
+                  <div class="card-body">
+                    <div class="card-title">Schedule</div>
+                    <div class="calendar__header">
+                      <div class="card-title">Mon</div>
+                      <div class="card-title">Tue</div>
+                      <div class="card-title">Wed</div>
+                      <!-- <div>thu</div>
+                                        <div>fri</div>
+                                        <div>sat</div>
+                                        <div>sun</div> -->
+                    </div>
+                    <div class="calendar__week">
+                      <div class="calendar__day">
+                        <div class="calender_date card-title">Jul 1</div>
+                        <p>
+                          11:35-12:25 <br />
+                          Interview
+                        </p>
+                      </div>
+                      <div class="calendar__day">
+                        <div class="calender_date card-title">Jul 2</div>
+                        <p>
+                          2:25-3:55 <br />
+                          CSCI 2110 OH
+                        </p>
+                      </div>
+                      <div class="calendar__day">
+                        <div class="calender_date card-title">Jul 3</div>
+                        <p>
+                          4:35-5:25 <br />
+                          CSCI 3100 Cls
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Courses and Feedback by Ab-->
+            <div class="row col-md-12">
+              <div class="main-card mb-3 card">
+                <div
+                  class="card-body row align-items-center justify-content-between"
+                >
+                  <h5 class="card-title">Current Courses</h5>
+                  <a class="btn mr-2 mb-2 btn-primary" href="pCourses.html">
+                    More
+                  </a>
+                  <div class="table-responsive">
+                    <table class="mb-0 table table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Course Name</th>
+                          <th>Course ID</th>
+                          <th>Office Hours</th>
+                          <th>TA &amp; Markers</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Web Development I</td>
+                          <td>CSCI 1180</td>
+                          <td>TWF 12:30-14:30</td>
+                          <td>
+                            Surya, Howard
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Network Computing II</td>
+                          <td>CSCI 1183</td>
+                          <td>TWF 12:30-14:30</td>
+                          <td>
+                            Nhat, Zhaohe
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Intro to Robotics</td>
+                          <td>CSCI 1186</td>
+                          <td>TWF 12:30-14:30</td>
+                          <td>
+                            Abdullah, Howard, Nhat
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    &gt;
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
+    <!-- Modal Job Post -->
+    <div
+      class="modal fade"
+      id="modalJobPost"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      style="display: none;"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              CSCI 1800 - New Job Posting
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <br />
+            <form class="">
+              <div class="position-relative form-group">
+                <label for="jobTitleSearch" class="">Job Title</label
+                ><input
+                  name="jobtitle"
+                  id="jobTitleSearch"
+                  placeholder="Job Title"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="position-relative form-group">
+                <label for="payPost" class="">Pay Rate</label
+                ><input
+                  name="payrate"
+                  id="payPost"
+                  placeholder="Pay Rate"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+              <div class="position-relative form-group">
+                <label for="facultySelection" class="">Type</label
+                ><select
+                  name="typeselect"
+                  id="typeSelection"
+                  class="form-control"
+                >
+                  <option>-----Select One-----</option>
+                  <option>Hourly</option>
+                  <option>Weekly</option>
+                  <option>Monthly</option>
+                </select>
+              </div>
+              <div class="position-relative form-group">
+                <label for="workHours" class="">Work Hours Per Week</label
+                ><input
+                  name="hours"
+                  id="workHours"
+                  placeholder="Work Hours"
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+              <div class="position-relative form-group">
+                <label for="jobDescriptionSearch" class=""
+                  >Job Description</label
+                ><textarea
+                  name="additioninfo"
+                  id="additionInfoSearch"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <div class="position-relative form-group">
+                <label for="jobRequirementSearch" class=""
+                  >Job Requirement</label
+                ><textarea
+                  name="additioninfo"
+                  id="additionInfoSearch"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <div class="position-relative form-group">
+                <label for="additionInfoSearch" class="">Additional Info</label
+                ><textarea
+                  name="additioninfo"
+                  id="additionInfoSearch"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <div class="position-relative form-group">
+                <label for="ddlPost" class="">Application Deadline</label
+                ><input
+                  name="ddl"
+                  id="ddlPost"
+                  placeholder=""
+                  type="date"
+                  class="form-control"
+                />
+              </div>
+            </form>
+            <br />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../styles/seiyria-slider/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <script>
+      var slider1 = new Slider("#ex1", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider2 = new Slider("#ex2", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider3 = new Slider("#ex3", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider4 = new Slider("#ex4", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+      var slider5 = new Slider("#ex5", {
+        ticks: [0, 100, 200, 300, 400],
+        ticks_labels: ["Poor", "Okay", "Moderate", "Good", "Excellent"],
+        ticks_snap_bounds: 30,
+      });
+    </script>
+
+    <div class="jvectormap-tip"></div>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+
+    <div class="jvectormap-tip"></div>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+
+    <div class="jvectormap-tip"></div>
+  </body>
+</html>
