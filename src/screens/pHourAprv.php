@@ -383,7 +383,7 @@
     </div>
     <script
       type="text/javascript"
-      src="../styles/architectui-html-free/architectui-html-free/assets/scripts/main.js"
+      src="./assets/scripts/main.js"
     ></script>
     <!-- Code injected by live-server -->
     <script type="text/javascript">
