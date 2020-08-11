@@ -127,10 +127,10 @@ $user = $_GET['user'];
 		}
 		else if($user=="prof")
 		{
-			echo '<a class="btn btn-lg btn-primary btn-block" href="Prof.html">
+			echo '<a class="btn btn-lg btn-primary btn-block" href="prof.html">
 			Sign in
 			</a>
-			<a class="btn btn-lg btn-primary btn-block" href="Prof.html">
+			<a class="btn btn-lg btn-primary btn-block" href="prof.html">
 			Register
 			</button>';
 		}
