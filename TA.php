@@ -235,7 +235,7 @@
         </div>
 		<?php
         session_start();
-         include_once 'course-list.php';
+         include_once 'php-helpers/course-list.php';
 
         ?>
         <div class="app-main__outer">
@@ -458,7 +458,7 @@
                         <h6 class="card-subtitle">
                           Article 17.1 – Dalhousie / CUPE 3912 Collective Agreement (^)
                         </h6>
-                        <form class="" method="post" action="insert.php" >
+                        <form class="" method="post" action="php-helpers/insert.php" >
                           <div class="form-row">
                             <div class="col-md-auto">
                               <div class="position-relative form-group">
@@ -562,13 +562,13 @@
                     <button id="validate" type="button" onclick="checkTotalHours()" class="btn btn-primary" >
                 Validate
               </button>';
-              $page = "insert.php";
+              $page = "php-helpers/insert.php";
               $target = "_blank";
               echo '<input onsubmit="window.open('.$page.','.$target.')" style="visibility: hidden" id="hourSubmit" type="submit" name="hourSubmit" value="Submit" class="btn btn-success">';
                   }
                   else
                   {
-                    $page = "insert.php";
+                    $page = "php-helpers/insert.php";
                     $target = "_blank";
                     echo ' <h5 class="card-title">
                     Marker Form
@@ -581,7 +581,7 @@
                     approver to timesheets@cs.dal.ca by due dates outlined in Marker
                     Timesheets. (^)
                   </h6>
-                  <form class="" method="post" action="insert.php" >
+                  <form class="" method="post" action="php-helpers/insert.php" >
                     <div class="form-row">
                       <div class="col-md-auto">
                         <div class="position-relative form-group">

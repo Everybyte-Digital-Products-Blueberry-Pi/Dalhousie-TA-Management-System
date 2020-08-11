@@ -45,5 +45,5 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 
-  header("Location: TA.php"); //redirect to TA.php as soon as data is entered into the table 
+  header("Location: ../TA.php"); //redirect to TA.php as soon as data is entered into the table 
 ?>

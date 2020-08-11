@@ -294,7 +294,7 @@
                         <!---PHP-->
 
                         <?php          
-                        include_once 'connect.php';
+                        include_once 'php-helpers/connect.php';
                         $sql = "SELECT E_name,  DalId, CourseID,id, Position FROM form ORDER BY form.id DESC"; //Extracting data from the form table
                         $index = 1;
                         $result = mysqli_query($conn,$sql);
@@ -534,23 +534,23 @@
         {
           if($statusVal=="approved")
           {
-            echo '<a href = "status.php?id='.$keys[$i].'&status=declined" class="btn btn-danger">
+            echo '<a href = "php-helpers/status.php?id='.$keys[$i].'&status=declined" class="btn btn-danger">
             Decline
           </a>';
           }
           else
           {
-            echo '<a href = "status.php?id='.$keys[$i].'&status=approved" class="btn btn-success">
+            echo '<a href = "php-helpers/status.php?id='.$keys[$i].'&status=approved" class="btn btn-success">
             Approve
           </a>';
           }
         }
         else
         {
-          echo '<a href = "status.php?id='.$keys[$i].'&status=approved" class="btn btn-success">
+          echo '<a href = "php-helpers/status.php?id='.$keys[$i].'&status=approved" class="btn btn-success">
           Approve
     </a>
-    <a href = "status.php?id='.$keys[$i].'&status=declined" class="btn btn-danger">
+    <a href = "php-helpers/status.php?id='.$keys[$i].'&status=declined" class="btn btn-danger">
       Decline
     </a>';
         }

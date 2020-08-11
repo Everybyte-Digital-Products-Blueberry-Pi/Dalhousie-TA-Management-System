@@ -144,10 +144,10 @@ $user = $_GET['user'];
 			</button>';
 		}
 		else {
-			echo '<a class="btn btn-lg btn-primary btn-block" href="">
+			echo '<a class="btn btn-lg btn-primary btn-block" href="officeHoursSub.php">
 			Sign in
 			</a>
-			<a class="btn btn-lg btn-primary btn-block" href="">
+			<a class="btn btn-lg btn-primary btn-block" href="officeHoursSub.php">
 			Register
 			</button>';
 		}
