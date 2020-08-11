@@ -1,0 +1,30 @@
+Why do we need a TA management system from a professor perspective?
+
+- Professor already have myCarrer to hiring TA, but what they can get is a very plain CV from applicants.
+So a database to track performance of TA and do some analysis to provide a deep insight into the applicants for proferssor.
+professor will not making decisions only by reading transcripts and CV, more data will help to make the decision making easier
+
+- During the course, there is nothing to keep track of the TA's activities and evaluate their working but straight up communication.
+We don't know if the number of the TAs hired might be too much or not enough for the workload of the course, are they working efficiently?
+It would be more convenient to have something that keep track of their work and evaluate it.
+
+- Current TA feedback system is not very suitable for the evaluation of the TA, using the similar question template with the prof.
+There should be more specific data about TAs.
+----------------
+Some components/ideas that could be implemented:
+
+ Thus, there should be a new database or extension to the existing database to record the TA's performence. Therefore more TA's data
+will be used, and most of these data is not being recorded in the current system.
+=> there should have several parameters such as: grade of course TA experience before, result of his last experience.
+
+- Tracking TA's activities during the course (Need to know more about the work in a course, what a professor's expectation on a TA)
+
+- A TA feedback system to evaluate the TAs
+
+---------------
+How do we track TA works during the course? What kind of data should be tracked? (Not yet solved)
+Reference link :
+https://uwaterloo.ca/statistics-and-actuarial-science/sites/ca.statistics-and-act   uarial-science/files/uploads/files/department_of_sas_ta_evaluation_form_002.pdf
+https://uwaterloo.ca/statistics-and-actuarial-science/current-graduate-students/teaching-assistant-roles-and-responsibilities
+---------------
+Value of the product that brings to the professor: Improve the quality of the hiring process, provide better solution to evaluate TA

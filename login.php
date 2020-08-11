@@ -1,5 +1,5 @@
 <!-- This is a login page. Please put in the login code by Nh and Ab-->
-<!-- In this login page, you will need to choose a role to proceed-->
+<!-- In this page you will need to input the corresponding username and password with the assigned role to login-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,30 +62,97 @@ rel="stylesheet"
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 	}
+
 </style>
 </head>
-
+<?php
+$user = $_GET['user'];
+?>
 <body class="text-center">
-	<form class="form-signin" method="get">
-		<img
+	<form class="form-signin">
+	<img
 		src="./assets/images/logo/company-logo.jpg"
 		alt="Company Logo"
 		height="120"
-		/>
+	/>
 		<h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
-		<h4 class="h4 mb-3 font-weight-normal">Select your user type</h4>
-		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=stu">
-			Student
-		</a>
-		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=TA">
-			TA
-		</a>
-		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=prof">
-			Professor
-		</a>
-		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=office">
-			Office
-		</a>
+		<?php
+		if($user == "stu" || $user == "TA")
+		{
+			echo '<label for="inputEmail" class="sr-only">Net ID</label>
+			<input
+			type="email"
+			id="inputEmail"
+			class="form-control"
+			placeholder="NetID"
+			required=""
+			autofocus=""
+			/>';
+		}
+		else if($user == "prof" || $user == "office")
+		{
+			echo '<label for="inputEmail" class="sr-only">Username</label>
+			<input
+			type="text"
+			id="inputUsername"
+			class="form-control"
+			placeholder="Username"
+			required=""
+			autofocus=""
+			/>';
+		}
+		?>
+		<label for="inputPassword" class="sr-only">Password</label>
+		<input
+		type="password"
+		id="inputPassword"
+		class="form-control"
+		placeholder="Password"
+		required=""
+		/>
+		<div class="checkbox mb-3">
+			<label>
+				<input type="checkbox" value="remember-me" /> Remember me
+			</label>
+		</div>
+		<?php
+		if($user == "stu")
+		{
+			echo '<a class="btn btn-lg btn-primary btn-block" href="jobs.html">
+			Sign in
+			</a>
+			<a class="btn btn-lg btn-primary btn-block" href="jobs.html">
+			Register
+			</button>';
+		}
+		else if($user=="prof")
+		{
+			echo '<a class="btn btn-lg btn-primary btn-block" href="Prof.html">
+			Sign in
+			</a>
+			<a class="btn btn-lg btn-primary btn-block" href="Prof.html">
+			Register
+			</button>';
+		}
+		else if($user=="TA")
+		{
+			echo '<a class="btn btn-lg btn-primary btn-block" href="TA.php">
+			Sign in
+			</a>
+			<a class="btn btn-lg btn-primary btn-block" href="TA.php">
+			Register
+			</button>';
+		}
+		else {
+			echo '<a class="btn btn-lg btn-primary btn-block" href="">
+			Sign in
+			</a>
+			<a class="btn btn-lg btn-primary btn-block" href="">
+			Register
+			</button>';
+		}
+		?>
+
 	</form>
 	<script>
 		type = "text/javascript";
