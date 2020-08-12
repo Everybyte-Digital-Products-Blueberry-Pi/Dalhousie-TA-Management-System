@@ -77,7 +77,7 @@ rel="stylesheet"
 		<img
 		src="./assets/images/logo/company-logo.jpg"
 		alt="Company Logo"
-		height="120"
+		height="80"
 		/>
 		<h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
 		<h4 class="h4 mb-3 font-weight-normal">Select your user type</h4>

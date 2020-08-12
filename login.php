@@ -73,7 +73,7 @@ $user = $_GET['user'];
 	<img
 		src="./assets/images/logo/company-logo.jpg"
 		alt="Company Logo"
-		height="120"
+		height="80"
 	/>
 		<h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
 		<?php
