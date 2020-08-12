@@ -496,6 +496,7 @@
                               </div>
                           <div class="input-group">
                           <div class="input-group-prepend" style="width: 30%;">
+                          <label for="exampleCustomSelect">Total Hours</label>
                             <span class="input-group-text" style="width: 100%;"
                               >In-Class Duties</span
                             >
