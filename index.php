@@ -90,7 +90,7 @@ rel="stylesheet"
 		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=prof">
 			Professor
 		</a>
-		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=office">
+		<a type="button" class="btn btn-lg btn-secondary btn-blocsk font-weight-bold" href="login.php?user=office">
 			Office
 		</a>
 	</form>
