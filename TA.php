@@ -485,7 +485,7 @@
                                 <label for="examplePassword11" class=""
                                   >Note: Above TA assignment together with other TA
                                   assignments for other courses cannot exceed 130 hours
-                                  per semester - as per (^) </label
+                                  per semester - as per (^)</label
                                 ><input
                                   id="totalHours"
                                   placeholder="Enter total hours"
@@ -494,9 +494,11 @@
                                   name="otherTHours"
                                 />
                               </div>
-                          <div class="input-group">
+                        
+                        <label for="examplePassword11">Note: The hours breakdown below must add up to the total hours selected above</label>
+                        <div class="input-group">
                           <div class="input-group-prepend" style="width: 30%;">
-                          <label for="exampleCustomSelect">Total Hours</label>
+                          
                             <span class="input-group-text" style="width: 100%;"
                               >In-Class Duties</span
                             >
