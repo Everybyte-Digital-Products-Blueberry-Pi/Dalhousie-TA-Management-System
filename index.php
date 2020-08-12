@@ -62,6 +62,13 @@ rel="stylesheet"
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 	}
+	.page-footer {
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+	}
 </style>
 </head>
 
@@ -92,5 +99,8 @@ rel="stylesheet"
 		src =
 		"./assets/scripts/main.js";
 	</script>
+	<footer class="page-footer font-small blue">
+		<div class="alert alert-primary" role="alert">DALTAMS is a Teaching Assistant (TA) Management System that simplifies the process of recruiting and managing TA developed by Blueberry Pi team.</div>
+	</footer>
 </body>
 </html>
