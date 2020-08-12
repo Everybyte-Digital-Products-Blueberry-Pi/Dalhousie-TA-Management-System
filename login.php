@@ -75,8 +75,8 @@ $user = $_GET['user'];
 		alt="Company Logo"
 		height="80"
 	/>
-		<h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
-		<h3 class="h3 mb-3 font-weight-normal">Hiring and managing TAs made simple</h3>
+	<h1 class="specialpad h1 mb-0  font-weight-bold">DalTAMS</h1>
+	<h6 class="h6 mb-5 font-weight-normal">Hiring and managing TAs made simple</h6>
 
 		<?php
 		if($user == "stu" || $user == "TA")

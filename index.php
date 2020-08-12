@@ -65,7 +65,7 @@ rel="stylesheet"
 	.page-footer {
   position: fixed;
   left: 0;
-  bottom: 10px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
 	}
