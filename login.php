@@ -51,7 +51,7 @@ rel="stylesheet"
 		align-items: center;
 		-webkit-box-pack: center;
 		justify-content: center;
-		padding-bottom: 80px;
+		padding-bottom: 100px;
 	}
 	html, body {
 		margin: 0;
