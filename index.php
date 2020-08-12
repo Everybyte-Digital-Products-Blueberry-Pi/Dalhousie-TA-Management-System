@@ -80,7 +80,9 @@ rel="stylesheet"
 		height="120"
 		/>
 		<h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
-		<h4 class="h4 mb-3 font-weight-normal">Select your user type</h4>
+		<h3 class="h3 mb-3 font-weight-normal">Hiring and managing TAs made simple</h3>
+		<h5 class="h5 mb-3 font-weight-normal">Select your user type</h5>
+
 		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=stu">
 			Student
 		</a>
@@ -90,7 +92,7 @@ rel="stylesheet"
 		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=prof">
 			Professor
 		</a>
-		<a type="button" class="btn btn-lg btn-secondary btn-blocsk font-weight-bold" href="login.php?user=office">
+		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=office">
 			Office
 		</a>
 	</form>
