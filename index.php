@@ -51,7 +51,7 @@ rel="stylesheet"
 		align-items: center;
 		-webkit-box-pack: center;
 		justify-content: center;
-		padding-bottom: 80px;
+		padding-bottom: 100px;
 	}
 	html, body {
 		margin: 0;
@@ -69,6 +69,7 @@ rel="stylesheet"
   width: 100%;
   text-align: center;
 	}
+
 </style>
 </head>
 
@@ -79,8 +80,8 @@ rel="stylesheet"
 		alt="Company Logo"
 		height="80"
 		/>
-		<h1 class="h1 mb-3 font-weight-bold">DalTAMS</h1>
-		<h3 class="h3 mb-3 font-weight-normal">Hiring and managing TAs made simple</h3>
+		<h1 class="specialpad h1 mb-0  font-weight-bold">DalTAMS</h1>
+		<h6 class="h6 mb-5 font-weight-normal">Hiring and managing TAs made simple</h6>
 		<h5 class="h5 mb-3 font-weight-normal">Select your user type</h5>
 
 		<a type="button" class="btn btn-lg btn-secondary btn-block font-weight-bold" href="login.php?user=stu">
@@ -101,8 +102,8 @@ rel="stylesheet"
 		src =
 		"./assets/scripts/main.js";
 	</script>
-	<footer class="page-footer font-small blue">
-		<div class="alert alert-primary" role="alert">DALTAMS is a Teaching Assistant (TA) Management System that simplifies the process of recruiting and managing TA developed by Blueberry Pi team.</div>
+	<footer class="page-footer small font-weight-normal blue alert alert-primary" role="alert">
+	DALTAMS is a Teaching Assistant (TA) Management System that simplifies the process of recruiting and managing TA developed by Blueberry Pi team.
 	</footer>
 </body>
 </html>
