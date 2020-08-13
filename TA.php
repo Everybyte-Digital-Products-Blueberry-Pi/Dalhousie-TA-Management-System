@@ -593,7 +593,7 @@
                             id="totalHours"
                             type="text"
                             class="form-control"
-                            name="otherTHours"
+                            name="tHours"
                           />
                         </div>
 
